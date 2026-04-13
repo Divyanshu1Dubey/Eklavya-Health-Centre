@@ -1,0 +1,190 @@
+/* === Color Variables === */
+.text-main {
+  color: #10324a !important;
+}
+.text-main-light {
+  color: #2a8c85 !important;
+}
+.text-second {
+  color: #d9a441 !important;
+}
+.mail a {
+  color: #554f4f !important;
+}
+.mail a:hover {
+  color: #3d3dca !important;
+}
+.secondary-fill {
+  fill: #b41e1e;
+}
+
+/* === Background Colors === */
+.bg-primary-dark {
+  background: linear-gradient(135deg, #10324a, #2a8c85) !important;
+}
+.primary-bg-soft {
+  background-color: #e8f6f4 !important;
+}
+.primary-bg {
+  background: #2a8c85 !important;
+}
+.secondary-bg {
+  background: #d9a441 !important;
+}
+.bg-lights {
+  background-color: #f7f7f7 !important;
+}
+.bg-secondary-lt {
+  background-color: #d0e0ee;
+}
+.bg-grays {
+  background-color: #e0e7ef !important;
+}
+.hero-bg {
+  background-color: hsla(0, 0%, 6%, 0.5);
+}
+
+/* === Typography === */
+h1 {
+  font-size: 46px !important;
+}
+h1,
+section h2 {
+  font-display: swap;
+  font-weight: bolder;
+  letter-spacing: 0;
+}
+section h2,
+section h1 {
+  color: #10324a !important;
+  font-size: 40px !important;
+}
+h1 span,
+section h2 span {
+  color: #2a8c85;
+  font-display: swap;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+.widget-title {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+}
+
+/* === Navigation === */
+.nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav {
+  color: #2a8c85 !important;
+  --bs-nav-link-hover-color: #2a8c85 !important;
+}
+.sticky-wrapper {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.is-sticky .navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-collapse {
+  width: 16rem !important;
+}
+
+/* === Cards === */
+
+.cards {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+}
+.cards:before {
+  content: '';
+  background: linear-gradient(135deg, #10324a, #2a8c85);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: top 0.8s ease-out, opacity 0.8s ease-in-out;
+  z-index: -1;
+}
+.cards:hover:before {
+  top: 0;
+}
+.cards:hover h3,
+.cards:hover p {
+  color: #fff !important;
+}
+.cards:hover img {
+  background-color: #fff !important;
+}
+.cards img {
+  transition: background-color 0.8s ease-out;
+}
+
+/* === General Card === */
+.card {
+  transition: all 0.6s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* === Swiper === */
+.swiper-hero:before,
+.gloader {
+  display: none;
+}
+
+/* === Utility Classes === */
+
+.link h3:hover,
+.link:hover h4 {
+  color: #b41e1e !important;
+}
+
+/* === Hero Section === */
+
+.hero-img {
+  background-color: #000;
+}
+.hero-img.bg-loaded {
+  background-image: url(/img/home/hero-bg.webp);
+  transition: background-image 0.3s ease-in-out;
+}
+.hero-p {
+  font-size: 23px !important;
+}
+
+/* === About & Choose Us Sections === */
+.about1-img {
+  width: 535px !important;
+  height: 552px !important;
+}
+
+/* === Animations === */
+.animate {
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+.row.animate {
+  animation: slideInDown 0.9s ease both;
+}
+
+/* === Topbar === */
+.topbar {
+  display: block;
+}

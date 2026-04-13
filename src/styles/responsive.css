@@ -1,0 +1,114 @@
+/* Adjust clone navbar offset on large screens and up */
+@media (min-width: 992px) {
+  .navbar-clone {
+    top: 57.2px !important;
+  }
+}
+
+/* ----------- MD & Down (<992px) ----------- */
+@media (max-width: 992px) {
+  .offcanvas {
+    background: #83c5c8 !important;
+  }
+
+  .navbar-expand-lg .navbar-brand {
+    padding: 0 !important;
+  }
+
+  h1,
+  section h2 {
+    font-size: 50px !important;
+    color: #83c5c8 !important;
+  }
+
+  h1 span,
+  section h2 span {
+    color: #b41e1e;
+    font-size: 50px;
+    font-weight: bolder;
+    font-display: swap;
+  }
+}
+
+/* ----------- SM Devices (<768px) ----------- */
+@media (max-width: 768px) {
+  .topbar {
+    display: none !important;
+  }
+
+  .navbar-clone {
+    top: 0 !important;
+  }
+
+  .sticky-wrapper {
+    position: relative !important;
+  }
+
+  /* Hero section responsive styles */
+  .hero-text {
+    align-items: end;
+    justify-content: center;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 20px !important;
+  }
+
+  .hero-text h3 {
+    font-size: 18px !important;
+  }
+
+  .hero-text p {
+    font-size: 16px !important;
+  }
+
+  .hero-text .btn {
+    padding: 8px !important;
+    margin-bottom: 10px;
+  }
+
+  img,
+  svg {
+    vertical-align: bottom !important;
+  }
+
+  h1,
+  section h2 {
+    font-size: 46px !important;
+    color: #83c5c8 !important;
+  }
+
+  h1 span,
+  section h2 span {
+    font-size: 46px;
+    color: #b41e1e;
+    font-weight: bolder;
+    font-display: swap;
+  }
+}
+
+/* ----------- XS Devices (<600px) ----------- */
+@media (max-width: 600px) {
+  .hero-p {
+    font-size: 18px !important;
+  }
+}
+
+/* ----------- XS Devices (<576px) ----------- */
+@media (max-width: 576px) {
+  h1,
+  section h2 {
+    font-size: 40px !important;
+    color: #83c5c8 !important;
+  }
+
+  h1 span,
+  section h2 span {
+    font-size: 40px;
+    color: #b41e1e;
+    font-weight: bolder;
+    font-display: swap;
+  }
+}
