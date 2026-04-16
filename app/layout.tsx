@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://drsadeepsahu.com",
+    url: "https://drsandeepkumarsahu.com",
     siteName: "Dr. Sandeep Kumar Sahu",
     title: "Dr. Sandeep Kumar Sahu – Endocrinologist in Cuttack",
     description: "Expert care for Diabetes, Thyroid, PCOS & all Hormonal Disorders in Cuttack, Odisha.",

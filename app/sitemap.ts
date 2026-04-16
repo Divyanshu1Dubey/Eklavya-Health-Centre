@@ -3,7 +3,7 @@ import { services } from "@/data/services";
 import { blogs } from "@/data/index";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://drsadeepsahu.com";
+  const baseUrl = "https://drsandeepkumarsahu.com";
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 1 },
