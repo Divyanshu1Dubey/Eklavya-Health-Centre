@@ -19,7 +19,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!resource) return {};
 
   return {
-    title: `${resource.title} | Patient Resource | Dr. Sandeep K. Sahu`,
+    title: `${resource.title} | Patient Resource | Dr. Sandeep Kumar Sahu`,
     description: resource.description,
   };
 }
@@ -32,7 +32,7 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
   }
 
   // Gracefully fallback the hero image just in case
-  const bgImage = resource.image || "/images/hero-patient.png";
+  const bgImage = resource.image || "/images/hero-patient.webp";
 
   // Parse simple line breaks created in data structure
   const paragraphs = resource.content.split("\\n\\n").map(p => p.trim());
@@ -83,7 +83,7 @@ export default function ResourcePage({ params }: { params: { slug: string } }) {
         <div className="border-b border-slate-100 bg-slate-50 sticky top-[72px] lg:top-[88px] z-40 transition-shadow hidden sm:block">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between text-sm text-slate-500 font-bold uppercase tracking-wider">
             <div className="flex items-center gap-6">
-              <span>Dr. Sandeep K. Sahu</span>
+              <span>Dr. Sandeep Kumar Sahu</span>
               <span className="text-slate-300">•</span>
               <span>Reviewed: Clinical Guide</span>
             </div>

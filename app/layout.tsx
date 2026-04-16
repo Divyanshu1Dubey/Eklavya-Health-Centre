@@ -6,20 +6,20 @@ import StickyCTA from "@/components/layout/StickyCTA";
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Sandeep K. Sahu – Endocrinologist in Cuttack | SAI SHREE HEALTH CARE",
-    template: "%s | Dr. Sandeep K. Sahu – Endocrinologist"
+    default: "Dr. Sandeep Kumar Sahu – Endocrinologist in Cuttack | SAI SHREE POLYCLINIC",
+    template: "%s | Dr. Sandeep Kumar Sahu – Endocrinologist"
   },
-  description: "Expert Endocrinologist in Cuttack specializing in Diabetes, Thyroid Disorders, PCOS, Obesity & Hormonal conditions. Book an appointment at SAI SHREE HEALTH CARE.",
+  description: "Expert Endocrinologist in Cuttack specializing in Diabetes, Thyroid Disorders, PCOS, Obesity & Hormonal conditions. Book an appointment at SAI SHREE POLYCLINIC.",
   keywords: ["Endocrinologist in Cuttack", "Diabetes specialist Cuttack", "Thyroid doctor Cuttack", "Hormone specialist Odisha", "PCOS treatment Cuttack", "Dr Sadeep Sahu"],
-  authors: [{ name: "Dr. Sandeep K. Sahu" }],
-  creator: "SAI SHREE HEALTH CARE",
+  authors: [{ name: "Dr. Sandeep Kumar Sahu" }],
+  creator: "SAI SHREE POLYCLINIC",
   metadataBase: new URL("https://drsadeepsahu.com"),
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://drsadeepsahu.com",
-    siteName: "Dr. Sandeep K. Sahu",
-    title: "Dr. Sandeep K. Sahu – Endocrinologist in Cuttack",
+    siteName: "Dr. Sandeep Kumar Sahu",
+    title: "Dr. Sandeep Kumar Sahu – Endocrinologist in Cuttack",
     description: "Expert care for Diabetes, Thyroid, PCOS & all Hormonal Disorders in Cuttack, Odisha.",
   },
 };

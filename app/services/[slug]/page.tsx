@@ -28,7 +28,7 @@ export async function generateMetadata(props: { params: Params }): Promise<Metad
   const service = services.find((s) => s.slug === params.slug);
   if (!service) return { title: "Service Not Found" };
   return {
-    title: `${service.title} Treatment in Cuttack | Dr. Sandeep K. Sahu`,
+    title: `${service.title} Treatment in Cuttack | Dr. Sandeep Kumar Sahu`,
     description: service.shortDescription,
   };
 }

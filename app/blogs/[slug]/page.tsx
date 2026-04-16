@@ -121,7 +121,7 @@ export default async function BlogDetailPage(props: { params: Params }) {
                   If you are experiencing any of the symptoms described in this article, it is important to consult a qualified endocrinologist promptly. Early intervention leads to significantly better outcomes and helps prevent complications.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-5">
-                  At SAI SHREE HEALTH CARE, Dr. Sahu and his team are dedicated to providing the most current, evidence-based treatments for all endocrine conditions. We welcome patients from Cuttack and across Odisha.
+                  At SAI SHREE POLYCLINIC, Dr. Sahu and his team are dedicated to providing the most current, evidence-based treatments for all endocrine conditions. We welcome patients from Cuttack and across Odisha.
                 </p>
 
                 <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 my-8">

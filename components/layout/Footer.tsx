@@ -51,7 +51,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-bold text-white text-sm leading-tight font-heading">
-                    Dr. Sandeep K. Sahu
+                    Dr. Sandeep Kumar Sahu
                   </p>
                   <p className="text-primary-300 text-xs leading-tight">Endocrinologist</p>
                 </div>

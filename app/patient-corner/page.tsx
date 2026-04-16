@@ -78,8 +78,8 @@ export default function PatientCornerPage() {
             <div className="page-hero-image">
               <div className="page-hero-image-glow" />
               <img
-                src="/images/hero-patient.png"
-                alt="Patient care at SAI SHREE HEALTH CARE"
+                src="/images/hero-patient.webp"
+                alt="Patient care at SAI SHREE POLYCLINIC"
                 className="relative z-10"
               />
             </div>

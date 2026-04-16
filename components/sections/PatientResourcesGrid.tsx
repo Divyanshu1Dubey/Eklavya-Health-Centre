@@ -55,7 +55,7 @@ export default function PatientResourcesGrid({ resources }: { resources: any[] }
           {resources.map((resource, index) => {
             const Icon = iconMap[resource.icon] || Activity;
             const isFeatured = index === 0;
-            const bgImage = resource.image || "/images/hero-patient.png";
+            const bgImage = resource.image || "/images/hero-patient.webp";
 
             // Apply large layout purely to the first item (Featured)
             const gridClass = isFeatured

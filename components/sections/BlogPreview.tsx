@@ -30,7 +30,7 @@ export default function BlogPreview() {
               {/* Image with hover effect */}
               <div className="h-48 relative overflow-hidden bg-slate-100">
                 <Image
-                  src={blog.image}
+                  src={blog.image || "/images/hero-blogs.webp"}
                   alt={blog.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"

@@ -9,8 +9,8 @@ import BlogPreview from "@/components/sections/BlogPreview";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "Best Endocrinologist in Cuttack | Dr. Sandeep K. Sahu",
-  description: "Dr. Sandeep K. Sahu – DM Endocrinology specialist in Cuttack. Expert treatment for Diabetes, Thyroid, PCOS, Obesity & Hormonal disorders. Book now.",
+  title: "Best Endocrinologist in Cuttack | Dr. Sandeep Kumar Sahu",
+  description: "Dr. Sandeep Kumar Sahu – DM Endocrinology specialist in Cuttack. Expert treatment for Diabetes, Thyroid, PCOS, Obesity & Hormonal disorders. Book now.",
 };
 
 export default function HomePage() {

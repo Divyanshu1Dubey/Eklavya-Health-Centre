@@ -108,7 +108,7 @@ export default function HeroSection() {
               {/* Doctor image */}
               <div className="hero-image-container">
                 <Image
-                  src="/images/home-hero.png"
+                  src="/images/home-hero.webp"
                   alt={`${doctor.name} – Endocrinologist in Cuttack`}
                   width={600}
                   height={720}

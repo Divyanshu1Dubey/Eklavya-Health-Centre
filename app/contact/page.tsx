@@ -62,15 +62,15 @@ Details: ${form.message || "None"}`;
                 Book an Appointment
               </h1>
               <p className="text-slate-600 text-base leading-relaxed max-w-lg">
-                Schedule a consultation with Dr. Sandeep K. Sahu. We respond to all inquiries promptly.
+                Schedule a consultation with Dr. Sandeep Kumar Sahu. We respond to all inquiries promptly.
               </p>
             </div>
             {/* Right: image */}
             <div className="page-hero-image">
               <div className="page-hero-image-glow" />
               <img
-                src="/images/hero-contact.jpg"
-                alt="Book appointment at SAI SHREE HEALTH CARE"
+                src="/images/hero-contact.webp"
+                alt="Book appointment at SAI SHREE POLYCLINIC"
                 className="relative z-10"
               />
             </div>
@@ -307,8 +307,8 @@ Details: ${form.message || "None"}`;
               {/* Map embed */}
               <div className="map-wrapper rounded-2xl overflow-hidden shadow-xl border border-slate-100 relative">
                 <iframe
-                  title="SAI SHREE HEALTH CARE Location Map"
-                  src="https://maps.google.com/maps?q=SAI%20SHREE%20HEALTH%20CARE,%20Near%20Shreema%20Hospital,%20Ring%20Road,%20Mangalabag,%20Cuttack-753001&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  title="Sai shree polyclinic Location Map"
+                  src="https://maps.google.com/maps?q=Sai%20shree%20polyclinic%20Cuttack%20At-%20Kathagola%2C%20Ring%20Rd%2C%20near%20Shree%20Maa%2C%20Cuttack%2C%20Odisha%20753110&t=&z=16&ie=UTF8&iwloc=&output=embed"
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 

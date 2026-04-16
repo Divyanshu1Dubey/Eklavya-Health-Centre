@@ -6,9 +6,9 @@ import CTASection from "@/components/sections/CTASection";
 import ServicesGridInteractive from "@/components/sections/ServicesGridInteractive";
 
 export const metadata: Metadata = {
-  title: "Endocrinology Services in Cuttack | Dr. Sandeep K. Sahu",
+  title: "Endocrinology Services in Cuttack | Dr. Sandeep Kumar Sahu",
   description:
-    "Comprehensive endocrine services: Diabetes, Thyroid, PCOS, Obesity, Growth Disorders & Metabolic conditions. Expert care by Dr. Sandeep K. Sahu in Cuttack.",
+    "Comprehensive endocrine services: Diabetes, Thyroid, PCOS, Obesity, Growth Disorders & Metabolic conditions. Expert care by Dr. Sandeep Kumar Sahu in Cuttack.",
 };
 
 const iconMap: Record<string, any> = {
@@ -45,8 +45,8 @@ export default function ServicesPage() {
             <div className="page-hero-image">
               <div className="page-hero-image-glow" />
               <img
-                src="/images/hero-services.jpg"
-                alt="Endocrinology Services — Dr. Sandeep K. Sahu"
+                src="/images/hero-services.webp"
+                alt="Endocrinology Services — Dr. Sandeep Kumar Sahu"
                 className="relative z-10"
               />
             </div>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
             Early Diagnosis Makes All the Difference
           </h2>
           <p className="text-slate-600 mb-8">
-            Hormonal disorders often develop slowly and silently. Many patients live with symptoms for years before receiving the right diagnosis. At SAI SHREE HEALTH CARE, we use advanced diagnostics to identify conditions early — when they are easiest to treat and manage.
+            Hormonal disorders often develop slowly and silently. Many patients live with symptoms for years before receiving the right diagnosis. At SAI SHREE POLYCLINIC, we use advanced diagnostics to identify conditions early — when they are easiest to treat and manage.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {["Earlier Treatment", "Better Outcomes", "Fewer Complications", "Quality of Life"].map((item) => (

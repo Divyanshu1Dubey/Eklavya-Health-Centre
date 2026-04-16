@@ -9,9 +9,9 @@ import { doctor } from "@/data/doctor";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Dr. Sandeep K. Sahu – DM Endocrinologist, Cuttack",
+  title: "About Dr. Sandeep Kumar Sahu – DM Endocrinologist, Cuttack",
   description:
-    "Learn about Dr. Sandeep K. Sahu's qualifications (MBBS, MD, DM Endocrinology), expertise, and philosophy of patient care at SAI SHREE HEALTH CARE, Cuttack.",
+    "Learn about Dr. Sandeep Kumar Sahu's qualifications (MBBS, MD, DM Endocrinology), expertise, and philosophy of patient care at SAI SHREE POLYCLINIC, Cuttack.",
 };
 
 export default function AboutPage() {
@@ -42,8 +42,8 @@ export default function AboutPage() {
             <div className="page-hero-image">
               <div className="page-hero-image-glow" />
               <img
-                src="/images/hero-about.png"
-                alt="Dr. Sandeep K. Sahu — Endocrinologist Cuttack"
+                src="/images/hero-about.webp"
+                alt="Dr. Sandeep Kumar Sahu — Endocrinologist Cuttack"
                 className="relative z-10"
               />
             </div>
@@ -59,8 +59,8 @@ export default function AboutPage() {
             <div className="relative order-1 lg:order-2">
               <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gradient-to-br from-slate-100 to-primary-50 max-w-sm mx-auto lg:ml-auto lg:mr-0 shadow-lg group">
                 <Image
-                  src="/images/about-doctor.png"
-                  alt="Dr. Sandeep K. Sahu"
+                  src="/images/about-doctor.webp"
+                  alt="Dr. Sandeep Kumar Sahu"
                   fill
                   className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-in-out"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -185,7 +185,7 @@ export default function AboutPage() {
             Committed to Your Long-Term Health
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed mb-6">
-            At SAI SHREE HEALTH CARE, our mission is to make expert endocrine care accessible to every patient in Cuttack and the surrounding regions. We believe that no one should suffer through undiagnosed hormonal conditions when effective treatments exist.
+            At SAI SHREE POLYCLINIC, our mission is to make expert endocrine care accessible to every patient in Cuttack and the surrounding regions. We believe that no one should suffer through undiagnosed hormonal conditions when effective treatments exist.
           </p>
           <p className="text-slate-600 text-lg leading-relaxed">
             Every consultation with Dr. Sahu is an investment in your long-term quality of life. Our goal isn't just to prescribe medication — it's to educate, empower, and partner with you throughout your health journey.

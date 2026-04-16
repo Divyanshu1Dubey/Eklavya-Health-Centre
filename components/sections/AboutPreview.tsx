@@ -12,8 +12,8 @@ export default function AboutPreview() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gradient-to-br from-slate-100 to-primary-50 max-w-md mx-auto lg:mx-0 shadow-lg group">
               <Image
-                src="/images/home-about.png"
-                alt="Dr. Sandeep K. Sahu"
+                src="/images/home-about.webp"
+                alt="Dr. Sandeep Kumar Sahu"
                 fill
                 className="object-cover object-top hover:scale-105 transition-transform duration-700 ease-in-out"
                 sizes="(max-width: 768px) 100vw, 50vw"

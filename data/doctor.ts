@@ -1,14 +1,14 @@
 // data/doctor.ts
 export const doctor = {
-  name: "Dr. Sandeep K. Sahu",
+  name: "Dr. Sandeep Kumar Sahu",
   shortName: "Dr. Sadeep Sahu",
   title: "Endocrinologist",
   qualifications: "MBBS, MD, DM (Endocrinology)",
   institution: "S.C.B Medical College, Cuttack",
   tagline: "Early diagnosis and preserving quality of life.",
-  bio: "Dr. Sandeep K. Sahu is a highly experienced Endocrinologist based in Cuttack, Odisha. With extensive training from S.C.B Medical College and a DM in Endocrinology, he specializes in the comprehensive management of hormonal disorders, diabetes, thyroid conditions, and metabolic diseases.",
+  bio: "Dr. Sandeep Kumar Sahu is a highly experienced Endocrinologist based in Cuttack, Odisha. With extensive training from S.C.B Medical College and a DM in Endocrinology, he specializes in the comprehensive management of hormonal disorders, diabetes, thyroid conditions, and metabolic diseases.",
   fullBio: [
-    "Dr. Sandeep K. Sahu completed his MBBS and MD from the prestigious S.C.B Medical College, Cuttack — one of Odisha's premier medical institutions. He then pursued his DM (Doctorate of Medicine) in Endocrinology, gaining specialized expertise in the complex field of hormonal and metabolic disorders.",
+    "Dr. Sandeep Kumar Sahu completed his MBBS and MD from the prestigious S.C.B Medical College, Cuttack — one of Odisha's premier medical institutions. He then pursued his DM (Doctorate of Medicine) in Endocrinology, gaining specialized expertise in the complex field of hormonal and metabolic disorders.",
     "With years of clinical experience, Dr. Sahu has helped thousands of patients in Cuttack and the surrounding regions manage chronic conditions like diabetes, thyroid disorders, PCOS, obesity, and growth abnormalities. His patient-centered approach combines the latest medical advances with compassionate care.",
     "Dr. Sahu believes that early diagnosis is the cornerstone of effective treatment. He is committed to educating his patients about their conditions and empowering them to lead healthier, fuller lives despite chronic illness."
   ],
@@ -25,7 +25,7 @@ export const doctor = {
     "Pituitary Disorders",
     "Bone & Calcium Disorders",
   ],
-  clinicName: "SAI SHREE HEALTH CARE",
+  clinicName: "SAI SHREE POLYCLINIC",
   address: "Near Shreema Hospital, Ring Road, Mangalabag, Cuttack – 753001",
   phone: "+91 7008512773",
   email: "drsadeepsahu@saishreehealthcare.com",
@@ -40,6 +40,6 @@ export const doctor = {
     { year: "2004", title: "MBBS", institution: "S.C.B Medical College, Cuttack", description: "Completed undergraduate medical education with distinction" },
     { year: "2008", title: "MD (Medicine)", institution: "S.C.B Medical College, Cuttack", description: "Post-graduate specialization in Internal Medicine" },
     { year: "2012", title: "DM (Endocrinology)", institution: "S.C.B Medical College, Cuttack", description: "Super-specialization in Endocrinology and Metabolism" },
-    { year: "2013", title: "Practice Established", institution: "SAI SHREE HEALTH CARE, Cuttack", description: "Established private clinic serving patients across Odisha" },
+    { year: "2013", title: "Practice Established", institution: "SAI SHREE POLYCLINIC, Cuttack", description: "Established private clinic serving patients across Odisha" },
   ],
 };

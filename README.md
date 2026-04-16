@@ -1,4 +1,4 @@
-# Dr. Sandeep K. Sahu – Endocrinologist Portfolio Website
+# Dr. Sandeep Kumar Sahu – Endocrinologist Portfolio Website
 
 A premium, high-converting multi-page doctor portfolio website built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**.
 
@@ -136,7 +136,7 @@ All content is centralized in `/data/`:
 ### Doctor Info (`data/doctor.ts`)
 ```ts
 export const doctor = {
-  name: "Dr. Sandeep K. Sahu",
+  name: "Dr. Sandeep Kumar Sahu",
   phone: "+91 7008512773",
   address: "...",
   // etc.
@@ -234,11 +234,11 @@ npx vercel
 
 ## 📞 Clinic Contact
 
-**SAI SHREE HEALTH CARE**  
+**SAI SHREE POLYCLINIC**  
 Near Shreema Hospital, Ring Road  
 Mangalabag, Cuttack – 753001  
 📞 +91 7008512773
 
 ---
 
-*Built for Dr. Sandeep K. Sahu – MBBS, MD, DM (Endocrinology)*
+*Built for Dr. Sandeep Kumar Sahu – MBBS, MD, DM (Endocrinology)*

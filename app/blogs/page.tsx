@@ -4,9 +4,9 @@ import { BookOpen, Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { blogs } from "@/data/index";
 
 export const metadata: Metadata = {
-  title: "Health Blog | Endocrinology & Diabetes Education | Dr. Sandeep K. Sahu",
+  title: "Health Blog | Endocrinology & Diabetes Education | Dr. Sandeep Kumar Sahu",
   description:
-    "Expert articles on diabetes, thyroid health, PCOS, obesity and hormonal disorders by Dr. Sandeep K. Sahu — Endocrinologist in Cuttack.",
+    "Expert articles on diabetes, thyroid health, PCOS, obesity and hormonal disorders by Dr. Sandeep Kumar Sahu — Endocrinologist in Cuttack.",
 };
 
 const categories = ["All", "Diabetes", "Thyroid", "PCOS", "Obesity", "General"];
@@ -47,8 +47,8 @@ export default function BlogsPage() {
             <div className="page-hero-image">
               <div className="page-hero-image-glow" />
               <img
-                src="/images/hero-blogs.jpg"
-                alt="Health & Wellness Blog — Dr. Sandeep K. Sahu"
+                src="/images/hero-blogs.webp"
+                alt="Health & Wellness Blog — Dr. Sandeep Kumar Sahu"
                 className="relative z-10"
               />
             </div>
@@ -69,7 +69,7 @@ export default function BlogsPage() {
                 className="card p-0 overflow-hidden flex flex-col md:flex-row group"
               >
                 <div className="md:w-2/5 h-56 md:h-auto bg-gradient-to-br from-primary-100 to-primary-50 flex items-center justify-center relative overflow-hidden shrink-0">
-                  <img src="/images/hero-blogs.jpg" alt={featured.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={featured.image || "/images/hero-blogs.webp"} alt={featured.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60" />
                   <span className={`absolute top-4 left-4 z-10 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm backdrop-blur-md ${categoryColors[featured.category] || "bg-white/90 text-slate-700"}`}>
                     {featured.category}
@@ -109,7 +109,7 @@ export default function BlogsPage() {
             {blogs.map((blog) => (
               <Link key={blog.slug} href={`/blogs/${blog.slug}`} className="blog-card group">
                 <div className="h-44 bg-gradient-to-br from-slate-50 to-primary-50 flex items-center justify-center relative overflow-hidden">
-                  <img src="/images/hero-patient.png" alt={blog.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={blog.image || "/images/hero-patient.webp"} alt={blog.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-40 mix-blend-multiply" />
                   <span className={`absolute top-3 left-3 z-10 text-xs font-bold px-2.5 py-1 rounded-full shadow-sm backdrop-blur-md ${categoryColors[blog.category] || "bg-white/90 text-slate-700"}`}>
                     {blog.category}
