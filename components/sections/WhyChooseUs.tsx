@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
               </p>
               
               <a
-                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-blue hover:-translate-y-1 hover:shadow-xl group"

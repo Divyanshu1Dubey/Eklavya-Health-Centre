@@ -36,7 +36,7 @@ export default function CTASection() {
 
         <div className="flex flex-wrap gap-4 justify-center mb-10">
           <a
-            href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+            href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-[#25D366] text-white font-bold px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 text-base hover:bg-[#20bd5a]"

@@ -55,7 +55,7 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-10">
               <a 
-                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

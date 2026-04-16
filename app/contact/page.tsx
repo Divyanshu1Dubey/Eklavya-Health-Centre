@@ -27,7 +27,7 @@ export default function ContactPage() {
     
     if (!form.name || !form.phone) return;
 
-    const messagePayload = `Hello, I want to book an appointment.
+    const messagePayload = `Hello, I want to book an appointment for DR. Sandeep K Sahu.
 
 Name: ${form.name}
 Phone: ${form.phone}
@@ -94,7 +94,7 @@ Details: ${form.message || "None"}`;
                   <p className="text-sm text-slate-600">Skip the form and chat with our front desk instantly.</p>
                 </div>
                 <a 
-                  href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+                  href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto flex justify-center items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-3 px-6 rounded-full shadow-sm hover:shadow-md transition-all whitespace-nowrap"

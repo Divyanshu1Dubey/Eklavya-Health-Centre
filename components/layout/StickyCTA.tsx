@@ -48,7 +48,7 @@ export default function StickyCTA() {
 
       {/* Premium WhatsApp Booking */}
       <a
-        href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+        href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-gradient-to-tr from-[#128C7E] to-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_40px_rgb(37,211,102,0.6)] focus:outline-none z-50 group relative border border-[#25D366]/50"

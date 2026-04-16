@@ -27,7 +27,7 @@ export default function Footer() {
                 Call Now
               </a>
               <a
-                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+                href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#20bd5a] transition-colors text-sm shadow-md"
@@ -46,14 +46,12 @@ export default function Footer() {
             {/* About */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-600 to-accent-500 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">SS</span>
-                </div>
+                <img src="/logo.svg" alt="Logo" className="h-10 w-auto" />
                 <div>
                   <p className="font-bold text-white text-sm leading-tight font-heading">
                     Dr. Sandeep Kumar Sahu
                   </p>
-                  <p className="text-primary-300 text-xs leading-tight">Endocrinologist</p>
+                  <p className="text-primary-300 text-xs leading-tight mt-0.5">Endocrinologist</p>
                 </div>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed mb-5">

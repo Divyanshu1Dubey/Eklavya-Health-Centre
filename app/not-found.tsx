@@ -16,7 +16,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <a
-            href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+            href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"

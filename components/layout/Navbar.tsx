@@ -47,14 +47,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 md:gap-4 group z-50">
             {/* You can replace this whole block with an actual <img src="/logo.png" /> */}
             <div className={`flex items-center transition-all ${scrolled ? 'scale-90' : 'scale-100'}`}>
-              <div
-                className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-gradient-animated flex items-center justify-center shadow-blue logo-bg relative overflow-hidden group-hover:shadow-teal transition-all"
-                style={{ background: 'linear-gradient(-45deg, #1B6CA8 0%, #0BA898 50%, #1B6CA8 100%)' }}
-              >
-                <span className="text-white font-bold text-sm md:text-base relative z-10">SAI</span>
-                {/* Decorative glow */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
+              <img src="/logo.svg" alt="SAI SHREE POLYCLINIC Logo" className="h-10 w-auto md:h-11 rounded-xl shadow-sm" />
             </div>
             <div className="flex flex-col">
               <p className="text-[13px] sm:text-[15px] font-extrabold text-slate-800 leading-tight font-heading tracking-tight whitespace-nowrap">
@@ -97,7 +90,7 @@ export default function Navbar() {
             </div>
 
             <a
-              href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+              href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-gradient-animated text-white text-[13px] font-bold px-6 py-2.5 rounded-full transition-all duration-300 shadow-blue hover:-translate-y-0.5 group"
@@ -148,7 +141,7 @@ export default function Navbar() {
               ))}
               <div className="pt-2 mt-1 border-t border-slate-100">
                 <a
-                  href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment.")}`}
+                  href={`https://wa.me/917008512773?text=${encodeURIComponent("Hello, I want to book an appointment for DR. Sandeep K Sahu.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-animated text-white font-bold py-3.5 rounded-xl shadow-blue active:scale-[0.98] transition-transform"
