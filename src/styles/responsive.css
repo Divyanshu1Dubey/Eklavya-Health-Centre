@@ -1,0 +1,121 @@
+/* Adjust clone navbar offset on large screens and up */
+@media (min-width: 992px) {
+  .navbar-clone {
+    top: 0 !important;
+  }
+}
+
+/* ----------- MD & Down (<992px) ----------- */
+@media (max-width: 992px) {
+  .offcanvas {
+    background: #83c5c8 !important;
+  }
+
+  .navbar-expand-lg .navbar-brand {
+    padding: 0 !important;
+  }
+
+  .display-3 {
+    font-size: clamp(2.1rem, 5.8vw, 3.1rem) !important;
+  }
+
+  .display-5 {
+    font-size: clamp(1.8rem, 4.5vw, 2.5rem) !important;
+  }
+}
+
+/* ----------- SM Devices (<768px) ----------- */
+@media (max-width: 768px) {
+  .topbar {
+    display: none !important;
+  }
+
+  .navbar-clone {
+    top: 0 !important;
+  }
+
+  .sticky-wrapper {
+    position: relative !important;
+  }
+
+  /* Hero section responsive styles */
+  .hero-text {
+    align-items: end;
+    justify-content: center;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 20px !important;
+  }
+
+  .hero-text h3 {
+    font-size: 18px !important;
+  }
+
+  .hero-text p {
+    font-size: 16px !important;
+  }
+
+  .hero-text .btn {
+    padding: 8px !important;
+    margin-bottom: 10px;
+  }
+
+  img,
+  svg {
+    vertical-align: bottom !important;
+  }
+
+  .hero-panel,
+  .brand-surface,
+  .clean-card,
+  .subtle-card {
+    border-radius: 18px !important;
+  }
+}
+
+/* ----------- XS Devices (<600px) ----------- */
+@media (max-width: 600px) {
+  .hero-p {
+    font-size: 18px !important;
+  }
+}
+
+/* ----------- XS Devices (<576px) ----------- */
+@media (max-width: 576px) {
+  .display-3 {
+    font-size: 1.95rem !important;
+    line-height: 1.23 !important;
+  }
+
+  .display-5 {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .journey-meta {
+    gap: 0.45rem;
+  }
+
+  .journey-meta span {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.62rem;
+  }
+
+  .service-media {
+    height: 176px;
+  }
+
+  .service-icon-chip {
+    width: 58px;
+    height: 58px;
+    left: 20px;
+    bottom: -12px;
+  }
+
+  .service-description {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,325 @@
+/* === Color Variables === */
+.text-main {
+  color: #10324a !important;
+}
+.text-main-light {
+  color: #2a8c85 !important;
+}
+.text-second {
+  color: #d9a441 !important;
+}
+.mail a {
+  color: #554f4f !important;
+}
+.mail a:hover {
+  color: #3d3dca !important;
+}
+.secondary-fill {
+  fill: #b41e1e;
+}
+
+/* === Background Colors === */
+.bg-primary-dark {
+  background: linear-gradient(135deg, #10324a, #2a8c85) !important;
+}
+.primary-bg-soft {
+  background-color: #e8f6f4 !important;
+}
+.primary-bg {
+  background: #2a8c85 !important;
+}
+.secondary-bg {
+  background: #d9a441 !important;
+}
+.bg-lights {
+  background-color: #f7f7f7 !important;
+}
+.bg-secondary-lt {
+  background-color: #d0e0ee;
+}
+.bg-grays {
+  background-color: #e0e7ef !important;
+}
+.hero-bg {
+  background-color: hsla(0, 0%, 6%, 0.5);
+}
+
+/* === Typography === */
+h1 {
+  font-size: clamp(2.4rem, 4vw, 4rem) !important;
+}
+h1,
+section h2 {
+  font-display: swap;
+  font-weight: bolder;
+  letter-spacing: 0;
+}
+section h2,
+section h1 {
+  color: #10324a !important;
+  font-size: clamp(2rem, 3vw, 3.25rem) !important;
+}
+h1 span,
+section h2 span {
+  color: #2a8c85;
+  font-display: swap;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+.widget-title {
+  position: relative;
+  z-index: 2;
+  color: #fff !important;
+}
+
+/* === Navigation === */
+.nav-link:hover,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav {
+  color: #2a8c85 !important;
+  --bs-nav-link-hover-color: #2a8c85 !important;
+}
+.sticky-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.is-sticky .navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .navbar-collapse {
+  width: auto !important;
+}
+
+/* === Cards === */
+
+.cards {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s ease-in-out;
+}
+.cards:before {
+  content: '';
+  background: linear-gradient(135deg, #10324a, #2a8c85);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: top 0.8s ease-out, opacity 0.8s ease-in-out;
+  z-index: -1;
+}
+.cards:hover:before {
+  top: 0;
+}
+.cards:hover h3,
+.cards:hover p {
+  color: #fff !important;
+}
+.cards:hover img {
+  background-color: #fff !important;
+}
+.cards img {
+  transition: background-color 0.8s ease-out;
+}
+
+/* === General Card === */
+.card {
+  transition: all 0.6s;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* === Swiper === */
+.swiper-hero:before,
+.gloader {
+  display: none;
+}
+
+/* === Utility Classes === */
+
+.link h3:hover,
+.link:hover h4 {
+  color: #b41e1e !important;
+}
+
+/* === Hero Section === */
+
+.hero-img {
+  background-color: #000;
+}
+.hero-img.bg-loaded {
+  background-image: url(/img/dr-akash-main.jpeg);
+  transition: background-image 0.3s ease-in-out;
+}
+.hero-p {
+  font-size: 23px !important;
+}
+
+/* === About & Choose Us Sections === */
+.about1-img {
+  width: 535px !important;
+  height: 552px !important;
+}
+
+/* === Animations === */
+.animate {
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+.row.animate {
+  animation: slideInDown 0.9s ease both;
+}
+
+/* === Topbar === */
+.topbar {
+  display: block;
+}
+
+.topbar-shell {
+  padding-top: 0.5rem;
+}
+
+.topbar-strip {
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 40px rgba(16, 50, 74, 0.14);
+}
+
+.topbar-info,
+.topbar-actions {
+  min-width: 0;
+}
+
+.topbar-text-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  font-size: 0.92rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.topbar-text-pill strong {
+  font-weight: 700;
+}
+
+.topbar-text-pill i {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+.topbar-action-btn {
+  min-height: 44px;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+@media (max-width: 991px) {
+  .topbar-strip {
+    border-radius: 18px;
+  }
+
+  .topbar-text-pill {
+    white-space: normal;
+  }
+
+  .topbar-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.section-shell {
+  border-radius: 28px;
+  border: 1px solid rgba(16, 50, 74, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 251, 0.96));
+  box-shadow: 0 22px 54px rgba(16, 50, 74, 0.08);
+}
+
+.contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.contact-chip strong {
+  font-weight: 700;
+}
+
+.footer-surface {
+  background: linear-gradient(135deg, #0e2d43 0%, #133e57 48%, #1f6e68 100%) !important;
+  position: relative;
+}
+
+.footer-surface:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(217, 164, 65, 0.14), transparent 28%), radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 32%);
+  pointer-events: none;
+}
+
+.footer-surface .widget,
+.footer-surface .widget-title,
+.footer-surface a,
+.footer-surface p,
+.footer-surface li {
+  color: #fff !important;
+}
+
+.footer-map-card {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 46px rgba(7, 17, 27, 0.18);
+}
+
+.footer-map-card iframe,
+.map-frame iframe {
+  display: block;
+  width: 100%;
+}
+
+.map-frame {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(16, 50, 74, 0.08);
+  box-shadow: 0 18px 44px rgba(16, 50, 74, 0.1);
+}
+
+.premium-form .form-control,
+.premium-form .form-select,
+.premium-form textarea {
+  border-radius: 16px;
+  border: 1px solid rgba(16, 50, 74, 0.12);
+  background: rgba(255, 255, 255, 0.94);
+  padding: 0.85rem 1rem;
+  box-shadow: none;
+}
+
+.premium-form .form-control:focus,
+.premium-form .form-select:focus,
+.premium-form textarea:focus {
+  border-color: rgba(42, 140, 133, 0.42);
+  box-shadow: 0 0 0 0.2rem rgba(42, 140, 133, 0.12);
+}

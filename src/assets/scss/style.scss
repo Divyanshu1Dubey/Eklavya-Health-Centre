@@ -1,0 +1,30 @@
+
+
+// Bootstrap Functions
+@import 'bootstrap/scss/functions';
+
+// Theme colors
+@import 'theme-colors';
+
+
+// Theme variables
+@import 'variables';
+
+// Bootstrap configuration
+@import 'bootstrap/scss/variables';
+// @import 'bootstrap/scss/variables-dark'; // Removed: file doesn't exist in Bootstrap 5.3.0
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+// Theme configuration
+@import 'theme/functions';
+@import 'theme/mixins';
+@import 'theme/utilities';
+@import 'theme/root';
+
+// Bootstrap layout & components
+@import 'bootstrap';
+
+// Theme layout & components
+@import 'theme/theme';

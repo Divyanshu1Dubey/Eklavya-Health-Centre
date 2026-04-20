@@ -1,244 +1,172 @@
-# Dr. Sandeep Kumar Sahu – Endocrinologist Portfolio Website
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Free Next.js template for orthopedic doctors, clinics, medical websites – Built with Bootstrap." />
+  <meta name="keywords" content="Next.js healthcare template, orthopedic website design, doctor portfolio theme, responsive medical website, React clinic template, Bootstrap 5 UI kit, fast-loading healthcare site, SEO optimized medical template, modern clinic website, free orthopedic template" />
+  <meta name="author" content="Themixly Web" />
+  <link rel="canonical" href="https://themixly.com/preview/563/orthopaedic-doctor-react-nextjs-template" />
+</head>
+<body>
+<h1>OrthoCare – Next.js Healthcare Template for Orthopaedic Doctors & Clinics</h1>
 
-A premium, high-converting multi-page doctor portfolio website built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**.
+<h2>Introduction</h2>
+<p>OrthoCare is a free, modern, and responsive Next.js & React template tailored for orthopaedic doctors, medical specialists, and healthcare clinics. Built with React 18+, Next.js 15+, Bootstrap 5, and SCSS, this multi-page template is optimized for speed, SEO, and user experience — perfect for professional medical websites looking to create an impactful online presence.</p>
 
----
+<h2>🔗 Live Preview & Download</h2>
+<ul>
+  <li>🚀 <a href="https://themixly.com/preview/563/orthopaedic-doctor-react-nextjs-template/" target="_blank"> Live Demo – OrthoCare Template</a></li>
+  <li>📦 <a href="https://github.com/themixlyweb/nextjs-orthopaedic-website-template" target="_blank"> Download from GitHub (Free)</a></li>
+</ul>
 
-## 🚀 Quick Start
+<h2>🧩 Feature Comparison: GitHub Free vs Themixly Pro</h2>
+<table>
+  <thead>
+    <tr><th>Feature</th><th>GitHub Free Version</th><th>Themixly Full Version</th></tr>
+  </thead>
+   <tbody>
+    <tr><td>Next.js 15+, React 18+</td><td>✅</td><td>✅</td></tr>
+    <tr><td>SCSS, Bootstrap 5.x</td><td>✅</td><td>✅</td></tr>
+    <tr><td>Multi-page Layout</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Custom Components</td><td>Limited</td><td>Full UI Kit Included</td></tr>
+    <tr><td>Doctor & Orthopaedic Focused Layout</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Doctor Profile Page</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Treatment Individual Pages</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Disease Page</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Blog & News Pages</td><td>❌</td><td>✅</td></tr>
+    <tr><td>Contact Forms & Tele Consultation Page</td><td>❌</td><td>✅</td></tr>
+    <tr><td>SEO Optimized Pages</td><td>Basic</td><td>Advanced</td></tr>
+    <tr><td>Responsive for All Devices</td><td>✅</td><td>✅</td></tr>
+    <tr><td>Lifetime Updates</td><td>Community Only</td><td>Lifetime Free Updates</td></tr>
+    <tr><td>Licensing</td><td>MIT (Free)</td><td>Commercial Use Allowed</td></tr>
+    <tr><td>Premium Support</td><td>Community via GitHub</td><td>1:1 Support via Email</td></tr>
+  </tbody>
+</table>
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+<h3>👉 <a href="https://themixly.com/themes/orthopaedic-doctor-react-nextjs-template/" target="_blank"> Buy Full Version – Pro Template on Themixly</a></h3>
 
-### Installation
+<h2>🧠 Template Use Cases</h2>
+<p>OrthoCare is ideal for:</p>
+<ul>
+  <li>Orthopaedic doctors and specialists</li>
+  <li>Private clinics or multi-specialty hospitals</li>
+  <li>Medical professionals and doctor portfolios</li>
+  <li>Joint care and physiotherapy centers</li>
+  <li>Health and wellness service websites</li>
+  <li>Appointment or service-focused medical sites</li>
+</ul>
 
-```bash
-# Clone or extract this project
-cd doctor-portfolio
+<h2>💡 Key Features</h2>
+<ul>
+  <li>Built with React 18+, Next.js 15+, and Bootstrap 5.x</li>
+  <li>Clean UI, modular components, and developer-friendly structure</li>
+  <li>Responsive layout for desktop, tablet, and mobile</li>
+  <li>Basic homepage, services, about, and contact sections</li>
+  <li>SEO-ready structure with optimized tags</li>
+  <li>SCSS styling for easy customization</li>
+  <li>MIT license for personal and educational use</li>
+</ul>
 
-# Install dependencies
-npm install
+<h2>📸 Screenshots</h2>
+<figure>
+  <figcaption>Includes pages like Home, About Us, Treatment Highlights, Doctor Profiles, Blog & News, Tele Consultation and Contact Page.
+</figcaption><br/>
+  <img src="https://themixly.com/wp-content/uploads/2025/06/OrthoCare-Product-Detail-Image-3.png" alt="OrthoCare– Multi-Page Preview">
+</figure>
 
-# Start development server
-npm run dev
-```
+<figure>
+  <figcaption>Built with a mobile-first layout, the template works seamlessly across desktop, tablet, and mobile devices.</figcaption><br/>
+  <img src="https://themixly.com/wp-content/uploads/2025/06/OrthoCare-Product-Detail-Image-1-scaled.png" alt="OrthoCare – Fully Responsive on All Devices">
+</figure>
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+<h2>✨ Why Choose OrthoCare?</h2>
+<ul>
+  <li>Designed specifically for orthopaedic professionals and healthcare clinics</li>
+  <li>Built using modern tools: Next.js App Router, SCSS, and Bootstrap 5</li>
+  <li>Clean codebase that’s easy to customize, scale, and deploy</li>
+  <li>Fully responsive – works great on all screen sizes</li>
+  <li>SEO-friendly structure helps improve search visibility</li>
+  <li>Free version available, with a seamless upgrade path to Pro</li>
+</ul>
 
----
+<h2>🛠️ Tech Stack</h2>
+<ul>
+  <li>⚛️ React 18+</li>
+  <li>🌐 Next.js 15+ (App Router)</li>
+  <li>🎨 Bootstrap 5.x</li>
+  <li>💅 SCSS Modules</li>
+  <li>🧱 HTML + JSX</li>
+  <li>📦 Ready for deployment (Netlify, Vercel, etc.)</li>
+</ul>
 
-## 🏗️ Project Structure
+<h2>🚀 Getting Started</h2>
+<pre><code>npm install       # Install dependencies
+npm run dev       # Start development server
+npm run build     # Build for production</code></pre>
 
-```
-doctor-portfolio/
-├── app/                          # Next.js App Router pages
-│   ├── layout.tsx                # Root layout (Navbar + Footer + StickyCTA)
-│   ├── page.tsx                  # Home page
-│   ├── globals.css               # Global styles, animations, glassmorphism
-│   ├── about/page.tsx            # About doctor page
-│   ├── services/
-│   │   ├── page.tsx              # Services listing
-│   │   └── [slug]/page.tsx       # Individual service detail
-│   ├── blogs/
-│   │   ├── page.tsx              # Blog listing
-│   │   └── [slug]/page.tsx       # Blog article detail
-│   ├── patient-corner/page.tsx   # FAQs + resources
-│   ├── contact/page.tsx          # Contact form + clinic info
-│   ├── sitemap.ts                # Auto-generated sitemap
-│   └── robots.ts                 # Robots.txt
-│
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx            # Sticky, responsive navbar
-│   │   ├── Footer.tsx            # Full footer with links
-│   │   └── StickyCTA.tsx         # Floating call/book buttons
-│   └── sections/
-│       ├── HeroSection.tsx       # Home hero with doctor card
-│       ├── StatsSection.tsx      # Key statistics bar
-│       ├── AboutPreview.tsx      # Home about preview
-│       ├── ServicesSection.tsx   # Services grid
-│       ├── WhyChooseUs.tsx       # Trust signals
-│       ├── TestimonialsSection.tsx
-│       ├── BlogPreview.tsx       # Latest blog posts
-│       └── CTASection.tsx        # Call to action
-│
-├── data/
-│   ├── doctor.ts                 # Doctor profile data
-│   ├── services.ts               # All 6 services with full content
-│   └── index.ts                  # Testimonials, blogs, FAQs, resources
-│
-├── public/images/                # Place your images here
-│   ├── doctor/                   # dr-sahu.jpg etc.
-│   ├── clinic/
-│   ├── services/
-│   └── blogs/
-│
-├── tailwind.config.ts            # Tailwind + custom design tokens
-└── package.json
-```
+<h3>📁 Folder Structure</h3>
 
----
+<pre><code>OrthoCare/
+├── pages/
+├── public/
+│   ├── images/
+├── src/
+│   ├── assets/
+│   │   └── scss/
+│   ├── components/
+│   ├── data/
+│   └── styles/
+├── README.md
+└── package.json</code></pre>
 
-## 📄 Pages
+<h2>📦 What’s Included in the Free GitHub Version?</h2>
+<p>The GitHub version includes only essential components to help you get started:</p>
+<ul>
+  <li>✅ Homepage layout with Hero, About, and Services sections</li>
+  <li>✅ Header with navigation</li>
+  <li>✅ Footer with contact and social links</li>
+  <li>✅ SCSS styling and Bootstrap 5 components</li>
+  <li>✅ Mobile-first, responsive layout</li>
+  <li>✅ Responsive layout using Bootstrap 5</li>
+  <li>✅ SCSS styling</li>
+  <li>✅ React, JSX, and HTML structure</li>
+</ul>
+<p>🔒 Full features like multi-page layout, appointment form, treatment details, and more are available in the premium version.</p>
+<p>👉 <a href="https://themixly.com/themes/orthopaedic-doctor-react-nextjs-template/" target="_blank">Download the Full Template on Themixly →</a></p>
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home – Hero, About preview, Services, Why Us, Testimonials, Blog preview, CTA |
-| `/about` | Full doctor biography, qualifications timeline, expertise |
-| `/services` | Services grid with all 6 specializations |
-| `/services/[slug]` | Individual service: overview, symptoms, treatments, CTA |
-| `/blogs` | Blog listing with featured post |
-| `/blogs/[slug]` | Full blog article with author card and related posts |
-| `/patient-corner` | FAQs accordion, educational resources, visit preparation |
-| `/contact` | Appointment form, clinic details, map embed, call CTA |
+<h2>📝 License</h2>
+<p>This template is licensed under the <a href="https://github.com/themixlyweb/nextjs-orthopaedic-website-template/blob/main/LICENSE" target="_blank">MIT License</a>.<br>
+You may use this version for personal and educational purposes.<br>
 
----
+<h2>📢 Support & Contributions</h2>
+<ul>
+  <li>⭐ Star this repo if you find it useful</li>
+  <li>Share with your dev network or healthcare business owners</li>
+  <li>Want full features & commercial license?</li>
+  <li>👉  Access the Full Template on <a href="https://themixly.com/" target="_blank">Themixly</a></li>
+</ul>
 
-## 🖼️ Adding Doctor Photos
+<h2>🔗 Other Templates You May Like</h2>
+<ul>
+  <li>🚚 <a href="https://themixly.com/themes/freight-forwarding-react-nextjs-template/" target="_blank">FreightEdge – Freight Forwarding Website Template</a></li>
+  <li>🎉 <a href="https://themixly.com/themes/event-planner-react-one-page-template/" target="_blank">Eventory – Event Planner Website Template</a></li>
+</ul>
 
-Place images in `/public/images/`:
+<p>Explore more templates → <a href="https://themixly.com/themes" target="_blank">Themixly Themes</a></p>
 
-1. **Doctor photo**: `/public/images/doctor/dr-sahu.jpg`
-   - Recommended: 800x1000px portrait
-   - Then uncomment the `<Image>` tag in `HeroSection.tsx` and `AboutPreview.tsx`
+<h2>🧾 Contact Us</h2>
+<p>
+  Need support or custom development?<br>
+  📩 <a href="https://themixly.com/contact-us/" target="_blank">Contact Themixly Team</a><br>
+  🔗 Follow us:
+  <a href="https://www.facebook.com/profile.php?id=61576748155161" target="_blank">Facebook</a> |
+  <a href="https://www.instagram.com/themixly/" target="_blank">Instagram</a>
+</p>
 
-2. **Blog images**: `/public/images/blogs/[blog-slug].jpg`
-   - Recommended: 1200x630px (16:9)
+<footer>
+  © 2025 Themixly. All rights reserved. | Built with ❤️ for developers & designers.
+</footer>
 
-3. **Clinic photos**: `/public/images/clinic/exterior.jpg`, `interior.jpg`
-
----
-
-## 🗺️ Google Maps Integration
-
-In `app/contact/page.tsx`, replace the map placeholder with:
-
-```jsx
-<iframe
-  src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL_HERE"
-  width="100%"
-  height="256"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-/>
-```
-
-Get embed URL from: Google Maps → Share → Embed a map
-
----
-
-## 📝 Updating Content
-
-All content is centralized in `/data/`:
-
-### Doctor Info (`data/doctor.ts`)
-```ts
-export const doctor = {
-  name: "Dr. Sandeep Kumar Sahu",
-  phone: "+91 7008512773",
-  address: "...",
-  // etc.
-};
-```
-
-### Services (`data/services.ts`)
-Add/edit services with full symptom lists, treatments, and key facts.
-
-### Blogs (`data/index.ts`)
-Add blog entries with slug, title, content, category, and metadata.
-
-### FAQs & Testimonials (`data/index.ts`)
-Edit the `faqs` and `testimonials` arrays.
-
----
-
-## 🎨 Design System
-
-### Colors
-- **Primary**: Blue `#1D6ECF` (trust, medical)
-- **Accent**: Teal `#0D9488` (health, vitality)
-- **Text**: Slate `#1E293B`
-- **Background**: Near-white `#FAFBFF`
-
-### Typography
-- **Headings**: Playfair Display (serif, premium)
-- **Body**: DM Sans (clean, readable)
-
-### Key CSS Classes
-```css
-.glass          /* Glassmorphism card */
-.gradient-text  /* Blue gradient text */
-.card           /* Standard card with hover effect */
-.btn-primary    /* Blue pill button */
-.btn-secondary  /* Outlined pill button */
-.section-tag    /* Small labeled badge */
-.expertise-badge /* Skill pill */
-.stat-card      /* Statistics display card */
-.service-card   /* Service listing card */
-```
-
----
-
-## 📱 Mobile Features
-
-- Responsive at all breakpoints (mobile-first)
-- Hamburger menu with smooth slide animation
-- Quick-call button always visible on mobile
-- Floating CTA buttons (Call Now + Book Appointment)
-- Touch-friendly tap targets
-
----
-
-## ⚡ Performance & SEO
-
-- `next/image` optimized images (when configured)
-- Static page generation for services and blogs
-- Semantic HTML throughout
-- Meta tags per page
-- Auto-generated XML sitemap at `/sitemap.xml`
-- Robots.txt at `/robots.txt`
-- Open Graph tags for social sharing
-
----
-
-## 🔧 Customization
-
-### Add a New Service
-1. Add entry to `data/services.ts`
-2. Route auto-generates via `generateStaticParams()`
-
-### Add a New Blog Post
-1. Add entry to `data/index.ts` blogs array
-2. Route auto-generates via `generateStaticParams()`
-
-### Change Phone Number / Address
-Update `data/doctor.ts` — it propagates everywhere automatically.
-
----
-
-## 📦 Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-Or deploy to Vercel:
-```bash
-npx vercel
-```
-
----
-
-## 📞 Clinic Contact
-
-**SAI SHREE POLYCLINIC**  
-Near Shreema Hospital, Ring Road  
-Mangalabag, Cuttack – 753001  
-📞 +91 7008512773
-
----
-
-*Built for Dr. Sandeep Kumar Sahu – MBBS, MD, DM (Endocrinology)*
+</body>
+</html>

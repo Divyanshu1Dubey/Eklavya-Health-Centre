@@ -1,14 +1,14 @@
 // data/doctor.ts
 export const doctor = {
-  name: "Dr. Sandeep Kumar Sahu",
-  shortName: "Dr. Sadeep Sahu",
+  name: "Dr. Akash Tamrakar",
+  shortName: "Dr. Akash Tamrakar",
   title: "Endocrinologist",
   qualifications: "MBBS, MD, DM (Endocrinology)",
   institution: "S.C.B Medical College, Cuttack",
   tagline: "Early diagnosis and preserving quality of life.",
-  bio: "Dr. Sandeep Kumar Sahu is a highly experienced Endocrinologist based in Cuttack, Odisha. With extensive training from S.C.B Medical College and a DM in Endocrinology, he specializes in the comprehensive management of hormonal disorders, diabetes, thyroid conditions, and metabolic diseases.",
+  bio: "Dr. Akash Tamrakar is a highly experienced Endocrinologist based in Cuttack, Odisha. With extensive training from S.C.B Medical College and a DM in Endocrinology, he specializes in the comprehensive management of hormonal disorders, diabetes, thyroid conditions, and metabolic diseases.",
   fullBio: [
-    "Dr. Sandeep Kumar Sahu completed his MBBS and MD from the prestigious S.C.B Medical College, Cuttack — one of Odisha's premier medical institutions. He then pursued his DM (Doctorate of Medicine) in Endocrinology, gaining specialized expertise in the complex field of hormonal and metabolic disorders.",
+    "Dr. Akash Tamrakar completed his MBBS and MD from the prestigious S.C.B Medical College, Cuttack — one of Odisha's premier medical institutions. He then pursued his DM (Doctorate of Medicine) in Endocrinology, gaining specialized expertise in the complex field of hormonal and metabolic disorders.",
     "With years of clinical experience, Dr. Sahu has helped thousands of patients in Cuttack and the surrounding regions manage chronic conditions like diabetes, thyroid disorders, PCOS, obesity, and growth abnormalities. His patient-centered approach combines the latest medical advances with compassionate care.",
     "Dr. Sahu believes that early diagnosis is the cornerstone of effective treatment. He is committed to educating his patients about their conditions and empowering them to lead healthier, fuller lives despite chronic illness."
   ],
@@ -29,7 +29,7 @@ export const doctor = {
   address: "Near Shreema Hospital, Ring Road, Mangalabag, Cuttack – 753001",
   phone: "+91 7008512773",
   email: "drsadeepsahu@saishreehealthcare.com",
-  hours: "Mon – Sat: 10:00 AM – 2:00 PM & 5:00 PM – 8:00 PM",
+  hours: "Mon, Tue, Thu, Fri, Sat: 10:00 AM - 5:00 PM | Wed & Sun: 9:00 AM - 11:30 AM",
   stats: [
     { label: "Years Experience", value: "10+", icon: "award" },
     { label: "Patients Treated", value: "5000+", icon: "users" },

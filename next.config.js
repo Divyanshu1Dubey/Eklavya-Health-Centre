@@ -1,15 +1,33 @@
-/** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
+  reactStrictMode: false,
+  outputFileTracingRoot: path.join(__dirname),
+  sassOptions: {
+    quietDeps: true,
+    silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'legacy-js-api']
+  },
+  webpack: (config, { dev }) => {
+    if (dev) {
+      // Avoid flaky packfile cache rename/stat errors on Windows dev sessions.
+      config.cache = {
+        type: 'memory'
+      };
+    }
+
+    return config;
+  },
   images: {
+    unoptimized: true,
     remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'via.placeholder.com' }
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
-    formats: ['image/avif', 'image/webp'],
-  },
-  experimental: {
-    optimizeCss: true,
-  },
+  }
 };
 
 module.exports = nextConfig;

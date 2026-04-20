@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "ignoreDeprecations": "6.0",
+      "paths": {
+        "components/*": ["components/*"],
+        "hooks/*": ["hooks/*"],
+        "theme/*": ["theme/*"],
+        "styles/*": ["styles/*"],
+        "plugins/*": ["plugins/*"],
+        "assets/*": ["assets/*"]
+      }
+    },
+    "include": ["src"]
+  }
+  
