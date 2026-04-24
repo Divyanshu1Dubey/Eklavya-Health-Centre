@@ -21,7 +21,7 @@ export default class EklavyaHealthcare extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
           {/* Preload Key Hero Image for Performance */}
-          <link rel="preload" href="/img/dr-akash-main.jpeg" as="image" />
+          <link rel="preload" href="/img/dr-akash-profile.png" as="image" />
         </Head>
 
         <body>

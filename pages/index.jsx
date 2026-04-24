@@ -17,9 +17,11 @@ import NextLink from 'components/NextLink';
 import PageProgress from 'components/PageProgress';
 import Cards from 'components/Cards';
 import Seo from 'components/Seo';
-import { careHighlights, faqs, siteInfo, testimonials, treatments, trustPoints } from 'data';
+import IntroShowcase from 'components/IntroShowcase';
+import { useLanguage } from '../src/context/LanguageContext';
 
 const Home = () => {
+  const { data: { careHighlights, faqs, siteInfo, testimonials, treatments, trustPoints }, t } = useLanguage();
   const homeJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -72,23 +74,25 @@ const Home = () => {
       />
 
       <main className="content-wrapper overflow-hidden">
+        <IntroShowcase />
+
         <section className="wrapper pt-6 pb-10 pb-md-14">
           <div className="container">
             <div className="hero-panel p-6 p-md-8 p-lg-10 text-white" data-reveal="zoom">
               <div className="row align-items-center gy-8">
                 <div className="col-lg-7 position-relative" data-reveal="left" style={{ '--reveal-delay': '80ms', zIndex: 2 }}>
                   <span className="section-badge mb-4">
-                    Dr. Akash Tamrakar | Jhansi & Gursarai
+                    {t.doctorLocationSubtitle}
                   </span>
                   <h1 className="display-3 text-white mb-4">
-                    Dr. Akash Tamrakar for physician care, chest care, and long-term recovery support.
+                    {t.doctorMainHeroTitle}
                   </h1>
                   <p className="lead text-white text-opacity-85 mb-4">
-                    Dr. Akash Tamrakar helps families with diabetes, thyroid disorders, heart and chest issues, blood pressure concerns, and chronic disease follow-up with clear and evidence-based care.
+                    {t.doctorMainHeroDescription}
                   </p>
                   <div className="d-flex flex-wrap gap-3 mb-5">
-                    <NextLink href="/contact" title="Book Appointment" className="btn btn-power" />
-                    <NextLink href={`https://wa.me/${siteInfo.whatsapp}`} title="WhatsApp Clinic" className="btn btn-teal" target="_blank" />
+                    <NextLink href="/contact" title={t.bookAppointment} className="btn btn-power" />
+                    <NextLink href={`https://wa.me/${siteInfo.whatsapp}`} title={t.whatsappClinic} className="btn btn-whatsapp" target="_blank" />
                   </div>
                   <div className="d-flex flex-wrap">
                     {trustPoints.map((point) => (
@@ -111,7 +115,7 @@ const Home = () => {
                     />
                     <div className="mt-4 p-3 p-md-4 bg-white rounded-4 text-dark-blue">
                       <p className="mb-1 fw-bold text-teal">{siteInfo.doctorName}</p>
-                      <p className="mb-0">{siteInfo.role} focused on chronic disease control, preventive care, and practical follow-up for families across Jhansi and nearby towns.</p>
+                      <p className="mb-0">{t.doctorBioCard}</p>
                     </div>
                   </div>
                 </div>
@@ -126,41 +130,41 @@ const Home = () => {
               <div className="col-md-6 col-xl-3" data-reveal="zoom" style={{ '--reveal-delay': '20ms' }}>
                 <div className="clean-card h-100 text-center">
                   <ShieldCheck className="text-teal mb-3" size={28} aria-hidden="true" />
-                  <h3 className="h5 mb-2">Trusted Physician Care</h3>
-                  <p className="mb-0">Known among families searching for the best doctor in Jhansi and nearby areas.</p>
+                  <h3 className="h5 mb-2">{t.pillar1Title}</h3>
+                  <p className="mb-0">{t.pillar1Desc}</p>
                 </div>
               </div>
               <div className="col-md-6 col-xl-3" data-reveal="zoom" style={{ '--reveal-delay': '90ms' }}>
                 <div className="clean-card h-100 text-center">
                   <Activity className="text-teal mb-3" size={28} aria-hidden="true" />
-                  <h3 className="h5 mb-2">Multi-condition Expertise</h3>
-                  <p className="mb-0">Focused diagnosis and treatment for diabetes, thyroid, chest, heart, and BP disorders.</p>
+                  <h3 className="h5 mb-2">{t.pillar2Title}</h3>
+                  <p className="mb-0">{t.pillar2Desc}</p>
                 </div>
               </div>
               <div className="col-md-6 col-xl-3" data-reveal="zoom" style={{ '--reveal-delay': '160ms' }}>
                 <div className="clean-card h-100 text-center">
                   <MapPin className="text-teal mb-3" size={28} aria-hidden="true" />
-                  <h3 className="h5 mb-2">Jhansi and Gursarai Access</h3>
-                  <p className="mb-0">Conveniently located in Jhansi, with regular patients from Gursarai and nearby towns.</p>
+                  <h3 className="h5 mb-2">{t.pillar3Title}</h3>
+                  <p className="mb-0">{t.pillar3Desc}</p>
                 </div>
               </div>
               <div className="col-md-6 col-xl-3" data-reveal="zoom" style={{ '--reveal-delay': '230ms' }}>
                 <div className="clean-card h-100 text-center">
                   <CalendarCheck2 className="text-teal mb-3" size={28} aria-hidden="true" />
-                  <h3 className="h5 mb-2">Structured Follow-up</h3>
-                  <p className="mb-0">Clear treatment roadmap and follow-up planning for long-term medical stability.</p>
+                  <h3 className="h5 mb-2">{t.pillar4Title}</h3>
+                  <p className="mb-0">{t.pillar4Desc}</p>
                 </div>
               </div>
             </div>
 
             <div className="row align-items-center g-8">
               <div className="col-lg-5" data-reveal="left">
-                <span className="section-badge mb-3">Why patients visit Dr. Akash</span>
-                <h2 className="display-5 mb-4">Strong clinical judgement, calm communication, and consistent follow-up.</h2>
+                <span className="section-badge mb-3">{t.whyPatientsVisit}</span>
+                <h2 className="display-5 mb-4">{t.clinicalJudgement}</h2>
                 <p className="mb-4">
-                  Dr. Akash focuses on root-cause diagnosis and treatment plans patients can follow in daily life. This improves disease control and reduces confusion for long-term care.
+                  {t.rootCauseDiagnosis}
                 </p>
-                <NextLink href="/about" title="Learn about the doctor" className="btn btn-outline-primary rounded-pill" />
+                <NextLink href="/about" title={t.learnAboutDoctor} className="btn btn-outline-primary rounded-pill" />
               </div>
               <div className="col-lg-7" data-reveal="right" style={{ '--reveal-delay': '100ms' }}>
                 <div className="row g-4">
@@ -185,10 +189,10 @@ const Home = () => {
           <div className="container">
             <div className="d-flex flex-wrap justify-content-between align-items-end mb-6" data-reveal="left">
               <div>
-                <span className="section-badge mb-3">Core services</span>
-                <h2 className="display-5 mb-0">Specialized medical services for chronic disease control and stable recovery.</h2>
+                <span className="section-badge mb-3">{t.coreServicesTag}</span>
+                <h2 className="display-5 mb-0">{t.coreServicesTitle}</h2>
               </div>
-              <NextLink href="/treatments" title="View all treatments" className="btn btn-teal rounded-pill mt-4 mt-md-0" />
+              <NextLink href="/treatments" title={t.viewAllTreatments} className="btn btn-teal rounded-pill mt-4 mt-md-0" />
             </div>
             <Cards arr={treatments} />
           </div>
@@ -199,32 +203,32 @@ const Home = () => {
             <div className="row g-8 align-items-center">
               <div className="col-lg-6" data-reveal="left">
                 <div className="clean-card journey-card h-100">
-                  <span className="section-badge mb-3 bg-soft-purple-tint text-teal">Visit overview</span>
-                  <h2 className="display-5 mb-4">Simple care flow, clear follow-up, and fast appointment coordination.</h2>
+                  <span className="section-badge mb-3 bg-soft-purple-tint text-teal">{t.visitOverviewTag}</span>
+                  <h2 className="display-5 mb-4">{t.visitOverviewTitle}</h2>
                   <p className="mb-4">
-                    Patients can share their concerns, connect by phone or WhatsApp, and arrive with the right details already mapped out before the consultation begins.
+                    {t.visitOverviewDescription}
                   </p>
                   <div className="journey-meta mb-4">
-                    <span><Clock3 size={15} aria-hidden="true" />Structured consultation and follow-up</span>
-                    <span><PhoneCall size={15} aria-hidden="true" />Fast appointment response</span>
-                    <span><MapPin size={15} aria-hidden="true" />Patient-friendly clinic access</span>
+                    <span><Clock3 size={15} aria-hidden="true" />{t.visitMetaConsultation}</span>
+                    <span><PhoneCall size={15} aria-hidden="true" />{t.visitMetaAppointment}</span>
+                    <span><MapPin size={15} aria-hidden="true" />{t.visitMetaAccess}</span>
                   </div>
                   <div className="journey-note p-4 rounded-4">
-                    <p className="mb-2 fw-bold text-dark-blue">Before you visit</p>
+                    <p className="mb-2 fw-bold text-dark-blue">{t.beforeYouVisit}</p>
                     <p className="mb-0 text-dark-blue text-opacity-85">
-                      Keep previous reports, current medicines, and recent symptoms ready so the consultation starts with full context.
+                      {t.beforeYouVisitDesc}
                     </p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6" data-reveal="right" style={{ '--reveal-delay': '120ms' }}>
-                <span className="section-badge mb-3">Patient journey</span>
-                <h2 className="display-5 mb-4">From first consultation to follow-up, the process stays simple.</h2>
+                <span className="section-badge mb-3">{t.patientJourneyTag}</span>
+                <h2 className="display-5 mb-4">{t.patientJourneyTitle}</h2>
                 <ol className="icon-list bullet-bg bullet-soft-primary mb-0">
-                  <li><BadgeCheck size={16} aria-hidden="true" />Detailed consultation and symptom mapping</li>
-                  <li><Stethoscope size={16} aria-hidden="true" />Targeted clinical and lab investigations</li>
-                  <li><HeartPulse size={16} aria-hidden="true" />Medication, nutrition, and lifestyle optimization</li>
-                  <li><ShieldCheck size={16} aria-hidden="true" />Follow-up for sustained disease control</li>
+                  <li><BadgeCheck size={16} aria-hidden="true" />{t.journeyStep1}</li>
+                  <li><Stethoscope size={16} aria-hidden="true" />{t.journeyStep2}</li>
+                  <li><HeartPulse size={16} aria-hidden="true" />{t.journeyStep3}</li>
+                  <li><ShieldCheck size={16} aria-hidden="true" />{t.journeyStep4}</li>
                 </ol>
               </div>
             </div>
@@ -235,15 +239,15 @@ const Home = () => {
           <div className="container">
             <div className="row g-8 align-items-start">
               <div className="col-lg-5" data-reveal="left">
-                <span className="section-badge mb-3 bg-soft-purple-tint text-teal">FAQs</span>
-                <h2 className="display-5 mb-4">Common patient questions</h2>
+                <span className="section-badge mb-3 bg-soft-purple-tint text-teal">{t.faqTag}</span>
+                <h2 className="display-5 mb-4">{t.faqTitle}</h2>
                 <p className="text-white text-opacity-85 mb-0">
-                  These quick answers help patients understand treatment approach, follow-up, and what to expect before consultation.
+                  {t.faqDescription}
                 </p>
                 <div className="faq-side-note mt-5 p-4 rounded-4">
-                  <p className="mb-2 fw-bold text-white">Helpful before booking</p>
+                  <p className="mb-2 fw-bold text-white">{t.faqSideNoteTitle}</p>
                   <p className="mb-0 text-white text-opacity-85">
-                    You can contact the clinic directly if you need guidance on reports, timing, or which symptoms need priority attention.
+                    {t.faqSideNoteDesc}
                   </p>
                 </div>
               </div>
@@ -288,8 +292,8 @@ const Home = () => {
           <div className="container">
             <div className="row align-items-end mb-6" data-reveal="left">
               <div className="col-lg-8">
-                <span className="section-badge mb-3">Testimonials</span>
-                <h2 className="display-5 mb-0">What patients say about their consultation experience.</h2>
+                <span className="section-badge mb-3">{t.testimonialsTag}</span>
+                <h2 className="display-5 mb-0">{t.testimonialsTitle}</h2>
               </div>
             </div>
             <div className="row g-4">
@@ -311,32 +315,56 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper py-12 py-md-14">
+        <section className="wrapper brand-surface py-12 py-md-14">
           <div className="container">
-            <div className="row g-8 align-items-center">
-              <div className="col-lg-6" data-reveal="left">
-                <span className="section-badge mb-3">Visit Dr. Akash Tamrakar</span>
-                <h2 className="display-5 mb-4">Visit Dr. Akash Tamrakar in Jhansi, also serving Gursarai.</h2>
-                <p className="mb-4">
-                  {siteInfo.address.join(', ')}
-                </p>
-                <p className="mb-2"><strong>Phone:</strong> <a href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}>{siteInfo.phone}</a></p>
-                <p className="mb-2"><strong>Email:</strong> <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a></p>
-                <p className="mb-0"><strong>Hours:</strong> {siteInfo.clinicHoursText}</p>
-              </div>
-              <div className="col-lg-6" data-reveal="right" style={{ '--reveal-delay': '100ms' }}>
-                <div className="subtle-card overflow-hidden">
-                  <iframe
-                    src={siteInfo.mapsEmbed}
-                    width="100%"
-                    height="360"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Omkar Bhawan, in front of Vatsalya Hospital (Dr. Pramod Gupta), Karila ji road, Medical gate no 2, Jhansi, Uttar Pradesh 284128"
-                  />
+            <div className="text-center mb-10" data-reveal="zoom">
+              <h2 className="display-4 text-white mb-0">{t.ourCenters}</h2>
+            </div>
+            <div className="row g-6 justify-content-center">
+              {siteInfo.locations.map((loc, idx) => (
+                <div key={loc.id} className="col-lg-5" data-reveal="zoom" style={{ '--reveal-delay': `${idx * 100}ms` }}>
+                  <div className="bg-white rounded-4 overflow-hidden h-100 shadow-lg d-flex flex-column hover-lift transition-all">
+                    <div className="position-relative" style={{ height: '240px' }}>
+                      <Image
+                        src={loc.image}
+                        alt={loc.name}
+                        fill
+                        className="object-fit-cover"
+                      />
+                    </div>
+                    <div className="p-4 p-xl-5 flex-grow-1 d-flex flex-column">
+                      <h4 className="fs-22 mb-4 text-teal d-flex align-items-center fw-bold">
+                        <MapPin size={24} className="me-2 text-teal" />
+                        {loc.name}
+                      </h4>
+                      <div className="mb-4 text-dark-blue">
+                        <p className="mb-1 fw-bold fs-15 text-uppercase letter-spacing-1">{t.address}:</p>
+                        <p className="mb-0 fw-medium">{loc.address.join(', ')}</p>
+                      </div>
+                      <div className="mb-5 text-dark-blue">
+                        <p className="mb-1 fw-bold fs-15 text-uppercase letter-spacing-1">{t.phone}:</p>
+                        <p className="mb-0 fw-bold">{siteInfo.appointmentPhone}</p>
+                      </div>
+                      
+                      <div className="mt-auto">
+                        <p className="mb-3 fw-bold text-dark-blue fs-15 text-uppercase letter-spacing-1">{t.hours}:</p>
+                        <div className="table-responsive rounded-3 overflow-hidden border">
+                          <table className="table table-borderless mb-0">
+                            <tbody>
+                              {loc.schedule.map((slot, sIdx) => (
+                                <tr key={sIdx} className={sIdx !== loc.schedule.length - 1 ? 'border-bottom' : ''}>
+                                  <td className="bg-light fw-medium text-dark-blue py-3 px-3 w-50">{slot.days}</td>
+                                  <td className="py-3 px-3 fw-bold text-teal text-end w-50">{slot.time}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

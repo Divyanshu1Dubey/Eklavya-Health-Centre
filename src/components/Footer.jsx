@@ -72,19 +72,17 @@ const Footer = () => {
           </div>
           <div className="col-xl-3 mt-md-5 mt-xl-0 mt-10 overflow-hidden">
             <div className="widget">
-              <h4 className="widget-title fs-24 mb-3">Location</h4>
-              <p className="d-inline-flex align-items-center gap-2 mb-3 text-white text-opacity-85">
-                <MapPin size={16} aria-hidden="true" />
-                Jhansi, Uttar Pradesh
-              </p>
-              <div className="footer-map-card">
-                <iframe
-                  src={siteInfo.mapsEmbed}
-                  width="100%"
-                  height="300"
-                  loading="lazy"
-                  title="Omkar Bhawan, in front of Vatsalya Hospital (Dr. Pramod Gupta), Karila ji road, Medical gate no 2, Jhansi, Uttar Pradesh 284128"
-                />
+              <h4 className="widget-title fs-24 mb-4 text-white">Our Clinics</h4>
+              <div className="d-flex flex-column gap-4">
+                {siteInfo.locations.map(loc => (
+                  <div key={loc.id} className="text-white text-opacity-85">
+                    <p className="d-inline-flex align-items-center gap-2 mb-2 fw-bold text-white">
+                      <MapPin size={16} aria-hidden="true" className="text-teal" />
+                      {loc.name}
+                    </p>
+                    <p className="mb-0 fs-14">{loc.address.slice(0, 2).join(', ')}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

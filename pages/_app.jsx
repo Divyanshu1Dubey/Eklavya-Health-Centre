@@ -17,6 +17,8 @@ import 'styles/premium.css';
 
 import { siteInfo } from 'data';
 
+import { LanguageProvider } from '../src/context/LanguageContext';
+
 function MyApp({ Component, pageProps }) {
   const { pathname } = useRouter();
   const [loading] = useState(false);
@@ -102,11 +104,13 @@ function MyApp({ Component, pageProps }) {
         <meta name="geo.position" content={`${siteInfo.geo?.latitude || '25.4358'};${siteInfo.geo?.longitude || '78.6020'}`} />
         <meta name="ICBM" content={`${siteInfo.geo?.latitude || '25.4358'}, ${siteInfo.geo?.longitude || '78.6020'}`} />
       </Head>
-      <Layout>
-        <ThemeProvider>
-          {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
-        </ThemeProvider>
-      </Layout>
+      <LanguageProvider>
+        <Layout>
+          <ThemeProvider>
+            {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
+          </ThemeProvider>
+        </Layout>
+      </LanguageProvider>
     </Fragment>
   );
 }

@@ -2,12 +2,12 @@ import { Fragment } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import PageProgress from 'components/PageProgress';
 import Cards from 'components/Cards';
-import { consultationHours, treatments } from '../src/data';
+import { useLanguage } from '../src/context/LanguageContext';
 import Seo from 'components/Seo';
-import { siteInfo } from 'data';
 import NextLink from 'components/NextLink';
 
 const TreatmentsPage = () => {
+  const { data: { consultationHours, siteInfo, treatments } } = useLanguage();
   return (
     <Fragment>
       <PageProgress />

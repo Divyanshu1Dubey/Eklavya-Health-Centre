@@ -125,15 +125,15 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
 
   return (
     <Fragment>
-      <nav ref={navbarRef} className={sticky ? fixedClassName : navClassName}>
+      <nav ref={navbarRef} className={`${sticky ? fixedClassName : navClassName} bg-white navbar-premium-clean`}>
         {fancy ? (
           <div className="container">
-            <div className="navbar-collapse-wrapper section-shell bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-end px-3 px-lg-4 py-2">
+            <div className="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center py-3">
               {headerContent}
             </div>
           </div>
         ) : (
-          <div className="container flex-lg-row flex-nowrap align-items-center section-shell px-3 px-lg-4 py-2">
+          <div className="container flex-lg-row flex-nowrap align-items-center py-3">
             {headerContent}
           </div>
         )}

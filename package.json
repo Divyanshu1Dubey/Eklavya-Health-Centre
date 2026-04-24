@@ -11,10 +11,11 @@
     "lint": "next lint",
     "build": "next build",
     "start": "next start",
-    "sass": "sass --no-source-map src/assets/scss:public/css"
+    "sass": "sass --load-path=node_modules --no-source-map src/assets/scss:public/css"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@vercel/analytics": "^2.0.1",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.8",
     "lucide-react": "^1.8.0",

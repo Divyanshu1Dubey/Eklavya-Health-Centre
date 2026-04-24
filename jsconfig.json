@@ -1,7 +1,6 @@
 {
     "compilerOptions": {
       "baseUrl": "src",
-      "ignoreDeprecations": "6.0",
       "paths": {
         "components/*": ["components/*"],
         "hooks/*": ["hooks/*"],
@@ -13,4 +12,3 @@
     },
     "include": ["src"]
   }
-  

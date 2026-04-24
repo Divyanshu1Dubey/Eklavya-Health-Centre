@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -19,6 +20,9 @@ const Layout = ({ children }) => {
 
       {/* Site Footer */}
       <Footer />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </>
   );
 };

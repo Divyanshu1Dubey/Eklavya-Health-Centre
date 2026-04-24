@@ -3,9 +3,10 @@ import { CheckCircle2, BadgeCheck } from 'lucide-react';
 import About from 'components/About';
 import PageProgress from 'components/PageProgress';
 import Seo from 'components/Seo';
-import { clinicStats, missionVision, siteInfo, treatments } from 'data';
+import { useLanguage } from '../src/context/LanguageContext';
 
 const AboutPage = () => {
+  const { data: { clinicStats, missionVision, siteInfo, treatments } } = useLanguage();
   return (
     <Fragment>
       <PageProgress />

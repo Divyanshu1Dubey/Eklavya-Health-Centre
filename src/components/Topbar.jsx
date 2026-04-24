@@ -1,42 +1,42 @@
 import Link from 'next/link';
-import { siteInfo } from 'data';
+import { useLanguage } from '../context/LanguageContext';
 
 const Topbar = () => {
+  const { language, toggleLanguage, data: { siteInfo }, t } = useLanguage();
+
   return (
-    <section className="topbar topbar-shell py-2">
+    <section className="bg-primary-navy text-white fs-14">
       <div className="container">
-        <div className="topbar-strip px-3 px-lg-4 py-3 d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3 bg-primary-dark text-white">
-          <div className="d-flex flex-wrap align-items-center gap-3 topbar-info">
-            <span className="topbar-text-pill">
-              <i className="uil uil-clock" />
-              Mon - Sat: 10:00 AM - 2:00 PM & 5:00 PM - 8:00 PM
+        <div className="py-2 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-2">
+          <div className="d-flex flex-wrap align-items-center gap-4">
+            <span className="d-inline-flex align-items-center gap-2 text-white text-opacity-75">
+              <i className="uil uil-clock fs-16" />
+              11:00 AM - 5:00 PM (Wed & Sun exceptions apply)
             </span>
-            <a href={`tel:${siteInfo.appointmentPhone.replace(/\s/g, '')}`} className="topbar-text-pill text-decoration-none">
-              <i className="uil uil-phone-volume" />
-              <strong>{siteInfo.appointmentPhone}</strong>
+            <a href={`tel:${siteInfo.appointmentPhone.replace(/\s/g, '')}`} className="d-inline-flex align-items-center gap-2 text-white text-decoration-none fw-semibold">
+              <i className="uil uil-phone-volume fs-16" />
+              {siteInfo.appointmentPhone}
             </a>
           </div>
 
-          <div className="d-flex flex-wrap align-items-center gap-3 topbar-actions">
+          <div className="d-flex flex-wrap align-items-center gap-3">
             <a
               href={`https://wa.me/${siteInfo.whatsapp}`}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-light rounded-pill px-4 py-2 fw-bold text-main shadow-sm topbar-action-btn"
+              className="d-inline-flex align-items-center gap-2 text-white text-decoration-none fw-semibold topbar-hover-link"
             >
-              <i className="uil uil-whatsapp fs-22 me-2 text-main fw-bold" />
-              Chat With Us
+              <i className="uil uil-whatsapp fs-18 text-success" />
+              {t.chatWithUs}
             </a>
-
-            <Link
-              href={`https://wa.me/${siteInfo.appointmentWhatsApp}`}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm topbar-action-btn"
+            <div className="vr bg-white opacity-25 d-none d-lg-block" style={{ height: '20px' }}></div>
+            <button
+              onClick={toggleLanguage}
+              className="btn btn-sm btn-outline-light rounded-pill px-3 py-1 fw-bold border-opacity-25"
+              style={{ fontSize: '12px' }}
             >
-              <i className="uil uil-calendar-alt me-2 fs-22 text-white fw-bold" />
-              Book Appointment
-            </Link>
+              {language === 'en' ? 'अ (Hindi)' : 'A (English)'}
+            </button>
           </div>
         </div>
       </div>

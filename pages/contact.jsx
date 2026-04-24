@@ -2,9 +2,10 @@ import { Fragment, useMemo, useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import PageProgress from 'components/PageProgress';
 import Seo from 'components/Seo';
-import { siteInfo, treatments } from 'data';
+import { useLanguage } from '../src/context/LanguageContext';
 
 const ContactPage = () => {
+  const { data: { siteInfo, treatments } } = useLanguage();
   const [form, setForm] = useState({
     name: '',
     phone: '',
@@ -88,7 +89,7 @@ const ContactPage = () => {
           <div className="container">
             <div className="row g-8 align-items-start">
               <div className="col-lg-6" data-reveal="left">
-                <div className="clean-card premium-form h-100">
+                <div className="clean-card premium-form h-100 glass-card">
                   <span className="section-badge mb-3 bg-soft-purple-tint text-teal">Direct appointment</span>
                   <h2 className="h3 mb-3">Fill once: details go to both appointment numbers.</h2>
                   <p className="mb-4">Share your appointment details below and send directly on WhatsApp. The message reaches both the priority appointment number and the alternate contact number.</p>
@@ -154,27 +155,39 @@ const ContactPage = () => {
           <div className="container">
             <div className="row g-8 align-items-start">
               <div className="col-lg-5" data-reveal="left">
-                <div className="clean-card h-100">
+                <div className="clean-card h-100 glass-card">
                   <h2 className="h3 mb-4">Doctor contact details</h2>
-                  <p className="mb-3">{siteInfo.address.join(', ')}</p>
+                  <div className="d-flex flex-column gap-4 mb-4">
+                    {siteInfo.locations.map((loc) => (
+                      <div key={loc.id} className="p-3 bg-light rounded-medical">
+                        <h3 className="h6 fw-bold mb-2 text-dark-blue">{loc.name}</h3>
+                        <p className="mb-2 text-dark-blue text-opacity-85">{loc.address.join(', ')}</p>
+                        <p className="mb-0 text-teal fw-bold" style={{ fontSize: '14px' }}>{loc.timings}</p>
+                      </div>
+                    ))}
+                  </div>
                   <p className="mb-3"><strong>Phone:</strong> <a href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}>{siteInfo.phone}</a></p>
                   <p className="mb-3"><strong>Alt phone:</strong> <a href={`tel:${siteInfo.altPhone.replace(/\s/g, '')}`}>{siteInfo.altPhone}</a></p>
-                  <p className="mb-3"><strong>Email:</strong> <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a></p>
-                  <p className="mb-0"><strong>Hours:</strong> {siteInfo.clinicHoursText}</p>
+                  <p className="mb-0"><strong>Email:</strong> <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a></p>
                 </div>
               </div>
               <div className="col-lg-7" data-reveal="right" style={{ '--reveal-delay': '90ms' }}>
-                <div className="map-frame overflow-hidden">
-                  <iframe
-                    src={siteInfo.mapsEmbed}
-                    width="100%"
-                    height="450"
-                    style={{ border: 0 }}
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Omkar Bhawan, in front of Vatsalya Hospital (Dr. Pramod Gupta), Karila ji road, Medical gate no 2, Jhansi, Uttar Pradesh 284128"
-                  />
+                <div className="d-flex flex-column gap-4">
+                  {siteInfo.locations.map((loc) => (
+                    <div key={`map-${loc.id}`} className="map-frame overflow-hidden glass-card p-2">
+                      <h4 className="fs-16 px-2 pt-2 mb-2 text-dark-blue">{loc.name} Map</h4>
+                      <iframe
+                        src={loc.mapEmbed}
+                        width="100%"
+                        height="250"
+                        style={{ border: 0, borderRadius: '8px' }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={loc.name}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

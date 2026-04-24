@@ -49,15 +49,26 @@ const Card = ({ arr, icon }) => {
             <div className="service-card h-100 treatment-card-hover">
               <div className="service-media-wrap">
                 {item.coverImage ? (
-                  <Image
-                    src={item.coverImage}
-                    alt={`${item.title} treatment visual`}
-                    width={640}
-                    height={420}
-                    loading="eager"
-                    sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 25vw"
-                    className="service-media"
-                  />
+                  item.coverImage.endsWith('.mp4') ? (
+                    <video
+                      src={item.coverImage}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="service-media w-100 h-100 object-fit-cover"
+                    />
+                  ) : (
+                    <Image
+                      src={item.coverImage}
+                      alt={`${item.title} treatment visual`}
+                      width={640}
+                      height={420}
+                      loading="eager"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 25vw"
+                      className="service-media"
+                    />
+                  )
                 ) : (
                   <div className="service-media service-media-fallback" />
                 )}

@@ -2,12 +2,12 @@ import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 import { CheckCircle2, Star, Stethoscope } from 'lucide-react';
 import PageProgress from 'components/PageProgress';
-import { treatments } from '../../src/data';
+import { useLanguage } from '../../src/context/LanguageContext';
 import Seo from 'components/Seo';
-import { siteInfo } from 'data';
 import NextLink from 'components/NextLink';
 
 const TreatmentDetail = () => {
+  const { data: { treatments, siteInfo } } = useLanguage();
   const router = useRouter();
   const { slug } = router.query;
   
@@ -81,7 +81,19 @@ const TreatmentDetail = () => {
               <div className="col-lg-6" data-reveal="right" style={{ '--reveal-delay': '120ms' }}>
                 <div className="subtle-card p-3 p-md-4 text-center">
                   {treatment.coverImage ? (
-                    <img src={treatment.coverImage} className="img-fluid rounded-4 shadow-lg" alt={`${treatment.title} treatment`} />
+                    treatment.coverImage.endsWith('.mp4') ? (
+                      <video
+                        src={treatment.coverImage}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-100 rounded-4 shadow-lg object-fit-cover"
+                        style={{ height: '400px' }}
+                      />
+                    ) : (
+                      <img src={treatment.coverImage} className="img-fluid rounded-4 shadow-lg" alt={`${treatment.title} treatment`} />
+                    )
                   ) : (
                     <div className="clean-card d-inline-block p-5">
                       <Stethoscope size={72} className="text-teal" aria-hidden="true" />

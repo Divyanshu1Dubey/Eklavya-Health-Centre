@@ -16,7 +16,7 @@ const links = [
   {
     id: 3,
     icon: 'uil uil-map-marker',
-    url: siteInfo.mapsEmbed,
+    url: siteInfo.locations && siteInfo.locations.length > 0 ? siteInfo.locations[0].mapEmbed : '#',
     label: 'Map'
   }
 ];

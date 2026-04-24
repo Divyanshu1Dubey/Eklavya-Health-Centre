@@ -1,23 +1,5 @@
 export const treatments = [
   {
-    id: 1,
-    title: 'Diabetes',
-    slug: 'diabetes',
-    url: '/treatments/diabetes',
-    icon: '/img/d1.png',
-    coverImage: '/img/treatments/diabetes-management.webp',
-    cardDescription: 'Comprehensive diabetes management with early detection, lifestyle planning, medicine optimization, and regular monitoring.',
-    description:
-      'Diabetes care includes detailed diagnosis, blood sugar control, complication screening, and practical treatment planning for long-term stability.',
-    focusAreas: [
-      'Blood sugar monitoring and HbA1c control',
-      'Medication and insulin optimization',
-      'Lifestyle and meal planning guidance',
-      'Regular complication screening and prevention'
-    ],
-    keyFacts: ['537M people living with diabetes globally', 'Type 2 accounts for 90-95% cases', 'Early control prevents major complications']
-  },
-  {
     id: 2,
     title: 'Thyroid',
     slug: 'thyroid',
@@ -41,7 +23,7 @@ export const treatments = [
     slug: 'heart',
     url: '/treatments/heart',
     icon: '/img/d3.png',
-    coverImage: '/img/treatments/metabolism-disorders.webp',
+    coverImage: '/img/4210-177819745.mp4',
     cardDescription: 'Advanced cardiovascular care for hypertension, heart-risk evaluation, and long-term heart protection.',
     description:
       'Heart care includes blood pressure control, cardiac risk assessment, preventive counseling, and referral-guided management when advanced interventions are needed.',
@@ -59,7 +41,7 @@ export const treatments = [
     slug: 'chest',
     url: '/treatments/chest',
     icon: '/img/d6.png',
-    coverImage: '/img/treatments/growth-disorders.webp',
+    coverImage: '/img/16531-273379399_medium.mp4',
     cardDescription: 'Diagnosis and treatment for chest pain, chest infections, and respiratory discomfort.',
     description:
       'Chest care includes early diagnosis of infections, non-cardiac chest pain evaluation, and treatment plans for acute and chronic respiratory symptoms.',
@@ -77,7 +59,7 @@ export const treatments = [
     slug: 'lungs',
     url: '/treatments/lungs',
     icon: '/img/d7.png',
-    coverImage: '/img/treatments/obesity-management.webp',
+    coverImage: '/img/344466_medium.mp4',
     cardDescription: 'Specialized care for asthma, COPD, recurrent cough, and long-term breathing disorders.',
     description:
       'Lung services focus on better breathing, trigger control, inhaler optimization, and long-term monitoring for chronic respiratory diseases.',
@@ -91,65 +73,47 @@ export const treatments = [
   },
   {
     id: 6,
-    title: 'Kidney & Liver',
-    slug: 'kidney-liver',
-    url: '/treatments/kidney-liver',
+    title: 'Kidney',
+    slug: 'kidney',
+    url: '/treatments/kidney',
     icon: '/img/d8.png',
-    coverImage: '/img/treatments/metabolism-disorders.webp',
-    cardDescription: 'Focused care for kidney and liver disease with early detection, treatment, and prevention planning.',
+    coverImage: '/img/324008_medium.mp4',
+    cardDescription: 'Focused care for kidney disease with early detection, treatment, and prevention planning.',
     description:
-      'Kidney and liver care includes early warning recognition, risk control, medicine planning, and timely referral when advanced support is required.',
+      'Kidney care includes early warning recognition, risk control, medicine planning, and timely referral when advanced support is required.',
     focusAreas: [
-      'Kidney and liver function monitoring',
+      'Kidney function monitoring',
       'Infection and medicine-risk evaluation',
-      'Nutrition and hydration counseling',
+      'Hydration and long-term kidney protection',
       'Progressive disease prevention strategies'
     ],
     keyFacts: ['Early diagnosis prevents complications', 'Structured follow-up improves stability', 'Lifestyle and medicine adherence are critical']
   },
   {
     id: 7,
-    title: 'High Blood Pressure',
-    slug: 'high-blood-pressure',
-    url: '/treatments/high-blood-pressure',
+    title: 'Blood Pressure',
+    slug: 'blood-pressure',
+    url: '/treatments/blood-pressure',
     icon: '/img/d1.png',
-    coverImage: '/img/SS-5-Things-You-Need-to-Know-About-High-Blood-Pressure-scaled.jpg',
-    cardDescription: 'Evidence-based management of hypertension to reduce risk of stroke, heart disease, and kidney complications.',
+    coverImage: '/img/49815-458438877_medium.mp4',
+    cardDescription: 'Evidence-based management of hypertension & assessment for dizziness, weakness, and hypotension.',
     description:
-      'Hypertension care includes blood pressure profiling, trigger identification, treatment planning, and long-term follow-up for safer control.',
+      'Comprehensive blood pressure care covering both hypertension and low blood pressure. Features profiling, trigger identification, and long-term stabilization.',
     focusAreas: [
-      'Office and home blood pressure trend review',
-      'Medication optimization and adherence guidance',
-      'Salt, sleep, stress, and activity counseling',
-      'Stroke and heart-risk prevention plan'
+      'Hypertension and low blood pressure trends',
+      'Medication adjustment and fluid planning',
+      'Stroke and cardiovascular risk prevention',
+      'Safety and daily lifestyle counseling'
     ],
-    keyFacts: ['Hypertension is often silent', 'Early control reduces major complications', 'Routine monitoring is essential']
+    keyFacts: ['Improper BP causes hidden damage', 'Cause-based treatment improves stability', 'Consistent monitoring reduces emergency risk']
   },
   {
     id: 8,
-    title: 'Low Blood Pressure',
-    slug: 'low-blood-pressure',
-    url: '/treatments/low-blood-pressure',
-    icon: '/img/d2.png',
-    coverImage: '/img/main_bp.jpg',
-    cardDescription: 'Assessment and treatment for dizziness, weakness, and hypotension-related symptoms.',
-    description:
-      'Low blood pressure evaluation focuses on identifying root causes, preventing sudden drops, and improving day-to-day stability.',
-    focusAreas: [
-      'Cause-based hypotension assessment',
-      'Hydration and nutrition correction',
-      'Medicine review and adjustment',
-      'Safety planning for recurrent symptoms'
-    ],
-    keyFacts: ['Persistent symptoms need evaluation', 'Cause-based treatment improves outcomes', 'Monitoring prevents emergency episodes']
-  },
-  {
-    id: 9,
     title: 'Asthma',
     slug: 'asthma',
     url: '/treatments/asthma',
     icon: '/img/d3.png',
-    coverImage: '/img/Screenshot%202026-04-19%20003347.png',
+    coverImage: '/img/vecteezy_sick-man-got-flu-allergy-sneezing-and-blowing-nose_36019040.mp4',
     cardDescription: 'Comprehensive asthma diagnosis, treatment, and long-term control planning for symptom-free daily life.',
     description:
       'Asthma care combines trigger identification, inhaler planning, emergency prevention, and follow-up support for better quality of life.',
@@ -160,6 +124,24 @@ export const treatments = [
       'Regular follow-up for long-term control'
     ],
     keyFacts: ['Asthma can be effectively controlled', 'Trigger control is essential', 'Action plans reduce emergency risk']
+  },
+  {
+    id: 9,
+    title: 'Liver',
+    slug: 'liver',
+    url: '/treatments/liver',
+    icon: '/img/d8.png',
+    coverImage: '/img/vecteezy_bad-liver-disease-symptoms-liver-failure-3d-anatomy-x-ray_21922499.mp4',
+    cardDescription: 'Specialized evaluation and management for liver disorders, fatty liver, and metabolic health.',
+    description:
+      'Liver care focuses on managing fatty liver, enzyme abnormalities, and metabolic risks through structured diet, medication, and monitoring.',
+    focusAreas: [
+      'Fatty liver and enzyme monitoring',
+      'Metabolic optimization and weight management',
+      'Nutrition counseling for liver health',
+      'Prevention of progressive liver damage'
+    ],
+    keyFacts: ['Fatty liver is increasingly common', 'Diet and lifestyle changes are highly effective', 'Early intervention prevents liver damage']
   }
 ];
 
@@ -199,7 +181,6 @@ export const siteInfo = {
   },
   appointmentMessage: 'Hello Dr. Akash Tamrakar, I would like to book an appointment. Please see my details below and contact me soon.',
   serviceAreas: ['Jhansi', 'Gursarai', 'Mauranipur', 'Moth', 'Baruasagar', 'Uttar Pradesh'],
-  clinicHoursText: 'Mon, Tue, Thu, Fri, Sat: 10:00 AM - 5:00 PM | Wed & Sun: 9:00 AM - 11:30 AM',
   seoKeywords: [
     'best doctor in jhansi',
     'best doctor in gursarai',
@@ -224,54 +205,80 @@ export const siteInfo = {
     latitude: '25.4358',
     longitude: '78.6020'
   },
-  address: [
-    'Omkar Bhawan, in front of Vatsalya Hospital (Dr. Pramod Gupta)',
-    'Karila ji road, Medical gate no 2',
-    'Jhansi, Uttar Pradesh 284128'
+  locations: [
+    {
+      id: "jhansi",
+      name: "Jhansi Clinic",
+      image: encodeURI('/img/New folder/img1.jpg'),
+      address: [
+        'Omkar Bhawan, opposite Vatsalya Hospital',
+        '(Dr. Pramod Gupta), Karguan Ji Road',
+        'Medical Gate No. 2, Jhansi'
+      ],
+      timings: "11:00 AM to 5:00 PM (Wed & Sun: 9:00 AM to 11:00 AM)",
+      schedule: [
+        { days: 'Mon, Tue, Thu, Fri, Sat', time: '11:00 AM – 05:00 PM' },
+        { days: 'Wednesday & Sunday', time: '09:00 AM – 11:00 AM' }
+      ],
+      mapEmbed: "https://www.google.com/maps?q=Omkar%20Bhawan,%20in%20front%20of%20Vatsalya%20Hospital%20(Dr.%20Pramod%20Gupta),%20Jhansi,%20Uttar%20Pradesh%20284128&z=17&output=embed"
+    },
+    {
+      id: "gursarai",
+      name: "Gursarai Clinic",
+      image: encodeURI('/img/New folder/img2.jpg'),
+      address: [
+        'Near Dr. D. R. Singh Nursing Home',
+        'Mauranipur Road, Gursarai',
+        'Jhansi'
+      ],
+      timings: "Wed & Sun: 11:00 AM to 5:00 PM",
+      schedule: [
+        { days: 'Wednesday & Sunday', time: '11:00 AM – 05:00 PM' }
+      ],
+      mapEmbed: "https://www.google.com/maps?q=Dr.+D.+R.+Singh+Nursing+Home,+Gursarai,+Jhansi&z=16&output=embed"
+    }
   ],
-  mapsEmbed:
-    'https://www.google.com/maps?q=Omkar%20Bhawan,%20in%20front%20of%20Vatsalya%20Hospital%20(Dr.%20Pramod%20Gupta),%20Karila%20ji%20road,%20Medical%20gate%20no%202,%20Jhansi,%20Uttar%20Pradesh%20284128&z=17&output=embed',
   logo: '/img/dr-akash-main.jpeg'
 };
 
 export const careHighlights = [
   {
     id: 1,
-    title: 'Evidence-based physician care',
-    description: 'Focused treatment for diabetes, thyroid, blood pressure, chest, and long-term medical issues.'
+    title: 'Evidence-Based Medicine',
+    description: 'Every treatment decision is backed by clinical guidelines — ensuring accurate, safe, and effective care for diabetes, thyroid, heart, and chronic conditions.'
   },
   {
     id: 2,
-    title: 'Diagnostic precision',
-    description: 'Structured evaluation with targeted investigations and clear interpretation of reports.'
+    title: 'Precision Diagnostics',
+    description: 'Thorough lab analysis and structured clinical evaluation to identify the root cause — not just treat symptoms.'
   },
   {
     id: 3,
-    title: 'Personalized long-term plans',
-    description: 'Treatment combines medication optimization, nutrition support, and practical follow-up routines.'
+    title: 'Personalized Treatment Plans',
+    description: 'Custom medication protocols, dietary guidance, and lifestyle adjustments tailored to your body, your schedule, and your goals.'
   },
   {
     id: 4,
-    title: 'Patient education first',
-    description: 'Every consultation explains condition, treatment steps, and realistic expectations for recovery.'
+    title: 'Patient Education & Transparency',
+    description: 'Every consultation includes a clear explanation of your condition, treatment options, expected outcomes, and what to watch for between visits.'
   },
   {
     id: 5,
-    title: 'Multi-condition expertise',
-    description: 'Care includes diabetes, thyroid, heart, chest, lungs, kidney-liver health, blood pressure, and asthma.'
+    title: 'Multi-Speciality Expertise',
+    description: 'Comprehensive care spanning diabetes, thyroid, heart, chest, lungs, kidney, liver, blood pressure, and asthma — all under one roof.'
   },
   {
     id: 6,
-    title: 'Continuity of care',
-    description: 'Patients receive structured follow-up plans with clear goals for long-term disease control.'
+    title: 'Continuity of Care',
+    description: 'Structured follow-up schedules with clear progress milestones, so you always know where you stand on your health journey.'
   }
 ];
 
 export const trustPoints = [
-  'Trusted general physician and critical care expertise',
-  'Comprehensive diabetes, thyroid, heart, chest, lungs, kidney-liver, blood pressure, and asthma care',
-  'Structured follow-up for long-term chronic disease control',
-  'Accessible for patients from Jhansi, Gursarai, and nearby areas'
+  'Board-certified physician with advanced training in critical care and internal medicine',
+  'Comprehensive care for 8+ chronic conditions — diabetes, thyroid, heart, chest, kidneys, liver, BP, and asthma',
+  'Structured follow-up protocols designed for long-term disease control and prevention',
+  'Serving 16,000+ patients across Jhansi, Gursarai, and Bundelkhand region'
 ];
 
 export const faqs = [
@@ -359,13 +366,9 @@ export const clinicStats = [
 ];
 
 export const consultationHours = [
-  { day: 'Monday', time: '10:00 AM - 5:00 PM' },
-  { day: 'Tuesday', time: '10:00 AM - 5:00 PM' },
-  { day: 'Wednesday', time: '9:00 AM - 11:30 AM' },
-  { day: 'Thursday', time: '10:00 AM - 5:00 PM' },
-  { day: 'Friday', time: '10:00 AM - 5:00 PM' },
-  { day: 'Saturday', time: '10:00 AM - 5:00 PM' },
-  { day: 'Sunday', time: '9:00 AM - 11:30 AM' }
+  { day: 'Mon, Tue, Thu, Fri, Sat', time: '11:00 AM - 5:00 PM (Jhansi)' },
+  { day: 'Wednesday', time: '9:00 AM - 11:00 AM (Jhansi), 11:00 AM - 5:00 PM (Gursarai)' },
+  { day: 'Sunday', time: '9:00 AM - 11:00 AM (Jhansi), 11:00 AM - 5:00 PM (Gursarai)' }
 ];
 
 export const updates = [

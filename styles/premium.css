@@ -1,0 +1,338 @@
+/* ===========================================================
+   PREMIUM MEDICAL BLUE THEME - Complete Color Palette
+   ===========================================================
+   This file defines all colors for the premium medical
+   blue theme as per the design specifications.
+   =========================================================== */
+
+:root {
+  /* Primary Colors */
+  --primary-blue: #4A90E2;
+  --primary-blue-dark: #357ABD;
+  --light-blue: #EAF4FF;
+  --dark-blue: #1B3C59;
+
+  /* Gradients */
+  --gradient-start: #DCEEFF;
+  --gradient-end: #BFD8FF;
+
+  /* Background Colors */
+  --bg-main: #F8FBFF;
+  --bg-card: #FFFFFF;
+  --bg-section: #F1F7FD;
+
+  /* Text Colors */
+  --text-heading: #1B3C59;
+  --text-subheading: #4A6FA5;
+  --text-body: #5F6C7B;
+  --text-light: #9AA6B2;
+
+  /* Accent Colors */
+  --color-success: #2ECC71;
+  --color-warning: #F5A623;
+  --color-error: #E74C3C;
+
+  /* UI Element Colors */
+  --border-color: #E6EEF5;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================================================
+   GLOBAL STYLES WITH MEDICAL THEME
+   =========================================================== */
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h2, h3 {
+  color: var(--text-heading);
+}
+
+p {
+  color: var(--text-body);
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Primary Button Styles */
+.btn-primary,
+.btn.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.btn-primary:focus,
+.btn.btn-primary:focus {
+  background-color: var(--primary-blue-dark);
+  border-color: var(--primary-blue-dark);
+  box-shadow: 0 0 0 0.25rem rgba(74, 144, 226, 0.25);
+}
+
+/* Secondary Button Styles */
+.btn-outline-primary,
+.btn.btn-outline-primary {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover,
+.btn.btn-outline-primary:hover {
+  background-color: var(--light-blue);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px var(--card-shadow-hover);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Links */
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-blue-dark);
+}
+
+/* Forms */
+.form-control {
+  border-color: var(--border-color);
+  color: var(--text-body);
+}
+
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.form-label {
+  color: var(--text-heading);
+  font-weight: 500;
+}
+
+/* Input placeholders */
+.form-control::placeholder {
+  color: var(--text-light);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--text-body);
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--primary-blue);
+}
+
+/* Sections */
+.section {
+  background-color: var(--bg-main);
+}
+
+.section.alternate {
+  background-color: var(--bg-section);
+}
+
+/* Success, Warning, Error Colors */
+.alert-success {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.alert-warning {
+  background-color: rgba(245, 166, 35, 0.1);
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+}
+
+.alert-danger {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.badge-success {
+  background-color: var(--color-success);
+}
+
+.badge-warning {
+  background-color: var(--color-warning);
+}
+
+.badge-danger {
+  background-color: var(--color-error);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: var(--text-heading);
+}
+
+/* Gradients */
+.gradient-blue {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+/* Borders */
+.border-medical {
+  border-color: var(--border-color) !important;
+}
+
+/* Utilities */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+.text-heading {
+  color: var(--text-heading) !important;
+}
+
+.text-subheading {
+  color: var(--text-subheading) !important;
+}
+
+.text-body {
+  color: var(--text-body) !important;
+}
+
+.text-light {
+  color: var(--text-light) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--light-blue) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-blue) !important;
+}
+
+.bg-light-medical {
+  background-color: var(--bg-main) !important;
+}
+
+/* Rounded Elements (Pro Design Rule) */
+.rounded-medical {
+  border-radius: 8px !important;
+}
+
+.rounded-medical-lg {
+  border-radius: 12px !important;
+}
+
+/* Glassmorphism Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 40px -5px rgba(27, 60, 89, 0.08); /* Medical dark blue tint */
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 50px -5px rgba(27, 60, 89, 0.12);
+  transform: translateY(-2px);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+}
+
+/* Premium Design Rules - White Space & Subtle Shadows */
+.premium-section {
+  padding: 60px 20px;
+  background-color: var(--bg-main);
+}
+
+.premium-section.dark {
+  background-color: var(--dark-blue);
+  color: #FFFFFF;
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px var(--card-shadow-hover);
+  transition: all 0.3s ease;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: var(--bg-section);
+}
+
+.breadcrumb-item.active {
+  color: var(--text-heading);
+}
+
+.breadcrumb-item a {
+  color: var(--primary-blue);
+}
+
+/* Pagination */
+.pagination .page-link {
+  color: var(--primary-blue);
+  border-color: var(--border-color);
+}
+
+.pagination .page-link:hover {
+  background-color: var(--light-blue);
+  border-color: var(--primary-blue);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+/* Responsive & Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

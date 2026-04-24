@@ -1,16 +1,41 @@
-// Theme Colors
-$sky: #5eb9f0 !default;
-$blue: #3f78e0 !default;
-$grape: #605dba !default;
-$purple: #747ed1 !default;
-$violet: #a07cc5 !default;
-$pink: #d16b86 !default;
-$fuchsia: #e668b3 !default;
-$red: #e2626b !default;
-$orange: #f78b77 !default;
-$yellow: #fab758 !default;
-$green: #45c4a0 !default;
-$leaf: #7cb798 !default;
-$aqua: #54a8c7 !default;
-$navy: #343f52 !default;
-$ash: #9499a3 !default;
+// ===========================================================
+// Theme Colors - Premium Medical Blue
+// ===========================================================
+// Core Medical Blue Palette
+$sky: #EAF4FF !default;
+$blue: #4A90E2 !default;
+$grape: #357ABD !default;
+$purple: #1B3C59 !default;
+$violet: #4A6FA5 !default;
+$pink: #5F6C7B !default;
+$fuchsia: #9AA6B2 !default;
+$red: #E74C3C !default;
+$orange: #F5A623 !default;
+$yellow: #DCEEFF !default;
+$green: #2ECC71 !default;
+$leaf: #7CB798 !default;
+$aqua: #BFD8FF !default;
+$navy: #1B3C59 !default;
+$ash: #E6EEF5 !default;
+
+// Extended Medical Theme Variables
+$main-color: #4A90E2 !default;
+$primary-blue: #4A90E2 !default;
+$primary-blue-dark: #357ABD !default;
+$light-blue: #EAF4FF !default;
+$dark-blue: #1B3C59 !default;
+$gradient-start: #DCEEFF !default;
+$gradient-end: #BFD8FF !default;
+$bg-main: #F8FBFF !default;
+$bg-card: #FFFFFF !default;
+$bg-section: #F1F7FD !default;
+$text-heading: #1B3C59 !default;
+$text-subheading: #4A6FA5 !default;
+$text-body: #5F6C7B !default;
+$text-light: #9AA6B2 !default;
+$color-success: #2ECC71 !default;
+$color-warning: #F5A623 !default;
+$color-error: #E74C3C !default;
+$border-color: #E6EEF5 !default;
+$card-shadow: rgba(0, 0, 0, 0.05) !default;
+$card-shadow-hover: rgba(0, 0, 0, 0.1) !default;
