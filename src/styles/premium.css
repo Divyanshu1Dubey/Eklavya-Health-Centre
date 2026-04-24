@@ -286,6 +286,24 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   color: #fff !important;
 }
 
+/* Override: text inside white cards within brand-surface must be dark */
+.brand-surface .bg-white h4,
+.brand-surface .bg-white p,
+.brand-surface .bg-white td,
+.brand-surface .bg-white span {
+  color: var(--dark-blue) !important;
+}
+
+.brand-surface .bg-white .text-teal,
+.brand-surface .bg-white td.text-teal {
+  color: var(--primary-teal) !important;
+}
+
+.brand-surface .bg-white .fw-medium,
+.brand-surface .bg-white .fw-bold:not(.text-teal) {
+  color: var(--dark-blue) !important;
+}
+
 .section-badge {
   display: inline-flex;
   align-items: center;
