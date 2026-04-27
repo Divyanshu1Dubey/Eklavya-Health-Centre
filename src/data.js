@@ -243,7 +243,7 @@ export const siteInfo = {
       mapEmbed: "https://www.google.com/maps?q=Dr.+D.+R.+Singh+Nursing+Home,+Gursarai,+Jhansi&z=16&output=embed"
     }
   ],
-  logo: '/img/dr-akash-main.jpeg'
+  logo: '/img/Eklavya%20Healthcare%20Centre%20logo%20design.png'
 };
 
 export const careHighlights = [

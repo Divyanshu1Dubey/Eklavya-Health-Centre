@@ -53,6 +53,7 @@ const Card = ({ arr, icon }) => {
                     muted
                     loop
                     playsInline
+                    preload="metadata"
                     className="service-media w-100 h-100 object-fit-cover"
                   />
                 ) : (
@@ -61,7 +62,7 @@ const Card = ({ arr, icon }) => {
                     alt={`${item.title} treatment visual`}
                     width={640}
                     height={420}
-                    loading="eager"
+                    loading="lazy"
                     sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 25vw"
                     className="service-media"
                   />

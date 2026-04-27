@@ -23,6 +23,31 @@ import { useLanguage } from '../src/context/LanguageContext';
 const Home = () => {
   const { data: { careHighlights, faqs, siteInfo, testimonials, treatments, trustPoints }, t } = useLanguage();
   const summarizeText = (text, max = 130) => (text.length > max ? `${text.slice(0, max).trimEnd()}...` : text);
+  const getInitials = (name = '') => name
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join('');
+  const renderTestimonialCard = (item, keyPrefix = '') => {
+    const initials = getInitials(item.name);
+    return (
+      <div className="marquee-item" key={`${keyPrefix}${item.id}`}>
+        <div className="clean-card testimonial-card h-100 mb-0">
+          <p className="mb-4 testimonial-quote">“{item.quote}”</p>
+          <div className="testimonial-meta">
+            <span className="testimonial-avatar" aria-hidden="true">{initials}</span>
+            <div className="testimonial-info">
+              <p className="mb-0 fw-bold text-dark-blue">{item.name}</p>
+              <p className="mb-0 text-muted fs-14">{item.location}</p>
+              <p className="mb-0 testimonial-doctor">Care by {siteInfo.doctorName}</p>
+            </div>
+            <span className="testimonial-stars" aria-label="5 star rating">★★★★★</span>
+          </div>
+        </div>
+      </div>
+    );
+  };
   const homeJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -131,7 +156,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
           <div className="container">
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -146,7 +171,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light pb-8 pb-md-12">
+        <section className="wrapper premium-section-light pb-8 pb-md-12 section-surface section-visibility">
           <div className="container">
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -194,44 +219,19 @@ const Home = () => {
                   <span className="section-badge mb-0">{t.testimonialsTag}</span>
                   <h2 className="display-5 mb-0 section-heading-dark">{t.testimonialsTitle}</h2>
                 </div>
+                <p className="testimonial-lead mt-3 mb-0">{t.testimonialsLead}</p>
               </div>
             </div>
             <div className="row mb-12">
               <div className="col-12">
-                <div className="marquee-wrapper px-3">
+                <div className="marquee-wrapper testimonial-surface px-3">
                   <div className="marquee-track">
                     <div className="marquee-content">
-                      {testimonials.map((item) => (
-                        <div className="marquee-item" key={item.id}>
-                          <div className="clean-card testimonial-card h-100 mb-0">
-                            <p className="mb-4 testimonial-quote">“{item.quote}”</p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <div>
-                                <p className="mb-0 fw-bold text-dark-blue">{item.name}</p>
-                                <p className="mb-0 text-muted fs-14">{item.location}</p>
-                              </div>
-                              <span className="testimonial-stars" aria-label="5 star rating">★★★★★</span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                      {testimonials.map((item) => renderTestimonialCard(item))}
                     </div>
                     {/* Duplicate track for seamless infinite scrolling */}
                     <div className="marquee-content" aria-hidden="true">
-                      {testimonials.map((item) => (
-                        <div className="marquee-item" key={`dup-${item.id}`}>
-                          <div className="clean-card testimonial-card h-100 mb-0">
-                            <p className="mb-4 testimonial-quote">“{item.quote}”</p>
-                            <div className="d-flex align-items-center justify-content-between">
-                              <div>
-                                <p className="mb-0 fw-bold text-dark-blue">{item.name}</p>
-                                <p className="mb-0 text-muted fs-14">{item.location}</p>
-                              </div>
-                              <span className="testimonial-stars" aria-label="5 star rating">★★★★★</span>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                      {testimonials.map((item) => renderTestimonialCard(item, 'dup-'))}
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-visibility">
           <div className="container">
             <div className="row g-8 align-items-center">
               <div className="col-lg-6" data-reveal="left">
@@ -314,7 +314,7 @@ const Home = () => {
 
 
 
-        <section className="wrapper premium-section-light py-12 py-md-14">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
           <div className="container">
             <div className="premium-section-header centered mb-10" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -371,7 +371,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
           <div className="container">
             <div className="premium-faq-shell p-4 p-lg-5">
               <div className="row g-8 align-items-start">

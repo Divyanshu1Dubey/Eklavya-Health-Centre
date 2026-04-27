@@ -82,7 +82,8 @@ const translations = {
 
     // ─── Testimonials Section ───
     testimonialsTag: "Patient Stories",
-    testimonialsTitle: "Hear What Our Patients Say About Their Care Experience.",
+    testimonialsTitle: "Patient Stories About Dr. Akash Tamrakar.",
+    testimonialsLead: "Families across Jhansi, Gursarai, and Mauranipur share how Dr. Akash Tamrakar helped them with clear answers, calm guidance, and long-term care.",
 
     // ─── Intro Showcase ───
     advancedTreatment: "Advanced Treatment",
@@ -210,7 +211,8 @@ const translations = {
 
     // ─── Testimonials Section ───
     testimonialsTag: "मरीजों के अनुभव",
-    testimonialsTitle: "जानिए हमारे मरीज अपने इलाज के अनुभव के बारे में क्या कहते हैं।",
+    testimonialsTitle: "डॉ. आकाश ताम्रकार के बारे में मरीजों की कहानियाँ।",
+    testimonialsLead: "झांसी, गुरसराय और मऊरानीपुर के परिवार बताते हैं कि डॉ. आकाश ताम्रकार ने कैसे स्पष्ट समझ, शांत मार्गदर्शन और दीर्घकालिक देखभाल से मदद की।",
 
     // ─── Intro Showcase ───
     advancedTreatment: "उन्नत उपचार",
