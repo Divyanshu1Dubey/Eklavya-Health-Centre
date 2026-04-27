@@ -25,12 +25,21 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
     <Fragment>
       {/* Logo for desktop */}
       <div className="navbar-brand w-100">
-      <NextLink
+        <NextLink
           href="/"
           title={
-            <span className="brand-text d-inline-flex flex-column py-2">
-              <span className="fw-bold fs-18 text-dark-blue">Dr. Akash Tamrakar</span>
-              <span className="fs-13 text-teal">Consultant Physician & ICU Specialist</span>
+            <span className="brand-text d-inline-flex align-items-center gap-2 py-2">
+              <img
+                src="/img/favicon/eklavya-logo-32x32.png"
+                alt="Eklavya Healthcare Centre logo"
+                width="32"
+                height="32"
+                loading="eager"
+              />
+              <span className="d-inline-flex flex-column">
+                <span className="fw-bold fs-18 text-dark-blue">Dr. Akash Tamrakar</span>
+                <span className="fs-13 text-teal">Consultant Physician & ICU Specialist</span>
+              </span>
             </span>
           }
         />
@@ -43,9 +52,18 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
           <NextLink
             href="/"
             title={
-              <span className="brand-text d-inline-flex flex-column py-2">
-                <span className="fw-bold fs-18 text-white">Dr. Akash Tamrakar</span>
-                <span className="fs-13 text-white text-opacity-75">Consultant Physician & ICU Specialist</span>
+              <span className="brand-text d-inline-flex align-items-center gap-2 py-2">
+                <img
+                  src="/img/favicon/eklavya-logo-32x32.png"
+                  alt="Eklavya Healthcare Centre logo"
+                  width="28"
+                  height="28"
+                  loading="eager"
+                />
+                <span className="d-inline-flex flex-column">
+                  <span className="fw-bold fs-18 text-white">Dr. Akash Tamrakar</span>
+                  <span className="fs-13 text-white text-opacity-75">Consultant Physician & ICU Specialist</span>
+                </span>
               </span>
             }
           />
