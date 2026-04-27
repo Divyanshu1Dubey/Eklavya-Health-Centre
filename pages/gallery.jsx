@@ -1,46 +1,7 @@
 import { Fragment } from 'react';
 import PageProgress from 'components/PageProgress';
-import Image from 'next/image';
 import Seo from 'components/Seo';
 import { siteInfo } from 'data';
-
-const galleryItems = [
-  {
-    src: '/img/dr-akash-2.jpeg',
-    title: 'Doctor interaction',
-    subtitle: 'Clear communication with families'
-  },
-  {
-    src: '/img/dr-akash-3.jpeg',
-    title: 'Clinical review',
-    subtitle: 'Evidence-based diagnosis and follow-up'
-  },
-  {
-    src: '/img/dr-akash-profile.png',
-    title: 'Patient support',
-    subtitle: 'Simple and reassuring care flow'
-  },
-  {
-    src: '/img/dr-akash-4.jpeg',
-    title: 'Treatment planning',
-    subtitle: 'Personalized plan for chronic conditions'
-  },
-  {
-    src: '/img/dr-akash-5.jpeg',
-    title: 'Clinic environment',
-    subtitle: 'Organized space for smooth visits'
-  },
-  {
-    src: '/img/map.png',
-    title: 'Easy location access',
-    subtitle: 'Near Medical Gate No. 2, Jhansi'
-  },
-  {
-    src: '/img/dr-akash-profile.png',
-    title: 'Specialist profile',
-    subtitle: 'General medicine and critical care expertise'
-  }
-];
 
 const GalleryPage = () => {
   return (
@@ -81,25 +42,15 @@ const GalleryPage = () => {
 
         <section className="wrapper premium-section-light py-10 py-md-14">
           <div className="container">
-            <div className="row g-4">
-              {galleryItems.map((item, index) => (
-                <div className="col-md-6 col-lg-4" key={index} data-reveal="zoom" style={{ '--reveal-delay': `${index * 70}ms` }}>
-                  <div className="gallery-card h-100 premium-card-shell">
-                    <div className="gallery-media" style={{ aspectRatio: '4 / 3', position: 'relative', overflow: 'hidden' }}>
-                      <Image
-                        src={item.src}
-                        alt={`Clinic gallery image ${index + 1} at ${siteInfo.name}`}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <div className="gallery-copy">
-                      <h3>{item.title}</h3>
-                      <p>{item.subtitle}</p>
-                    </div>
-                  </div>
+            <div className="row">
+              <div className="col-12 text-center" data-reveal="zoom">
+                <div className="premium-section-panel p-5 p-md-6">
+                  <h2 className="display-4 text-dark-blue mb-3">Coming Soon</h2>
+                  <p className="lead premium-copy mb-0">
+                    Clinic gallery and facility images will be updated shortly. Thank you for your patience.
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
@@ -109,3 +60,4 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
+
