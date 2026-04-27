@@ -1,14 +1,15 @@
 {
-    "compilerOptions": {
-      "baseUrl": "src",
-      "paths": {
-        "components/*": ["components/*"],
-        "hooks/*": ["hooks/*"],
-        "theme/*": ["theme/*"],
-        "styles/*": ["styles/*"],
-        "plugins/*": ["plugins/*"],
-        "assets/*": ["assets/*"]
-      }
-    },
-    "include": ["src"]
-  }
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": "src",
+    "paths": {
+      "components/*": ["components/*"],
+      "hooks/*": ["hooks/*"],
+      "theme/*": ["theme/*"],
+      "styles/*": ["styles/*"],
+      "plugins/*": ["plugins/*"],
+      "assets/*": ["assets/*"]
+    }
+  },
+  "include": ["src"]
+}
