@@ -6,6 +6,7 @@
     "node": "20.x || 22.x"
   },
   "scripts": {
+    "generate-favicons": "node tools/generate-favicons.js",
     "dev": "next dev",
     "dev:clean": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force; if (Test-Path .next) { Remove-Item .next -Recurse -Force }; next dev -p 3000\"",
     "lint": "next lint",
@@ -14,6 +15,8 @@
     "sass": "sass --load-path=node_modules --no-source-map src/assets/scss:public/css"
   },
   "dependencies": {
+    "png-to-ico": "^1.0.0",
+    "sharp": "^0.32.0",
     "@popperjs/core": "^2.11.8",
     "@vercel/analytics": "^2.0.1",
     "animate.css": "^4.1.1",

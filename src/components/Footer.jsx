@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="widget d-flex flex-column">
               <div className="mb-4">
                 <p className="mb-1 fw-bold fs-18 text-white">Dr. Akash Tamrakar</p>
-                <p className="mb-0 text-white text-opacity-75">General Physician and Critical Care Specialist</p>
+                <p className="mb-0 text-white text-opacity-75">Consultant Physician and ICU Specialist</p>
               </div>
               <p className="lead mb-2 text-justify fs-18 text-white text-opacity-90">
                 {siteInfo.doctorBio.slice(0, 3).join(' ')}

@@ -25,12 +25,12 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
     <Fragment>
       {/* Logo for desktop */}
       <div className="navbar-brand w-100">
-        <NextLink
+      <NextLink
           href="/"
           title={
             <span className="brand-text d-inline-flex flex-column py-2">
               <span className="fw-bold fs-18 text-dark-blue">Dr. Akash Tamrakar</span>
-              <span className="fs-13 text-teal">General Physician & Critical Care Specialist</span>
+              <span className="fs-13 text-teal">Consultant Physician & ICU Specialist</span>
             </span>
           }
         />
@@ -45,7 +45,7 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
             title={
               <span className="brand-text d-inline-flex flex-column py-2">
                 <span className="fw-bold fs-18 text-white">Dr. Akash Tamrakar</span>
-                <span className="fs-13 text-white text-opacity-75">General Physician & Critical Care Specialist</span>
+                <span className="fs-13 text-white text-opacity-75">Consultant Physician & ICU Specialist</span>
               </span>
             }
           />

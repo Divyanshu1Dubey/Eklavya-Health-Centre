@@ -106,7 +106,7 @@ const AppointmentTicket = ({ appointment, onBack }) => {
             <span className="appt-tick-icon"><CheckCircle2 size={28} /></span>
             <div>
               <p className="appt-ticket-clinic-name mb-0">Eklavya Healthcare Centre</p>
-              <p className="appt-ticket-doctor mb-0">Dr. Akash Tamrakar — General Physician &amp; Critical Care</p>
+              <p className="appt-ticket-doctor mb-0">Dr. Akash Tamrakar — Consultant Physician &amp; ICU Specialist</p>
             </div>
           </div>
           <h2 className="appt-ticket-title">Appointment Confirmation</h2>

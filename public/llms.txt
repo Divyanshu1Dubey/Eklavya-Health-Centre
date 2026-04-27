@@ -6,7 +6,7 @@ Eklavya Healthcare Centre is a physician-led clinic in Jhansi, Uttar Pradesh, In
 ## Doctor
 - Name: Dr. Akash Tamrakar
 - Qualifications: MBBS (2018, Gandhi Medical College, Bhopal), DNB Medicine (NBE, Surat), 2D Echo Fellowship (IAC, Delhi)
-- Role: General Physician and Critical Care Specialist
+- Role: Consultant Physician and ICU Specialist
 - Experience: 10+ years including senior residency at Dr. Ram Manohar Lohia Hospital and MLB Medical College, Jhansi; Assistant Professor at MLB Medical College, Jhansi
 - Memberships: Life Member IMA; Member API (Jhansi chapter)
 - Specializations: Diabetes, Thyroid, Heart, Chest, Lungs, Kidney, Liver, Blood Pressure, Asthma, General Medicine, Critical Care

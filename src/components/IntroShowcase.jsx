@@ -192,7 +192,7 @@ const IntroShowcase = () => {
           </p>
           <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
             <NextLink href="/contact" title={t.bookAppointment} className="btn btn-power" />
-            <NextLink href="/about" title={t.visitDoctor} className="btn btn-outline-primary rounded-pill bg-white" />
+            <NextLink href="/about" title={t.visitDoctor} className="btn btn-outline-primary rounded-pill" />
           </div>
           <div className="d-flex flex-wrap justify-content-center gap-3 intro-badge-row">
             {introBadges.map((badge) => {

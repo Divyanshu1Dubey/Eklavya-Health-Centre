@@ -6,10 +6,10 @@ export default class EklavyaHealthcare extends Document {
       <Html lang="en">
         <Head>
           {/* Favicon and Touch Icons */}
-          <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
-          <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32" />
-          <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+          <link rel="shortcut icon" href="/img/favicon/eklavya-favicon.ico" />
+          <link rel="icon" type="image/png" href="/img/favicon/eklavya-logo-32x32.png" sizes="32x32" />
+          <link rel="icon" type="image/png" href="/img/favicon/eklavya-logo-16x16.png" sizes="16x16" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/eklavya-apple-touch-icon.png" />
           <link rel="manifest" href="/img/favicon/site.webmanifest" />
 
           {/* Theme Color for Mobile Browsers */}
