@@ -394,6 +394,18 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   text-shadow: 0 2px 20px rgba(7, 22, 36, 0.28);
 }
 
+.section-divider {
+  height: 54px;
+  position: relative;
+  z-index: 1;
+  margin: -10px 0 -6px;
+  background:
+    radial-gradient(40px 12px at 10% 0%, rgba(74, 144, 226, 0.2) 60%, transparent 62%) repeat-x,
+    radial-gradient(46px 14px at 35% 100%, rgba(255, 159, 67, 0.2) 60%, transparent 62%) repeat-x;
+  background-size: 180px 54px, 200px 54px;
+  opacity: 0.85;
+}
+
 .orb-surface {
   position: relative;
   overflow: hidden;
@@ -437,6 +449,47 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   background: url('/img/pattern.png');
   opacity: 0.05;
   pointer-events: none;
+}
+
+.intro-premium-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(74, 144, 226, 0.25), transparent 40%),
+    radial-gradient(circle at 84% 20%, rgba(255, 159, 67, 0.2), transparent 42%);
+  pointer-events: none;
+  z-index: 1;
+  animation: floatOrb 16s ease-in-out infinite;
+}
+
+.intro-media-frame-premium {
+  border: 1px solid rgba(148, 189, 233, 0.45);
+  box-shadow: 0 34px 86px rgba(12, 32, 55, 0.35);
+}
+
+.intro-media-frame-premium::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.12), transparent 45%),
+    radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.12), transparent 45%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.intro-glass-panel {
+  padding: 1.3rem 1.6rem;
+  border-radius: 20px;
+  background: rgba(10, 26, 43, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 40px rgba(6, 16, 28, 0.4);
+  backdrop-filter: blur(14px);
+}
+
+.intro-media-title {
+  text-shadow: 0 12px 28px rgba(4, 12, 22, 0.55);
 }
 
 .section-visibility {
@@ -1559,6 +1612,20 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
   pointer-events: none;
 }
 
+.testimonial-surface::after {
+  content: '';
+  position: absolute;
+  right: -120px;
+  top: -140px;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.25), rgba(74, 144, 226, 0.05), transparent 70%);
+  animation: floatOrb 18s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
 /* Optional fading edges for the marquee */
 .marquee-wrapper::before,
 .marquee-wrapper::after {
@@ -1615,7 +1682,9 @@ h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display
 
 @media (prefers-reduced-motion: reduce) {
   .orb-surface::after,
-  .journey-orb::after {
+  .journey-orb::after,
+  .intro-premium-shell::before,
+  .testimonial-surface::after {
     animation: none;
   }
 }

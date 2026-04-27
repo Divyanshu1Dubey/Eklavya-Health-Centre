@@ -106,9 +106,9 @@ const IntroShowcase = () => {
   const activeSlide = introSlides[activeIndex];
 
   return (
-    <section className="wrapper pt-0 pb-8 pb-md-10">
-      <div className="intro-fullscreen">
-        <div className="intro-media-frame intro-media-frame-full">
+    <section className="wrapper pt-0 pb-8 pb-md-10 intro-premium">
+      <div className="intro-fullscreen intro-premium-shell">
+        <div className="intro-media-frame intro-media-frame-full intro-media-frame-premium">
           <div key={activeSlide.src} className={`position-absolute w-100 h-100 top-0 left-0 ${activeSlide.orientation === 'portrait' ? 'is-portrait-slide' : ''}`}>
             {activeSlide.type === 'video' ? (
               <video
@@ -138,7 +138,7 @@ const IntroShowcase = () => {
 
             <div className="intro-overlay" style={{ opacity: 0.6 }} />
 
-            <div className="intro-media-copy intro-media-copy-full">
+            <div className="intro-media-copy intro-media-copy-full intro-glass-panel">
               <span className="intro-eyebrow">{activeSlide.eyebrow}</span>
               <h1 className="intro-media-title">{activeSlide.title}</h1>
               <div className="mt-4 d-flex gap-3 flex-wrap justify-content-center">

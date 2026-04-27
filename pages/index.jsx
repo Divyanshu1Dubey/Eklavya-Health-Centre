@@ -114,6 +114,7 @@ const Home = () => {
 
       <main className="content-wrapper overflow-hidden">
         <IntroShowcase />
+        <div className="section-divider" aria-hidden="true" />
 
         <section className="wrapper pt-6 pb-10 pb-md-14">
           <div className="container">
@@ -156,7 +157,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface">
           <div className="container">
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -276,6 +277,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <div className="section-divider" aria-hidden="true" />
 
         <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface orb-surface-soft">
           <div className="container">
@@ -320,7 +322,9 @@ const Home = () => {
 
 
 
-        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
+        <div className="section-divider" aria-hidden="true" />
+
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface">
           <div className="container">
             <div className="premium-section-header centered mb-10" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -377,7 +381,9 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility">
+        <div className="section-divider" aria-hidden="true" />
+
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface">
           <div className="container">
             <div className="premium-faq-shell p-4 p-lg-5">
               <div className="row g-8 align-items-start">
