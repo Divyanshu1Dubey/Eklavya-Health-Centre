@@ -49,7 +49,7 @@ const scrollCue = (function () {
         window.addEventListener('load', $f.runQuery);
       }
 
-      window.addEventListener('scroll', scroll);
+      window.addEventListener('scroll', scroll, { passive: true });
 
       if (ds) {
         let pages = docSlider.getElements().pages;

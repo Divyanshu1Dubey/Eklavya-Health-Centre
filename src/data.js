@@ -149,7 +149,7 @@ export const siteInfo = {
   name: 'Eklavya Healthcare Centre',
   doctorName: 'Dr. Akash Tamrakar',
   role: 'General Physician and Critical Care Specialist',
-  url: 'https://eklavyahealthcare.com',
+  url: 'https://www.drakashtamrakar.in',
   phone: '+91 79872 86267',
   altPhone: '+91 83491 94144',
   instagramUrl: 'https://www.instagram.com/dr_akash_tamrakar/',

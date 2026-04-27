@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eklavyahealthcare.com/sitemap.xml
+Sitemap: https://www.drakashtamrakar.in/sitemap.xml

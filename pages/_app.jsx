@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
       const scrollCue = (await import('plugins/scrollcue')).default;
       scrollCue.init({
         interval: -400,
-        duration: 700,
-        percentage: 0.8,
+        duration: 600,
+        percentage: 0.85,
       });
       scrollCue.update();
     })();

@@ -27,17 +27,24 @@ const PageProgress = () => {
       progressPath.getBoundingClientRect(); // Force layout for transition
       progressPath.style.transition = 'stroke-dashoffset 10ms linear';
 
-      // Update progress on scroll
+      // Update progress on scroll (throttled with rAF for smoothness)
+      let ticking = false;
       const handleScroll = () => {
-        const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const progress = pathLength - (scroll * pathLength) / height;
-        progressPath.style.strokeDashoffset = progress.toString();
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = pathLength - (scroll * pathLength) / height;
+            progressPath.style.strokeDashoffset = progress.toString();
 
-        if (scroll >= offset) {
-          progressWrap.classList.add('active-progress');
-        } else {
-          progressWrap.classList.remove('active-progress');
+            if (scroll >= offset) {
+              progressWrap.classList.add('active-progress');
+            } else {
+              progressWrap.classList.remove('active-progress');
+            }
+            ticking = false;
+          });
+          ticking = true;
         }
       };
 
@@ -47,8 +54,8 @@ const PageProgress = () => {
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       };
 
-      // Event listeners
-      window.addEventListener('scroll', handleScroll);
+      // Event listeners (passive for better scroll performance)
+      window.addEventListener('scroll', handleScroll, { passive: true });
       progressWrap.addEventListener('click', handleClick);
 
       // Cleanup on unmount

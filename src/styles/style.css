@@ -1,3 +1,13 @@
+/* === Smooth Scrolling === */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* === Color Variables === */
 .text-main {
   color: #10324a !important;

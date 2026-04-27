@@ -149,7 +149,7 @@ export const siteInfo = {
   name: 'एकलव्य हेल्थकेयर सेंटर',
   doctorName: 'डॉ. आकाश ताम्रकार',
   role: 'जनरल फिजिशियन और क्रिटिकल केयर विशेषज्ञ',
-  url: 'https://eklavyahealthcare.com',
+  url: 'https://www.drakashtamrakar.in',
   phone: '+91 79872 86267',
   altPhone: '+91 83491 94144',
   instagramUrl: 'https://www.instagram.com/dr_akash_tamrakar/',
