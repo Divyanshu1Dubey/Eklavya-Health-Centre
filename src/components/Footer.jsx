@@ -33,7 +33,7 @@ const Footer = () => {
         <div className="row gx-10 justify-content-around">
 
           {/* Doctor bio, description, and contact information */}
-          <div className="col-lg-4 col-xl-3">
+          <div className="col-lg-4 col-xl-3" data-reveal="zoom" style={{ '--reveal-delay': '0ms' }}>
             <div className="widget d-flex flex-column">
               <div className="mb-4">
                 <p className="mb-1 fw-bold fs-18 text-white">Dr. Akash Tamrakar</p>
@@ -63,14 +63,14 @@ const Footer = () => {
           </div>
 
           {/* Link widgets */}
-          <div className="col-md-6 col-lg-4 col-xl-3 mt-lg-0 mt-5 text-white d-flex justify-content-md-center">
+          <div className="col-md-6 col-lg-4 col-xl-3 mt-lg-0 mt-5 text-white d-flex justify-content-md-center" data-reveal="zoom" style={{ '--reveal-delay': '100ms' }}>
             {widget(usefulLinks, 'Useful Links')}
           </div>
 
-          <div className="col-md-6 col-lg-4 col-xl-3 mt-lg-0 mt-5 text-white d-flex justify-content-md-center">
+          <div className="col-md-6 col-lg-4 col-xl-3 mt-lg-0 mt-5 text-white d-flex justify-content-md-center" data-reveal="zoom" style={{ '--reveal-delay': '200ms' }}>
             {widget(treatments, 'Treatments')}
           </div>
-          <div className="col-xl-3 mt-md-5 mt-xl-0 mt-10 overflow-hidden">
+          <div className="col-xl-3 mt-md-5 mt-xl-0 mt-10 overflow-hidden" data-reveal="zoom" style={{ '--reveal-delay': '300ms' }}>
             <div className="widget">
               <h4 className="widget-title fs-24 mb-4 text-white">Our Clinics</h4>
               <div className="d-flex flex-column gap-4">

@@ -87,6 +87,10 @@ const Navbar = ({ navClassName, navOtherClass, fancy }) => {
             </li>
 
             <li className="nav-item" data-bs-dismiss="offcanvas">
+              <NextLink href="/best-doctor-in-jhansi" title="Best Doctor in Jhansi" className="nav-link" />
+            </li>
+
+            <li className="nav-item" data-bs-dismiss="offcanvas">
               <NextLink href="/contact" title="Contact Us" className="nav-link" />
             </li>
             <li className="nav-item d-lg-none" data-bs-dismiss="offcanvas">

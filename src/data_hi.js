@@ -151,7 +151,9 @@ export const siteInfo = {
   role: 'जनरल फिजिशियन और क्रिटिकल केयर विशेषज्ञ',
   url: 'https://eklavyahealthcare.com',
   phone: '+91 79872 86267',
-  altPhone: '+91 95994 29413',
+  altPhone: '+91 83491 94144',
+  instagramUrl: 'https://www.instagram.com/dr_akash_tamrakar/',
+  facebookUrl: 'https://www.facebook.com/people/Dr-Akash-Tamrakar/61575050222991/',
   whatsapp: '917987286267',
   email: 'ak.tamrakar12@gmail.com',
   appointmentPhone: '+91 83491 94144',
@@ -192,7 +194,7 @@ export const siteInfo = {
     {
       id: "jhansi",
       name: "झांसी क्लीनिक",
-      image: encodeURI('/img/New folder/img1.jpg'),
+      image: encodeURI('/img/New folder/Gemini_Generated_Image_ktd849ktd849ktd8.png'),
       address: [
         'ओमकार भवन, वात्सल्य हॉस्पिटल के सामने',
         '(डॉ. प्रमोद गुप्ता), करगुआं जी रोड',
@@ -208,7 +210,7 @@ export const siteInfo = {
     {
       id: "gursarai",
       name: "गुरसराय क्लीनिक",
-      image: encodeURI('/img/New folder/img2.jpg'),
+      image: encodeURI('/img/New folder/Gemini_Generated_Image_ktd849ktd849ktd8.png'),
       address: [
         'डॉ. डी. आर. सिंह नर्सिंग होम के पास',
         'मऊरानीपुर रोड, गुरसराय',
@@ -320,7 +322,7 @@ export const missionVision = {
 };
 
 export const clinicStats = [
-  { id: 1, value: '16k+', label: 'खुशहाल मरीज़' },
+  { id: 1, value: '1000+', label: 'आपातकालीन मामले संभाले' },
   { id: 2, value: '10+', label: 'वर्षों का अनुभव' },
   { id: 3, value: '15k+', label: 'सफल उपचार' }
 ];
@@ -341,5 +343,7 @@ export const usefulLinks = [
   { id: 2, title: 'हमारे बारे में', url: '/about' },
   { id: 3, title: 'सेवाएँ', url: '/treatments' },
   { id: 4, title: 'अपॉइंटमेंट', url: '/contact' },
-  { id: 5, title: 'संपर्क करें', url: '/contact' }
+  { id: 5, title: 'संपर्क करें', url: '/contact' },
+  { id: 6, title: 'झांसी में सर्वश्रेष्ठ डॉक्टर', url: '/best-doctor-in-jhansi' },
+  { id: 7, title: 'गुरसराय में सर्वश्रेष्ठ डॉक्टर', url: '/best-doctor-in-gursarai' }
 ];

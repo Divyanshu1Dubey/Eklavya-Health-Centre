@@ -18,7 +18,7 @@ const Header = () => {
         <Topbar />
       </div>
 
-      <div ref={stickyRef} className={`sticky-wrapper ${isSticky ? 'is-sticky' : ''}`}>
+      <div ref={stickyRef} className={`sticky-wrapper animate-nav-drop ${isSticky ? 'is-sticky' : ''}`}>
         {/* Main navigation bar */}
         <Navbar />
       </div>

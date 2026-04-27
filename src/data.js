@@ -151,21 +151,23 @@ export const siteInfo = {
   role: 'General Physician and Critical Care Specialist',
   url: 'https://eklavyahealthcare.com',
   phone: '+91 79872 86267',
-  altPhone: '+91 95994 29413',
+  altPhone: '+91 83491 94144',
+  instagramUrl: 'https://www.instagram.com/dr_akash_tamrakar/',
+  facebookUrl: 'https://www.facebook.com/people/Dr-Akash-Tamrakar/61575050222991/',
   whatsapp: '917987286267',
   email: 'ak.tamrakar12@gmail.com',
   appointmentPhone: '+91 83491 94144',
   appointmentWhatsApp: '918349194144',
   doctorBio: [
-    'MBBS completed in 2018 from Gandhi Medical College, Bhopal.',
-    'Internship completed in 2019 at Gandhi Medical College.',
-    'DNB Medicine from NBE, Smt. Rasilaben Sevantilal Shah Venus Hospital, Surat.',
-    'Senior residency at Dr. Ram Manohar Lohia Hospital.',
-    'Senior residency at MLB Medical College, Jhansi.',
-    'Assistant Professor at MLB Medical College, Jhansi.',
-    'Life member of IMA.',
-    'Member of API Jhansi.',
-    '2D Echo fellowship from Indian Association of 2D Echo Cardiography, Delhi, JROP Institute.'
+    'MBBS (2018), Gandhi Medical College, Bhopal.',
+    'Internship (2019), Gandhi Medical College, Bhopal.',
+    'DNB Medicine, NBE at Smt. Rasilaben Sevantilal Shah Venus Hospital, Surat.',
+    'Senior Residency, Dr. Ram Manohar Lohia Hospital.',
+    'Senior Residency, MLB Medical College, Jhansi.',
+    'Assistant Professor, MLB Medical College, Jhansi.',
+    '2D Echo Fellowship, Indian Association of 2D Echo Cardiography (Delhi), JROP Institute.',
+    'Life Member, Indian Medical Association (IMA).',
+    'Member, Association of Physicians of India (API), Jhansi chapter.'
   ],
   memberProfile: {
     heading: 'DR. AKASH TAMRAKAR, MBBS, DNB (Medicine)',
@@ -182,6 +184,9 @@ export const siteInfo = {
   appointmentMessage: 'Hello Dr. Akash Tamrakar, I would like to book an appointment. Please see my details below and contact me soon.',
   serviceAreas: ['Jhansi', 'Gursarai', 'Mauranipur', 'Moth', 'Baruasagar', 'Uttar Pradesh'],
   seoKeywords: [
+    'dr akash tamrakar',
+    'dr akash tamrakar best doctor in jhansi',
+    'akash tamrakar doctor jhansi',
     'best doctor in jhansi',
     'best doctor in gursarai',
     'best doctor in jhansi up',
@@ -209,7 +214,7 @@ export const siteInfo = {
     {
       id: "jhansi",
       name: "Jhansi Clinic",
-      image: encodeURI('/img/New folder/img1.jpg'),
+      image: encodeURI('/img/New folder/Gemini_Generated_Image_ktd849ktd849ktd8.png'),
       address: [
         'Omkar Bhawan, opposite Vatsalya Hospital',
         '(Dr. Pramod Gupta), Karguan Ji Road',
@@ -225,7 +230,7 @@ export const siteInfo = {
     {
       id: "gursarai",
       name: "Gursarai Clinic",
-      image: encodeURI('/img/New folder/img2.jpg'),
+      image: encodeURI('/img/New folder/Gemini_Generated_Image_ktd849ktd849ktd8.png'),
       address: [
         'Near Dr. D. R. Singh Nursing Home',
         'Mauranipur Road, Gursarai',
@@ -360,7 +365,7 @@ export const missionVision = {
 };
 
 export const clinicStats = [
-  { id: 1, value: '16k+', label: 'Happy Patients' },
+  { id: 1, value: '1000+', label: 'Emergency Cases Handled' },
   { id: 2, value: '10+', label: 'Years Experience' },
   { id: 3, value: '15k+', label: 'Treatments' }
 ];
@@ -407,5 +412,15 @@ export const usefulLinks = [
     id: 5,
     title: 'Contact Us',
     url: '/contact'
+  },
+  {
+    id: 6,
+    title: 'Best Doctor in Jhansi',
+    url: '/best-doctor-in-jhansi'
+  },
+  {
+    id: 7,
+    title: 'Best Doctor in Gursarai',
+    url: '/best-doctor-in-gursarai'
   }
 ];

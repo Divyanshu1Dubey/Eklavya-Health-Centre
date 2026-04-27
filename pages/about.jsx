@@ -1,20 +1,34 @@
 import { Fragment } from 'react';
-import { CheckCircle2, BadgeCheck } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, BadgeCheck, BriefcaseMedical, CheckCircle2, GraduationCap, HeartPulse, Users } from 'lucide-react';
 import About from 'components/About';
 import PageProgress from 'components/PageProgress';
 import Seo from 'components/Seo';
+import NextLink from 'components/NextLink';
 import { useLanguage } from '../src/context/LanguageContext';
 
 const AboutPage = () => {
-  const { data: { clinicStats, missionVision, siteInfo, treatments } } = useLanguage();
+  const { data: { siteInfo, treatments } } = useLanguage();
+  const highlightLabels = [
+    'Qualification',
+    'Academic Appointment',
+    'Professional Association',
+    'Professional Association',
+    'Advanced Clinical Training',
+    'Research Contribution'
+  ];
+
   return (
     <Fragment>
       <PageProgress />
       <Seo
-        title={`About ${siteInfo.doctorName}`}
-        description={`Meet ${siteInfo.doctorName}, ${siteInfo.role} at ${siteInfo.name}, trusted as one of the best physician and chest doctor options for patients in Jhansi and Gursarai.`}
+        title={`About ${siteInfo.doctorName} - Physician in Jhansi`}
+        description={`Meet ${siteInfo.doctorName}, ${siteInfo.role} at ${siteInfo.name}, trusted by patients searching for the best doctor in Jhansi, best doctor in Gursarai, and experienced physician care.`}
         canonical={`${siteInfo.url}/about`}
         keywords={[
+          'dr akash tamrakar',
+          'dr akash tamrakar best doctor in jhansi',
+          'about dr akash tamrakar',
           'best doctor in jhansi',
           'best doctor in gursarai',
           'best physician in jhansi',
@@ -24,116 +38,149 @@ const AboutPage = () => {
         ]}
       />
       <main className="content-wrapper overflow-hidden pb-10">
-        <section className="wrapper py-10 py-md-14">
+        <section className="wrapper premium-section-light py-10 py-md-14">
           <div className="container">
-            <div className="clinic-panel p-6 p-md-8" data-reveal="zoom">
-              <div className="row align-items-center gy-6">
-                <div className="col-lg-7" data-reveal="left">
-                  <span className="section-badge mb-3 bg-soft-purple-tint text-teal">About Dr. Akash Tamrakar</span>
-                  <h1 className="display-3 text-dark-blue mb-4">Patient-first care led by Dr. Akash Tamrakar in Jhansi and nearby Gursarai.</h1>
-                  <p className="lead text-dark-blue text-opacity-85 mb-0">
-                    Dr. Akash Tamrakar focuses on clear diagnosis, practical treatment planning, and long-term support for chronic medical conditions.
-                  </p>
+            <div className="premium-section-panel premium-profile-intro-panel p-4 p-md-4 p-xl-5" data-reveal="zoom">
+              <div className="premium-section-header centered premium-profile-header-compact mb-3 mb-md-4">
+                <div className="premium-section-heading-frame">
+                  <span className="section-badge">Clinical Profile</span>
                 </div>
-                <div className="col-lg-5" data-reveal="right" style={{ '--reveal-delay': '100ms' }}>
-                  <div className="subtle-card p-4 bg-white text-dark-blue">
-                    <p className="fw-bold text-teal mb-2">Academic & clinical bio</p>
-                    <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
-                      {siteInfo.doctorBio.map((point) => (
-                        <li key={point}><CheckCircle2 size={16} aria-hidden="true" />{point}</li>
-                      ))}
+              </div>
+              <About
+                headingH1="Clinical "
+                span="Journey"
+                para={`${siteInfo.doctorName} completed MBBS in 2018 from Gandhi Medical College, Bhopal, and internship in 2019.`}
+                para2="He then pursued DNB Medicine through NBE at Smt. Rasilaben Sevantilal Shah Venus Hospital, Surat, building strong foundation in internal medicine."
+                para3="His career includes senior residency at Dr. Ram Manohar Lohia Hospital and MLB Medical College, Jhansi, Assistant Professorship at MLB Medical College, and a 2D Echo Fellowship from the Indian Association of 2D Echo Cardiography (Delhi) at JROP Institute."
+                imgPosition="left"
+                src="/img/dr-akash-profile.png"
+                btnTitle="Book Consultation"
+                btnUrl="/contact"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="wrapper premium-section-light py-8 py-md-10">
+          <div className="container">
+            <div className="premium-section-panel premium-academic-panel p-4 p-md-5 mb-4" data-reveal="left">
+              <div className="premium-section-header centered premium-profile-header-compact mb-3 mb-md-4">
+                <div className="premium-section-heading-frame">
+                  <span className="section-badge">Clinical Timeline</span>
+                </div>
+              </div>
+              <div className="row g-3 g-lg-4 premium-academic-grid">
+                <span className="premium-academic-line d-none d-lg-block" aria-hidden="true"></span>
+                <div className="col-lg-6 premium-academic-item premium-academic-item-left" data-reveal="left" style={{ '--reveal-delay': '40ms' }}>
+                  <div className="premium-list-card p-3 p-md-4 h-100 premium-academic-card">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <GraduationCap size={18} className="text-teal" aria-hidden="true" />
+                      <p className="mb-0 fw-bold text-dark-blue">Education & Core Training</p>
+                    </div>
+                    <ul className="list-unstyled mb-0 d-grid gap-2">
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>MBBS (2018), Gandhi Medical College, Bhopal.</span></li>
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Internship (2019), Gandhi Medical College, Bhopal.</span></li>
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>DNB Medicine, NBE at Smt. Rasilaben Sevantilal Shah Venus Hospital, Surat.</span></li>
                     </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section className="wrapper">
-          <div className="container">
-            <div className="section-shell mb-10" data-reveal="zoom" style={{ '--reveal-delay': '120ms' }}>
-              <div className="px-4 px-md-8 py-10">
-                <About
-                  headingH1="Clinical"
-                  span="profile"
-                  para={`${siteInfo.doctorName} completed MBBS in 2018 from Gandhi Medical College, Bhopal, followed by internship in 2019. He went on to complete DNB Medicine from NBE at Smt. Rasilaben Sevantilal Shah Venus Hospital, Surat.`}
-                  para2="His training also includes senior residency at Dr. Ram Manohar Lohia Hospital and MLB Medical College, Jhansi, plus an Assistant Professorship at MLB Medical College, Jhansi."
-                  para3="He also completed a 2D Echo fellowship from the Indian Association of 2D Echo Cardiography, Delhi, at JROP Institute."
-                  imgPosition="left"
-                  src="/img/dr-akash-profile.png"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="wrapper pb-10 pb-md-14">
-          <div className="container">
-            <div className="row g-6">
-              <div className="col-lg-6" data-reveal="left">
-                <div className="clean-card h-100">
-                  <span className="section-badge mb-3 bg-soft-purple-tint text-teal">Mission</span>
-                  <h2 className="h3 mb-3">Our Mission</h2>
-                  <p className="mb-0">{missionVision.mission}</p>
+                <div className="col-lg-6 premium-academic-item premium-academic-item-right" data-reveal="right" style={{ '--reveal-delay': '110ms' }}>
+                  <div className="premium-list-card p-3 p-md-4 h-100 premium-academic-card">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <BriefcaseMedical size={18} className="text-teal" aria-hidden="true" />
+                      <p className="mb-0 fw-bold text-dark-blue">Clinical & Academic Experience</p>
+                    </div>
+                    <ul className="list-unstyled mb-0 d-grid gap-2">
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Senior Residency, Dr. Ram Manohar Lohia Hospital.</span></li>
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Senior Residency, MLB Medical College, Jhansi.</span></li>
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Assistant Professor, MLB Medical College, Jhansi.</span></li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <div className="col-lg-6" data-reveal="right" style={{ '--reveal-delay': '90ms' }}>
-                <div className="clean-card h-100">
-                  <span className="section-badge mb-3 bg-soft-purple-tint text-teal">Vision</span>
-                  <h2 className="h3 mb-3">Our Vision</h2>
-                  <p className="mb-0">{missionVision.vision}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section className="wrapper pb-10 pb-md-14">
-          <div className="container">
-            <div className="clean-card" data-reveal="zoom">
-              <div className="row g-4">
-                {clinicStats.map((item) => (
-                  <div className="col-md-4" key={item.id}>
-                    <div className="p-4 rounded-4 bg-soft-purple-tint h-100 text-center">
-                      <p className="display-6 mb-1 text-teal fw-bold">{item.value}</p>
-                      <p className="mb-0 fw-bold text-dark-blue">{item.label}</p>
+                <div className="col-lg-6 premium-academic-item premium-academic-item-left" data-reveal="left" style={{ '--reveal-delay': '180ms' }}>
+                  <div className="premium-list-card p-3 p-md-4 h-100 premium-academic-card">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <HeartPulse size={18} className="text-teal" aria-hidden="true" />
+                      <p className="mb-0 fw-bold text-dark-blue">Advanced Fellowship</p>
+                    </div>
+                    <p className="premium-copy mb-0 d-flex align-items-start gap-2">
+                      <CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" />
+                      <span>2D Echo Fellowship, Indian Association of 2D Echo Cardiography (Delhi), JROP Institute.</span>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="col-lg-6 premium-academic-item premium-academic-item-right" data-reveal="right" style={{ '--reveal-delay': '250ms' }}>
+                  <div className="premium-list-card p-3 p-md-4 h-100 premium-academic-card">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <Users size={18} className="text-teal" aria-hidden="true" />
+                      <p className="mb-0 fw-bold text-dark-blue">Professional Memberships</p>
+                    </div>
+                    <ul className="list-unstyled mb-0 d-grid gap-2">
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Life Member, Indian Medical Association (IMA).</span></li>
+                      <li className="premium-copy d-flex align-items-start gap-2"><CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" /><span>Member, Association of Physicians of India (API), Jhansi chapter.</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="col-12 premium-academic-item premium-academic-item-full" data-reveal="zoom" style={{ '--reveal-delay': '320ms' }}>
+                  <div className="premium-list-card p-3 p-md-4 h-100 premium-academic-card">
+                    <div className="d-flex align-items-center gap-2 mb-2">
+                      <BadgeCheck size={18} className="text-teal" aria-hidden="true" />
+                      <p className="mb-0 fw-bold text-dark-blue">Professional Highlights</p>
+                    </div>
+                    <div className="professional-timeline">
+                      <div className="professional-timeline-step">
+                        <p className="professional-timeline-label mb-1">Consultant Profile</p>
+                        <h3 className="h5 mb-0 text-dark-blue">{siteInfo.memberProfile.heading}</h3>
+                      </div>
+                      <div className="professional-timeline-step">
+                        <p className="professional-timeline-label mb-1">Core Speciality Focus</p>
+                        <p className="premium-copy mb-0">{siteInfo.memberProfile.speciality}</p>
+                      </div>
+                      {siteInfo.memberProfile.points.map((point, index) => (
+                        <div className="professional-timeline-step" key={point}>
+                          <p className="professional-timeline-label mb-1">{highlightLabels[index] || `Professional Milestone ${index + 1}`}</p>
+                          <p className="premium-copy mb-0">{point}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="wrapper pb-10 pb-md-14">
+        <section className="wrapper premium-section-band py-10 py-md-14">
           <div className="container">
-            <div className="clean-card" data-reveal="zoom">
-              <span className="section-badge mb-3 bg-soft-purple-tint text-teal">Our Members</span>
-              <h2 className="h3 mb-3">{siteInfo.memberProfile.heading}</h2>
-              <p className="mb-4"><strong>Speciality:</strong> {siteInfo.memberProfile.speciality}</p>
-              <ul className="icon-list bullet-bg bullet-soft-primary mb-0">
-                {siteInfo.memberProfile.points.map((point) => (
-                  <li key={point}><BadgeCheck size={16} aria-hidden="true" />{point}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="wrapper pb-10 pb-md-14">
-          <div className="container">
-            <div className="clean-card" data-reveal="left">
-              <span className="section-badge mb-3">Treatments Available</span>
-              <div className="row g-3">
-                {treatments.map((item) => (
-                  <div className="col-md-4" key={item.slug}>
-                    <div className="p-3 rounded-4 bg-light-grey h-100 d-flex align-items-center gap-2">
-                      <CheckCircle2 size={17} className="text-teal" aria-hidden="true" />
-                      <span className="fw-bold text-dark-blue">{item.title}</span>
-                    </div>
+            <div className="premium-dark-card p-4 p-md-5 p-xl-6" data-reveal="zoom">
+              <div className="row align-items-center g-5">
+                <div className="col-lg-5">
+                  <span className="section-badge mb-3">Treatments Available</span>
+                  <h2 className="display-5 mb-3">Comprehensive care across chronic, preventive, and follow-up needs.</h2>
+                  <p className="premium-copy-light mb-4">
+                    Patients can consult for diabetes, thyroid, chest, lungs, heart, kidney, liver, blood pressure, asthma, and related internal medicine concerns.
+                  </p>
+                  <NextLink href="/treatments" title="Explore Treatments" className="btn btn-power rounded-pill" />
+                </div>
+                <div className="col-lg-7">
+                  <div className="row g-3">
+                    {treatments.map((item) => (
+                      <div className="col-md-6" key={item.slug}>
+                        <Link href={item.url} className="premium-list-card premium-list-card-dark p-3 h-100 d-flex align-items-center justify-content-between gap-3">
+                          <div className="d-flex align-items-center gap-2">
+                            <CheckCircle2 size={17} aria-hidden="true" />
+                            <span>{item.title}</span>
+                          </div>
+                          <ArrowRight size={16} aria-hidden="true" />
+                        </Link>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>

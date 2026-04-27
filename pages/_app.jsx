@@ -20,7 +20,8 @@ import { siteInfo } from 'data';
 import { LanguageProvider } from '../src/context/LanguageContext';
 
 function MyApp({ Component, pageProps }) {
-  const { pathname } = useRouter();
+  const router = useRouter();
+  const { pathname } = router;
   const [loading] = useState(false);
 
   // Load Bootstrap only on the client side
@@ -43,9 +44,51 @@ function MyApp({ Component, pageProps }) {
     })();
   }, [pathname]);
 
+  useEffect(() => {
+    const handleStart = () => document.body.classList.add('route-transitioning');
+    const handleDone = () => {
+      window.setTimeout(() => document.body.classList.remove('route-transitioning'), 80);
+    };
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleDone);
+    router.events.on('routeChangeError', handleDone);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleDone);
+      router.events.off('routeChangeError', handleDone);
+    };
+  }, [router.events]);
+
   // Lightweight global reveal system for smooth section/card animations.
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
+    const autoRevealSelectors = [
+      '.premium-section-header',
+      '.premium-section-panel',
+      '.premium-dark-card',
+      '.clean-card',
+      '.subtle-card',
+      '.service-card',
+      '.gallery-card',
+      '.testimonial-card',
+      '.trust-highlight-card',
+      '.trust-quick-card',
+      '.premium-location-card',
+      '.premium-list-card',
+      '.faq-card',
+      '.map-frame',
+      '.glass-card'
+    ];
+
+    document.querySelectorAll(autoRevealSelectors.join(',')).forEach((element, index) => {
+      if (!element.hasAttribute('data-reveal') && !element.closest('[data-no-reveal]')) {
+        element.setAttribute('data-reveal', 'up');
+        element.style.setProperty('--reveal-delay', `${Math.min(index % 5, 4) * 45}ms`);
+      }
+    });
 
     const revealElements = document.querySelectorAll('[data-reveal]');
     if (!revealElements.length) return;
@@ -80,25 +123,8 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#10324a" />
-        <title>{siteInfo.name}</title>
-        <meta name="description" content="Best doctor in Jhansi and Gursarai for physician consultation, chest care, critical care, diabetes, thyroid, and heart treatment at Eklavya Healthcare Centre." />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={siteInfo.name} />
-        <meta property="og:description" content="Best doctor in Jhansi and Gursarai for physician consultation, chest care, critical care, diabetes, thyroid, and heart treatment at Eklavya Healthcare Centre." />
-        <meta property="og:url" content={siteInfo.url} />
-        <meta property="og:image" content={`${siteInfo.url}${siteInfo.logo}`} />
-        <meta property="og:image:secure_url" content={`${siteInfo.url}${siteInfo.logo}`} />
-        <meta property="og:locale" content="en_IN" />
-        <meta property="og:country-name" content="India" />
-
-        {/* Twitter Meta */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={siteInfo.name} />
-        <meta name="twitter:description" content="Best doctor in Jhansi and Gursarai for physician consultation, chest care, critical care, diabetes, thyroid, and heart treatment at Eklavya Healthcare Centre." />
-        <meta name="twitter:image" content={`${siteInfo.url}${siteInfo.logo}`} />
-
+        <meta name="application-name" content={siteInfo.name} />
+        <meta name="format-detection" content="telephone=yes" />
         <meta name="geo.region" content={siteInfo.geo?.regionCode || 'IN-UP'} />
         <meta name="geo.placename" content={`${siteInfo.geo?.locality || 'Jhansi'}, ${siteInfo.geo?.region || 'Uttar Pradesh'}`} />
         <meta name="geo.position" content={`${siteInfo.geo?.latitude || '25.4358'};${siteInfo.geo?.longitude || '78.6020'}`} />

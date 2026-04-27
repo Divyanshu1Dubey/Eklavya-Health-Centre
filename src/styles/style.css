@@ -56,7 +56,6 @@ section h2 {
 }
 section h2,
 section h1 {
-  color: #10324a !important;
   font-size: clamp(2rem, 3vw, 3.25rem) !important;
 }
 h1 span,

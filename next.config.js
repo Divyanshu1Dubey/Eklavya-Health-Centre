@@ -2,6 +2,8 @@ const path = require('path');
 
 const nextConfig = {
   reactStrictMode: false,
+  poweredByHeader: false,
+  compress: true,
   outputFileTracingRoot: path.join(__dirname),
   sassOptions: {
     quietDeps: true,
@@ -27,6 +29,31 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(self)'
+          }
+        ]
+      }
+    ];
   }
 };
 

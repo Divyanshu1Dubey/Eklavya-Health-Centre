@@ -2,85 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://eklavyahealthcare.com/</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/about</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/treatments</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/gallery</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/contact</loc>
-    <lastmod>2026-04-13</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://eklavyahealthcare.com/treatments/diabetes</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://eklavyahealthcare.com/treatments/thyroid</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/treatments/heart</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/treatments/chest</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/treatments/lungs</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eklavyahealthcare.com/treatments/kidney-liver</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://eklavyahealthcare.com/treatments/kidney</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://eklavyahealthcare.com/treatments/high-blood-pressure</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://eklavyahealthcare.com/treatments/low-blood-pressure</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://eklavyahealthcare.com/treatments/blood-pressure</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://eklavyahealthcare.com/treatments/asthma</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://eklavyahealthcare.com/treatments/liver</loc>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -43,7 +43,7 @@ const About = ({
         width={535}
         height={225}
         sizes="(max-width: 991px) 100vw, 535px"
-        className="position-static about1-img"
+        className="position-static about1-img about-profile-image"
       />
     );
 
@@ -57,7 +57,7 @@ const About = ({
         style={isVisible ? imgAnimation : {}}
       >
         <div className="about-img">
-          <figure className="reveal image-anime rounded-xl shadow-lg">{renderMedia()}</figure>
+          <figure className="reveal image-anime about-profile-figure">{renderMedia()}</figure>
         </div>
       </div>
 
@@ -68,6 +68,7 @@ const About = ({
         }`}
         style={isVisible ? textAnimation : {}}
       >
+        <div className="about-profile-copy">
         {/* Optional Subheading Label */}
         {subHeading && (
           <h3 className="fs-15 py-2 px-3 primary-bg-soft text-main d-inline rounded-pill">{subHeading}</h3>
@@ -102,6 +103,7 @@ const About = ({
             <NextLink title={btnTitle} href={btnUrl} className="btn btn-power rounded-pill" />
           </div>
         )}
+        </div>
       </div>
     </div>
   );
