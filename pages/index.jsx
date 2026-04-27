@@ -171,7 +171,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light pb-8 pb-md-12 section-surface section-visibility">
+        <section className="wrapper premium-section-light pb-8 pb-md-12 section-surface section-visibility orb-surface">
           <div className="container">
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
@@ -242,6 +242,7 @@ const Home = () => {
               <div className="col-lg-5" data-reveal="left">
                 <span className="section-badge mb-3">{t.whyPatientsVisit}</span>
                 <h2 className="display-5 mb-4 section-heading-dark">{t.clinicalJudgement}</h2>
+                <p className="trust-byline mb-3">{t.trustByline}</p>
                 <p className="mb-4 trust-intro premium-copy">{summarizeText(t.rootCauseDiagnosis, 160)}</p>
                 <div className="trust-fast-points mb-4">
                   {trustPoints.slice(0, 3).map((point) => (
@@ -254,6 +255,10 @@ const Home = () => {
                 <NextLink href="/about" title={t.learnAboutDoctor} className="btn btn-outline-primary rounded-pill" />
               </div>
               <div className="col-lg-7" data-reveal="right" style={{ '--reveal-delay': '100ms' }}>
+                <div className="trust-grid-header mb-3">
+                  <span className="section-badge">{t.trustHighlightsTag}</span>
+                  <h3 className="h4 mb-0 text-dark-blue">{t.trustHighlightsTitle}</h3>
+                </div>
                 <div className="row g-3">
                   {careHighlights.map((item) => (
                     <div className="col-md-6" key={item.id} data-reveal="zoom" style={{ '--reveal-delay': `${item.id * 70}ms` }}>
@@ -272,23 +277,24 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="wrapper premium-section-light py-12 py-md-14 section-visibility">
+        <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface orb-surface-soft">
           <div className="container">
             <div className="row g-8 align-items-center">
               <div className="col-lg-6" data-reveal="left">
-                <div className="clean-card journey-card premium-section-panel h-100 position-relative">
+                <div className="clean-card journey-card premium-section-panel h-100 position-relative journey-orb">
                   <div className="position-absolute top-0 end-0 p-4 opacity-10 d-none d-sm-block">
                     <Stethoscope size={100} />
                   </div>
                   <span className="section-badge mb-3 bg-soft-purple-tint text-teal">{t.visitOverviewTag}</span>
                   <h2 className="display-4 text-dark-blue mb-4">{t.visitOverviewTitle}</h2>
+                  <p className="journey-byline mb-3">{t.visitOverviewByline}</p>
                   <p className="lead mb-4 text-dark-blue opacity-75">
                     {t.visitOverviewDescription}
                   </p>
                   <div className="journey-meta mb-4">
-                    <span className="bg-light-grey px-3 py-2 rounded-pill shadow-sm"><Clock3 size={16} className="text-teal" />{t.visitMetaConsultation}</span>
-                    <span className="bg-light-grey px-3 py-2 rounded-pill shadow-sm"><PhoneCall size={16} className="text-teal" />{t.visitMetaAppointment}</span>
-                    <span className="bg-light-grey px-3 py-2 rounded-pill shadow-sm"><MapPin size={16} className="text-teal" />{t.visitMetaAccess}</span>
+                    <span className="journey-pill"><Clock3 size={16} className="text-teal" />{t.visitMetaConsultation}</span>
+                    <span className="journey-pill"><PhoneCall size={16} className="text-teal" />{t.visitMetaAppointment}</span>
+                    <span className="journey-pill"><MapPin size={16} className="text-teal" />{t.visitMetaAccess}</span>
                   </div>
                   <div className="journey-note p-4 rounded-4 shadow-sm border-start border-4 border-teal">
                     <p className="mb-2 fw-bold text-dark-blue fs-18">{t.beforeYouVisit}</p>

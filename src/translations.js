@@ -51,6 +51,9 @@ const translations = {
     whyPatientsVisit: "Why Families Trust Dr. Akash",
     clinicalJudgement: "Accurate Diagnosis. Clear Communication. Consistent Results.",
     rootCauseDiagnosis: "Dr. Akash believes in treating the root cause, not just the symptoms. Every consultation includes thorough examination, transparent explanation, and a practical treatment plan that fits your daily life — making long-term disease control achievable and stress-free.",
+    trustHighlightsTag: "Clinical Focus",
+    trustHighlightsTitle: "Evidence-Led Care Pillars",
+    trustByline: "Trusted care with Dr. Akash Tamrakar.",
 
     // ─── Core Services Section ───
     coreServicesTag: "Our Specializations",
@@ -61,6 +64,7 @@ const translations = {
     visitOverviewTag: "How Your Visit Works",
     visitOverviewTitle: "Simple Steps to Better Health — From Booking to Recovery.",
     visitOverviewDescription: "Share your symptoms or reports via phone or WhatsApp before your visit. Walk in prepared, receive a thorough consultation, and leave with a clear action plan for your health.",
+    visitOverviewByline: "Guided personally by Dr. Akash Tamrakar.",
     visitMetaConsultation: "Thorough consultation & diagnosis",
     visitMetaAppointment: "Quick appointment scheduling",
     visitMetaAccess: "Comfortable, patient-friendly clinics",
@@ -180,6 +184,9 @@ const translations = {
     whyPatientsVisit: "परिवार डॉ. आकाश पर क्यों भरोसा करते हैं",
     clinicalJudgement: "सटीक निदान। स्पष्ट संवाद। स्थायी परिणाम।",
     rootCauseDiagnosis: "डॉ. आकाश सिर्फ लक्षणों पर नहीं, बल्कि मूल कारण का इलाज करने में विश्वास रखते हैं। हर परामर्श में गहन जांच, पारदर्शी स्पष्टीकरण और एक व्यावहारिक उपचार योजना शामिल होती है जो आपके दैनिक जीवन में आसानी से लागू हो सके — जिससे दीर्घकालिक रोग नियंत्रण सरल और तनाव-मुक्त बने।",
+    trustHighlightsTag: "क्लिनिकल फोकस",
+    trustHighlightsTitle: "प्रमाण-आधारित देखभाल के स्तंभ",
+    trustByline: "डॉ. आकाश ताम्रकार के साथ भरोसेमंद देखभाल।",
 
     // ─── Core Services Section ───
     coreServicesTag: "हमारी विशेषज्ञताएँ",
@@ -190,6 +197,7 @@ const translations = {
     visitOverviewTag: "आपकी विजिट कैसे होती है",
     visitOverviewTitle: "बेहतर स्वास्थ्य की ओर सरल कदम — बुकिंग से लेकर रिकवरी तक।",
     visitOverviewDescription: "अपने लक्षण या रिपोर्ट फोन या व्हाट्सएप से साझा करें। तैयार होकर आएं, गहन परामर्श प्राप्त करें, और अपने स्वास्थ्य के लिए एक स्पष्ट कार्य योजना लेकर जाएं।",
+    visitOverviewByline: "डॉ. आकाश ताम्रकार के मार्गदर्शन में।",
     visitMetaConsultation: "गहन परामर्श और निदान",
     visitMetaAppointment: "त्वरित अपॉइंटमेंट शेड्यूलिंग",
     visitMetaAccess: "आरामदायक, मरीज-अनुकूल क्लीनिक",
