@@ -1,0 +1,60 @@
+# Eklavya Healthcare Centre
+
+## Overview
+Eklavya Healthcare Centre is a physician-led clinic in Jhansi, Uttar Pradesh, India, run by Dr. Akash Tamrakar (MBBS, DNB Medicine). The clinic provides general medicine and critical care consultation for chronic and acute conditions across Jhansi, Gursarai, and nearby towns in the Bundelkhand region.
+
+## Doctor
+- Name: Dr. Akash Tamrakar
+- Qualifications: MBBS (2018, Gandhi Medical College, Bhopal), DNB Medicine (NBE, Surat), 2D Echo Fellowship (IAC, Delhi)
+- Role: General Physician and Critical Care Specialist
+- Experience: 10+ years including senior residency at Dr. Ram Manohar Lohia Hospital and MLB Medical College, Jhansi; Assistant Professor at MLB Medical College, Jhansi
+- Memberships: Life Member IMA; Member API (Jhansi chapter)
+- Specializations: Diabetes, Thyroid, Heart, Chest, Lungs, Kidney, Liver, Blood Pressure, Asthma, General Medicine, Critical Care
+
+## Clinics
+1. Jhansi Clinic
+   - Address: Omkar Bhawan, opposite Vatsalya Hospital (Dr. Pramod Gupta), Karguan Ji Road, Medical Gate No. 2, Jhansi
+   - Timings: Mon, Tue, Thu, Fri, Sat: 11:00 AM – 5:00 PM; Wed & Sun: 9:00 AM – 11:00 AM
+   - Map: https://www.google.com/maps?q=Omkar+Bhawan,+in+front+of+Vatsalya+Hospital+(Dr.+Pramod+Gupta),+Jhansi,+Uttar+Pradesh+284128
+
+2. Gursarai Clinic
+   - Address: Near Dr. D. R. Singh Nursing Home, Mauranipur Road, Gursarai, Jhansi
+   - Timings: Wednesday & Sunday: 11:00 AM – 5:00 PM
+   - Map: https://www.google.com/maps?q=Dr.+D.+R.+Singh+Nursing+Home,+Gursarai,+Jhansi
+
+## Services
+- Thyroid care (hypo/hyperthyroidism)
+- Heart care (hypertension, cardiac risk evaluation)
+- Chest care (chest pain, respiratory infections)
+- Lung care (asthma, COPD, chronic cough)
+- Kidney care (early detection, prevention)
+- Blood pressure management
+- Asthma diagnosis and long-term control
+- Liver evaluation and fatty liver management
+- Diabetes management
+- General physician consultation
+- Critical care support
+
+## Contact
+- Phone: +91 79872 86267
+- Alternate: +91 83491 94144
+- WhatsApp Appointment: +91 83491 94144
+- Email: ak.tamrakar12@gmail.com
+- Instagram: https://www.instagram.com/dr_akash_tamrakar/
+- Facebook: https://www.facebook.com/people/Dr-Akash-Tamrakar/61575050222991/
+- Website: https://eklavyahealthcare.com
+
+## Service Areas
+Jhansi, Gursarai, Mauranipur, Moth, Baruasagar, Uttar Pradesh
+
+## Key Pages
+- Home: https://eklavyahealthcare.com/
+- About: https://eklavyahealthcare.com/about
+- Treatments: https://eklavyahealthcare.com/treatments
+- Contact / Appointment: https://eklavyahealthcare.com/contact
+- Gallery: https://eklavyahealthcare.com/gallery
+- Best Doctor in Jhansi: https://eklavyahealthcare.com/best-doctor-in-jhansi
+- Best Doctor in Gursarai: https://eklavyahealthcare.com/best-doctor-in-gursarai
+
+## Sitemap
+- https://eklavyahealthcare.com/sitemap.xml
