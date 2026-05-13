@@ -13,6 +13,12 @@ const TreatmentDetail = ({ slug: staticSlug }) => {
   const slug = staticSlug || router.query.slug;
 
   const treatment = treatments.find(t => t.slug === slug);
+  const authorityCitations = siteInfo.authorityReferences.map((item) => ({
+    '@type': 'CreativeWork',
+    name: item.label,
+    url: item.url,
+    description: item.summary
+  }));
 
   if (!treatment) {
     return (
@@ -61,6 +67,7 @@ const TreatmentDetail = ({ slug: staticSlug }) => {
         },
         reviewedBy: { '@id': `${siteInfo.url}#doctor` },
         publisher: { '@id': `${siteInfo.url}#clinic` },
+        citation: authorityCitations,
         inLanguage: 'en-IN'
       },
       {
@@ -78,8 +85,8 @@ const TreatmentDetail = ({ slug: staticSlug }) => {
     <Fragment>
       <PageProgress />
       <Seo
-        title={`${treatment.title} Treatment | Dr. Akash Tamrakar Best Doctor in Jhansi`}
-        description={`${treatment.cardDescription} Consult Dr. Akash Tamrakar at Eklavya Healthcare Centre, trusted by patients searching for the best doctor in Jhansi and Gursarai for focused diagnosis and follow-up.`}
+        title={`${treatment.title} Treatment in Jhansi | Dr. Akash`}
+        description={`${treatment.cardDescription} Consult Dr. Akash Tamrakar in Jhansi and Gursarai for diagnosis, treatment planning, and follow-up care.`}
         canonical={`${siteInfo.url}/treatments/${slug}`}
         image={treatment.coverImage || `${siteInfo.url}${siteInfo.logo}`}
         keywords={[
@@ -145,7 +152,7 @@ const TreatmentDetail = ({ slug: staticSlug }) => {
             <div className="row g-8 align-items-center">
               <div className="col-lg-6" data-reveal="left">
                 <div className="clean-card premium-section-panel p-4 p-md-5">
-                  <h2 className="h3 mb-4">What this consultation includes</h2>
+                  <h2 className="h3 mb-4">What does this consultation include?</h2>
                   <p className="premium-copy mb-4">
                     {treatment.description || 'The consultation is designed to understand symptoms, review reports, and create a focused treatment and follow-up roadmap.'}
                   </p>
@@ -166,7 +173,7 @@ const TreatmentDetail = ({ slug: staticSlug }) => {
                 <div className="premium-section-panel p-4 p-md-5">
                   <div className="premium-section-heading-frame mb-4">
                     <span className="section-badge">Why this treatment matters</span>
-                    <h2 className="h3 mb-0">Clear next steps, practical advice, and follow-up built into the consultation.</h2>
+                    <h2 className="h3 mb-0">Why does follow-up matter for {treatment.title.toLowerCase()} care?</h2>
                   </div>
                   <div className="row g-3">
                     {(treatment.keyFacts || []).map((fact) => (

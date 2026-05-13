@@ -90,6 +90,51 @@ const IntroShowcase = () => {
     { icon: HeartPulse, label: t.longTermChronicCare },
   ];
 
+  const impactPromoStyles = {
+    card: {
+      maxWidth: '58rem',
+      borderRadius: '1.5rem',
+      padding: '1.25rem',
+      background: 'linear-gradient(135deg, rgba(10, 66, 77, 0.1), rgba(11, 116, 104, 0.16))',
+      border: '1px solid rgba(11, 116, 104, 0.18)',
+      boxShadow: '0 18px 45px rgba(8, 49, 58, 0.14)',
+      backdropFilter: 'blur(14px)'
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+      gap: '1rem'
+    },
+    item: {
+      borderRadius: '1.15rem',
+      padding: '1rem 1.1rem',
+      background: 'rgba(255, 255, 255, 0.72)',
+      border: '1px solid rgba(255, 255, 255, 0.7)',
+      boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.65)'
+    },
+    label: {
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: '0.35rem',
+      marginBottom: '0.45rem',
+      padding: '0.3rem 0.75rem',
+      borderRadius: '999px',
+      background: 'rgba(11, 116, 104, 0.12)',
+      color: '#0b7468',
+      fontSize: '0.78rem',
+      fontWeight: 800,
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase'
+    },
+    value: {
+      marginBottom: 0,
+      color: '#0b1f24',
+      fontSize: '1.02rem',
+      fontWeight: 700,
+      lineHeight: 1.45
+    }
+  };
+
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const isMobile = window.matchMedia('(max-width: 767px)').matches;
@@ -140,7 +185,7 @@ const IntroShowcase = () => {
 
             <div className="intro-media-copy intro-media-copy-full intro-glass-panel">
               <span className="intro-eyebrow">{activeSlide.eyebrow}</span>
-              <h1 className="intro-media-title">{activeSlide.title}</h1>
+              <p className="intro-media-title mb-0">{activeSlide.title}</p>
               <div className="mt-4 d-flex gap-3 flex-wrap justify-content-center">
                 <NextLink href="/contact" title={t.bookAppointment} className="btn btn-power" />
               </div>
@@ -183,28 +228,40 @@ const IntroShowcase = () => {
 
         <div className="container intro-content-below premium-section-panel premium-section-panel-glow">
           <div className="premium-section-header centered">
-          <span className="section-badge intro-badge mb-4">{t.premiumMedicalBlue}</span>
-          <h2 className="display-4 mb-4 intro-title">
-            {t.oneCalmFirstImpression}
-          </h2>
-          <p className="intro-lead mb-4">
-            {t.openingShowcaseDescription}
-          </p>
-          <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
-            <NextLink href="/contact" title={t.bookAppointment} className="btn btn-power" />
-            <NextLink href="/about" title={t.visitDoctor} className="btn btn-outline-primary rounded-pill" />
-          </div>
-          <div className="d-flex flex-wrap justify-content-center gap-3 intro-badge-row">
-            {introBadges.map((badge) => {
-              const Icon = badge.icon;
-              return (
-                <span className="intro-mini-pill" key={badge.label}>
-                  <Icon size={16} aria-hidden="true" />
-                  {badge.label}
-                </span>
-              );
-            })}
-          </div>
+            <span className="section-badge intro-badge mb-4">{t.premiumMedicalBlue}</span>
+            <h2 className="display-4 mb-4 intro-title">
+              {t.oneCalmFirstImpression}
+            </h2>
+            <p className="intro-lead mb-4">
+              {t.openingShowcaseDescription}
+            </p>
+            <div className="impact-promo-card mx-auto mb-4 text-start text-lg-center" style={impactPromoStyles.card}>
+              <div className="impact-promo-grid" style={impactPromoStyles.grid}>
+                <div className="impact-promo-item" style={impactPromoStyles.item}>
+                  <span className="impact-promo-label" style={impactPromoStyles.label}>Experience</span>
+                  <p className="impact-promo-value" style={impactPromoStyles.value}>10+ years across internal medicine, ICU care, and academic practice</p>
+                </div>
+                <div className="impact-promo-item" style={impactPromoStyles.item}>
+                  <span className="impact-promo-label" style={impactPromoStyles.label}>Patient care</span>
+                  <p className="impact-promo-value" style={impactPromoStyles.value}>Structured care for diabetes, thyroid, heart, chest, BP, kidney, liver, and asthma</p>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex flex-wrap justify-content-center gap-3 mb-4">
+              <NextLink href="/contact" title="Book Appointment" className="btn btn-power" />
+              <NextLink href="/about" title="Meet the Doctor" className="btn btn-outline-primary rounded-pill" />
+            </div>
+            <div className="d-flex flex-wrap justify-content-center gap-3 intro-badge-row">
+              {introBadges.map((badge) => {
+                const Icon = badge.icon;
+                return (
+                  <span className="intro-mini-pill" key={badge.label}>
+                    <Icon size={16} aria-hidden="true" />
+                    {badge.label}
+                  </span>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

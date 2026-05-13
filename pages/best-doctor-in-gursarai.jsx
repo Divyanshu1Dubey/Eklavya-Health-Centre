@@ -21,6 +21,12 @@ const BestDoctorGursaraiPage = () => {
   const { data: { siteInfo, treatments } } = useLanguage();
   const gursaraiClinic = siteInfo.locations.find((location) => location.id === 'gursarai') || siteInfo.locations[1];
   const mapSearchUrl = toGoogleMapsSearchUrl(gursaraiClinic?.mapEmbed);
+  const authorityCitations = siteInfo.authorityReferences.map((item) => ({
+    '@type': 'CreativeWork',
+    name: item.label,
+    url: item.url,
+    description: item.summary
+  }));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -41,6 +47,7 @@ const BestDoctorGursaraiPage = () => {
         description:
           'Dr. Akash Tamrakar offers physician and chronic care consultations for families in Gursarai with focused diagnosis, practical treatment plans, and structured follow-up.',
         reviewedBy: { '@id': `${siteInfo.url}#doctor` },
+        citation: authorityCitations,
         about: {
           '@type': 'Place',
           name: 'Gursarai, Uttar Pradesh'
@@ -72,7 +79,7 @@ const BestDoctorGursaraiPage = () => {
       <PageProgress />
       <Seo
         title="Best Doctor in Gursarai | Dr. Akash Tamrakar"
-        description="Looking for the best doctor in Gursarai? Consult Dr. Akash Tamrakar for diabetes, thyroid, heart, chest, blood pressure, and chronic care with clear diagnosis and follow-up support."
+        description="Consult Dr. Akash Tamrakar in Gursarai for diabetes, thyroid, heart, chest, blood pressure, and chronic care with clear follow-up support."
         canonical={`${siteInfo.url}/best-doctor-in-gursarai`}
         keywords={[
           'best doctor in gursarai',
@@ -110,7 +117,7 @@ const BestDoctorGursaraiPage = () => {
             <div className="row g-4 g-lg-5 align-items-start">
               <div className="col-lg-7" data-reveal="left">
                 <div className="premium-section-panel p-4 p-md-5">
-                  <h2 className="h3 mb-4">Why patients in Gursarai choose Dr. Akash Tamrakar</h2>
+                  <h2 className="h3 mb-4">Why do patients in Gursarai choose Dr. Akash Tamrakar?</h2>
                   <div className="d-grid gap-3">
                     <div className="premium-list-card p-3 d-flex align-items-start gap-2">
                       <CheckCircle2 size={16} className="text-teal mt-1" aria-hidden="true" />
@@ -126,7 +133,7 @@ const BestDoctorGursaraiPage = () => {
                     </div>
                   </div>
 
-                  <h3 className="h5 mt-4 mb-3">Popular consultations in Gursarai</h3>
+                  <h3 className="h5 mt-4 mb-3">What are popular consultations in Gursarai?</h3>
                   <div className="row g-2">
                     {treatments.slice(0, 6).map((item) => (
                       <div className="col-md-6" key={item.slug}>
@@ -142,7 +149,7 @@ const BestDoctorGursaraiPage = () => {
 
               <div className="col-lg-5" data-reveal="right" style={{ '--reveal-delay': '100ms' }}>
                 <div className="premium-section-panel p-4 p-md-5">
-                  <h2 className="h4 mb-3">Gursarai Clinic Details</h2>
+                  <h2 className="h4 mb-3">Where is the Gursarai clinic?</h2>
                   <p className="mb-3 d-flex align-items-start gap-2">
                     <MapPin size={16} className="text-teal mt-1" aria-hidden="true" />
                     <span>{Array.isArray(gursaraiClinic?.address) ? gursaraiClinic.address.join(', ') : 'Gursarai Clinic'}</span>

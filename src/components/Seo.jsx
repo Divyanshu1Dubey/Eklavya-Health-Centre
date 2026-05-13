@@ -9,14 +9,24 @@ const Seo = ({
   type = 'website',
   noindex = false,
   keywords,
-  jsonLd
+  jsonLd,
+  datePublished = siteInfo.lastUpdated,
+  dateModified = siteInfo.lastUpdated
 }) => {
-  const fullTitle = title ? `${title} | ${siteInfo.name}` : siteInfo.name;
+  const fullTitle = title || `${siteInfo.doctorName} | ${siteInfo.name}`;
   const pageUrl = canonical || siteInfo.url;
   const safeImage = image && !/\.(mp4|webm|mov)$/i.test(image) ? image : siteInfo.logo;
   const resolvedImage = safeImage.startsWith('http') ? safeImage : `${siteInfo.url}${safeImage}`;
   const resolvedKeywords = (keywords && keywords.length ? keywords : siteInfo.seoKeywords || []).join(', ');
   const serviceAreas = siteInfo.serviceAreas?.map((area) => ({ '@type': 'Place', name: area })) || [];
+  const authorityCitations = (siteInfo.authorityReferences || []).map((item) => ({
+    '@type': 'CreativeWork',
+    name: item.label,
+    url: item.url,
+    description: item.summary
+  }));
+  const meLinks = [siteInfo.instagramUrl, siteInfo.facebookUrl].filter(Boolean);
+  const isHomePage = pageUrl.replace(/\/$/, '') === siteInfo.url.replace(/\/$/, '');
 
   const toGoogleMapsSearchUrl = (mapEmbed) => {
     if (!mapEmbed) return null;
@@ -106,6 +116,64 @@ const Seo = ({
         }
       },
       {
+        '@type': 'Organization',
+        '@id': `${siteInfo.url}#organization`,
+        name: siteInfo.name,
+        url: siteInfo.url,
+        logo: `${siteInfo.url}${siteInfo.logo}`,
+        image: resolvedImage,
+        telephone: siteInfo.phone,
+        email: siteInfo.email,
+        sameAs,
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: siteInfo.appointmentPhone || siteInfo.phone,
+            contactType: 'appointments',
+            areaServed: 'IN',
+            availableLanguage: ['English', 'Hindi']
+          }
+        ]
+      },
+      {
+        '@type': 'Person',
+        '@id': `${siteInfo.url}#author`,
+        name: siteInfo.doctorName,
+        jobTitle: siteInfo.role,
+        image: resolvedImage,
+        worksFor: { '@id': `${siteInfo.url}#organization` },
+        knowsAbout: [
+          'Internal medicine',
+          'Critical care',
+          'Diabetes management',
+          'Thyroid disorders',
+          'Hypertension',
+          'Respiratory care'
+        ],
+        sameAs,
+        url: `${siteInfo.url}/about`
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: fullTitle,
+        description,
+        author: { '@id': `${siteInfo.url}#author` },
+        publisher: { '@id': `${siteInfo.url}#organization` },
+        datePublished,
+        dateModified,
+        reviewedBy: { '@id': `${siteInfo.url}#doctor` },
+        citation: authorityCitations,
+        ...(isHomePage ? {
+          speakable: {
+            '@type': 'SpeakableSpecification',
+            cssSelector: ['.intro-media-title', '.intro-lead', '.trust-byline']
+          }
+        } : {}),
+        inLanguage: 'en-IN'
+      },
+      {
         '@type': 'Physician',
         '@id': `${siteInfo.url}#doctor`,
         name: siteInfo.doctorName,
@@ -122,7 +190,7 @@ const Seo = ({
           'Blood pressure management',
           'Critical care'
         ],
-        worksFor: { '@id': `${siteInfo.url}#clinic` },
+        worksFor: { '@id': `${siteInfo.url}#organization` },
         availableLanguage: ['English', 'Hindi'],
         areaServed: serviceAreas,
         sameAs,
@@ -138,6 +206,7 @@ const Seo = ({
         telephone: siteInfo.phone,
         email: siteInfo.email,
         priceRange: '$$',
+        parentOrganization: { '@id': `${siteInfo.url}#organization` },
         contactPoint: [
           {
             '@type': 'ContactPoint',
@@ -230,11 +299,16 @@ const Seo = ({
       <meta name="subject" content={`Dr. Akash Tamrakar - Best Doctor in Jhansi and Gursarai`} key="subject" />
       <meta name="geo.region" content={siteInfo.geo?.regionCode || 'IN-UP'} key="geo-region" />
       <meta name="geo.placename" content={siteInfo.geo?.locality || 'Jhansi'} key="geo-place" />
+      <meta name="geo.country" content="IN" key="geo-country" />
       <meta name="geo.position" content={`${siteInfo.geo?.latitude || '25.4358'};${siteInfo.geo?.longitude || '78.6020'}`} key="geo-position" />
       <meta name="ICBM" content={`${siteInfo.geo?.latitude || '25.4358'}, ${siteInfo.geo?.longitude || '78.6020'}`} key="icbm" />
       <link rel="canonical" href={pageUrl} key="canonical" />
       <link rel="alternate" hrefLang="en-IN" href={pageUrl} key="alternate-en-in" />
       <link rel="alternate" hrefLang="x-default" href={pageUrl} key="alternate-x-default" />
+      <link rel="author" href={`${siteInfo.url}/about`} key="author-link" />
+      {meLinks.map((href) => (
+        <link rel="me" href={href} key={`me-${href}`} />
+      ))}
 
       <meta property="og:type" content={type} key="og-type" />
       <meta property="og:title" content={fullTitle} key="og-title" />

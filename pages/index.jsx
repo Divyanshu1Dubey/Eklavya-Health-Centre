@@ -23,6 +23,12 @@ import { useLanguage } from '../src/context/LanguageContext';
 const Home = () => {
   const { data: { careHighlights, faqs, siteInfo, testimonials, treatments, trustPoints }, t } = useLanguage();
   const summarizeText = (text, max = 130) => (text.length > max ? `${text.slice(0, max).trimEnd()}...` : text);
+  const authorityCitations = siteInfo.authorityReferences.map((item) => ({
+    '@type': 'CreativeWork',
+    name: item.label,
+    url: item.url,
+    description: item.summary
+  }));
   const getInitials = (name = '') => name
     .split(' ')
     .filter(Boolean)
@@ -81,9 +87,42 @@ const Home = () => {
         url: siteInfo.url,
         name: `Dr. Akash Tamrakar - best doctor in Jhansi and Gursarai`,
         description: `${siteInfo.doctorName} provides physician consultation for diabetes, thyroid, chest, heart, kidney, liver, asthma, blood pressure, and critical care concerns in Jhansi and Gursarai.`,
+        author: { '@id': `${siteInfo.url}#author` },
         reviewedBy: { '@id': `${siteInfo.url}#doctor` },
-        publisher: { '@id': `${siteInfo.url}#clinic` },
+        publisher: { '@id': `${siteInfo.url}#organization` },
+        datePublished: siteInfo.lastUpdated,
+        dateModified: siteInfo.lastUpdated,
+        citation: authorityCitations,
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.intro-media-title', '.intro-lead', '.trust-byline']
+        },
         inLanguage: 'en-IN'
+      },
+      {
+        '@type': 'Article',
+        '@id': `${siteInfo.url}/#doctor-article`,
+        headline: 'Dr. Akash Tamrakar, physician in Jhansi and Gursarai',
+        description: `${siteInfo.name} provides physician-led care for diabetes, thyroid, heart, chest, asthma, blood pressure, kidney, liver, and chronic disease follow-up.`,
+        author: { '@id': `${siteInfo.url}#author` },
+        publisher: { '@id': `${siteInfo.url}#organization` },
+        mainEntityOfPage: { '@id': `${siteInfo.url}/#webpage` },
+        datePublished: siteInfo.lastUpdated,
+        dateModified: siteInfo.lastUpdated,
+        citation: authorityCitations,
+        inLanguage: 'en-IN'
+      },
+      {
+        '@type': 'HowTo',
+        '@id': `${siteInfo.url}/#consultation-howto`,
+        name: `How to consult ${siteInfo.doctorName} at ${siteInfo.name}`,
+        description: 'A simple patient consultation process for appointment booking, clinical review, diagnostic planning, treatment, and follow-up.',
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Book an appointment', text: 'Call, WhatsApp, or use the contact form to request a consultation slot.' },
+          { '@type': 'HowToStep', position: 2, name: 'Share symptoms and history', text: 'Discuss symptoms, past treatment, current medicines, and relevant reports during consultation.' },
+          { '@type': 'HowToStep', position: 3, name: 'Review tests when needed', text: 'Complete targeted lab or diagnostic tests when clinically required.' },
+          { '@type': 'HowToStep', position: 4, name: 'Follow a treatment plan', text: 'Receive medicine, lifestyle, nutrition, and follow-up guidance based on the diagnosis.' }
+        ]
       }
     ]
   };
@@ -92,8 +131,8 @@ const Home = () => {
     <Fragment>
       <PageProgress />
       <Seo
-        title="Dr. Akash Tamrakar | Best Doctor in Jhansi and Gursarai"
-        description={`${siteInfo.name} is trusted for diabetes, thyroid, heart, chest, asthma, blood pressure, and chronic care. Consult Dr. Akash Tamrakar, a trusted physician for patients searching for the best doctor in Jhansi and Gursarai.`}
+        title="Dr. Akash Tamrakar | Physician in Jhansi"
+        description="Consult Dr. Akash Tamrakar at Eklavya Healthcare Centre for diabetes, thyroid, heart, chest, asthma, blood pressure, and chronic care in Jhansi."
         canonical={siteInfo.url}
         image={`${siteInfo.url}${siteInfo.logo}`}
         keywords={[
@@ -162,7 +201,7 @@ const Home = () => {
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
                 <span className="section-badge mb-0">{t.coreServicesTag}</span>
-                <h2 className="display-5 mb-0 section-heading-dark">{t.coreServicesTitle}</h2>
+                <h2 className="display-5 mb-0 section-heading-dark">What treatments are available?</h2>
               </div>
             </div>
             <div className="text-center mb-6" data-reveal="zoom" style={{ '--reveal-delay': '80ms' }}>
@@ -177,7 +216,7 @@ const Home = () => {
             <div className="premium-section-header centered mb-6" data-reveal="zoom">
               <div className="premium-section-heading-frame">
                 <span className="section-badge mb-0">{t.premiumMedicalBlue}</span>
-                <h2 className="display-4 mb-0 section-heading-dark">{t.premiumHealthcareService || 'Excellence in Care'}</h2>
+                <h2 className="display-4 mb-0 section-heading-dark">Why choose Eklavya Healthcare Centre?</h2>
               </div>
             </div>
             <div className="trust-overview-panel p-3 p-md-4 mb-7 premium-section-panel premium-section-panel-glow" data-reveal="zoom">
@@ -242,7 +281,7 @@ const Home = () => {
             <div className="row align-items-start g-4 g-lg-6 premium-section-panel premium-section-panel-soft p-4 p-lg-5 mx-0">
               <div className="col-lg-5" data-reveal="left">
                 <span className="section-badge mb-3">{t.whyPatientsVisit}</span>
-                <h2 className="display-5 mb-4 section-heading-dark">{t.clinicalJudgement}</h2>
+                <h2 className="display-5 mb-4 section-heading-dark">How does the clinic plan chronic care?</h2>
                 <p className="trust-byline mb-3">{t.trustByline}</p>
                 <p className="mb-4 trust-intro premium-copy">{summarizeText(t.rootCauseDiagnosis, 160)}</p>
                 <div className="trust-fast-points mb-4">
@@ -279,6 +318,36 @@ const Home = () => {
         </section>
         <div className="section-divider" aria-hidden="true" />
 
+        <section className="wrapper premium-section-light py-10 py-md-12 section-surface section-visibility">
+          <div className="container">
+            <div className="premium-section-panel p-4 p-md-5" data-reveal="zoom">
+              <div className="row g-4 align-items-start">
+                <div className="col-lg-4">
+                  <span className="section-badge mb-3">Clinical references</span>
+                  <h2 className="h3 mb-3 section-heading-dark">What do public health sources say?</h2>
+                  <p className="premium-copy mb-2">Last updated: May 14, 2026.</p>
+                  <p className="premium-copy mb-0">These data points explain why early diagnosis, regular follow-up, and prevention matter for common chronic conditions.</p>
+                </div>
+                <div className="col-lg-8">
+                  <div className="row g-3">
+                    {siteInfo.authorityReferences.map((item) => (
+                      <div className="col-md-4" key={item.id}>
+                        <article className="premium-list-card h-100 p-3">
+                          <p className="fw-bold text-dark-blue mb-2">{item.label}</p>
+                          <p className="premium-copy mb-3">{item.summary}</p>
+                          <a href={item.url} target="_blank" rel="noreferrer" className="fw-bold text-teal">
+                            Source
+                          </a>
+                        </article>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="wrapper premium-section-light py-12 py-md-14 section-surface section-visibility orb-surface orb-surface-soft">
           <div className="container">
             <div className="row g-8 align-items-center">
@@ -308,7 +377,7 @@ const Home = () => {
               </div>
               <div className="col-lg-6" data-reveal="right" style={{ '--reveal-delay': '120ms' }}>
                 <span className="section-badge mb-3">{t.patientJourneyTag}</span>
-                <h2 className="display-5 mb-4 section-heading-dark">{t.patientJourneyTitle}</h2>
+                <h2 className="display-5 mb-4 section-heading-dark">How does a consultation work?</h2>
                 <ol className="icon-list bullet-bg bullet-soft-primary mb-0">
                   <li><BadgeCheck size={16} aria-hidden="true" />{t.journeyStep1}</li>
                   <li><Stethoscope size={16} aria-hidden="true" />{t.journeyStep2}</li>
@@ -329,7 +398,7 @@ const Home = () => {
             <div className="premium-section-header centered mb-10" data-reveal="zoom">
               <div className="premium-section-heading-frame">
                 <span className="section-badge mb-0">{t.clinicLocation}</span>
-                <h2 className="display-4 mb-0 section-heading-dark">{t.ourCenters}</h2>
+                <h2 className="display-4 mb-0 section-heading-dark">Where can patients visit?</h2>
               </div>
             </div>
             <div className="row g-6 justify-content-center">
@@ -390,7 +459,7 @@ const Home = () => {
                 <div className="col-lg-5" data-reveal="left">
                   <div className="premium-section-heading-frame mb-4">
                     <span className="section-badge mb-0">{t.faqTag}</span>
-                    <h2 className="display-5 mb-0 section-heading-dark">{t.faqTitle}</h2>
+                    <h2 className="display-5 mb-0 section-heading-dark">What do patients ask before visiting?</h2>
                   </div>
                   <p className="premium-copy mb-0">
                     {t.faqDescription}
